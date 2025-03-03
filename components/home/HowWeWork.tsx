@@ -50,14 +50,14 @@ const HowWeWork: React.FC = () => {
   return (
     <div className="bg-white container mx-auto py-10 px-4">
       <div className="text-center mb-8">
-        <p className="text-[#443d3d] inline-block py-1 px-8 border-[#EF4444]">How We Work</p>
-        <h2 className="text-4xl font-bold mt-2 text-[#443d3d]">Enjoy Seamless Service With <span className="text-[#EF4444]">Our Easy Steps!</span></h2>
+        <p className="text-[#443d3d] inline-block py-1 px-8 border-[#967bb6]">How We Work</p>
+        <h2 className="text-4xl font-bold mt-2 text-[#443d3d]">Enjoy Seamless Service With <span className="text-[#967bb6]">Our Easy Steps!</span></h2>
       </div>
       
-      <div className="border border-red-400 rounded-full py-4 px-6  flex items-center justify-between mb-12 mx-auto max-w-4xl">
+      <div className="border border-purple-400 rounded-full py-4 px-6  flex items-center justify-between mb-12 mx-auto max-w-4xl">
         <p className="text-[#443d3d]">Efficient workflow from requirements gathering to support and maintenance</p>
         <button className="flex items-center text-[#443d3d]">
-        <div className="ml-2 w-2 h-2 mr-2.5 rounded-full bg-[#EF4444]"></div>
+        <div className="ml-2 w-2 h-2 mr-2.5 rounded-full bg-[#967bb6]"></div>
           <span>See All</span>
           
         </button>

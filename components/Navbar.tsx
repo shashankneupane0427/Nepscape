@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
           <li>
             <Link
               href="/"
-              className="hover:text-[#ef4444] font-medium transition duration-300 ease-in-out transform hover:scale-105"
+              className="hover:text-[#967bb6] font-medium transition duration-300 ease-in-out transform hover:scale-105"
             >
               Home
             </Link>
@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
           <li className="relative group">
             <Link
               href="#"
-              className="hover:text-[#ef4444] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
+              className="hover:text-[#967bb6] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
             >
               About <MdKeyboardArrowDown className="ml-1" />
             </Link>
@@ -82,7 +82,7 @@ const Navbar: React.FC = () => {
           <li className="relative group">
             <Link
               href="#"
-              className="hover:text-[#ef4444] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
+              className="hover:text-[#967bb6] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
             >
               Service <MdKeyboardArrowDown className="ml-1" />
             </Link>
@@ -130,7 +130,7 @@ const Navbar: React.FC = () => {
           <li className="relative group">
   <Link
     href="#"
-    className="hover:text-[#ef4444] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
+    className="hover:text-[#967bb6] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
   >
     Pricing <MdKeyboardArrowDown className="ml-1" />
   </Link>
@@ -155,7 +155,7 @@ const Navbar: React.FC = () => {
           <li>
             <Link
               href="/work"
-              className="hover:text-[#ef4444] transition duration-300 ease-in-out transform hover:scale-105"
+              className="hover:text-[#967bb6] transition duration-300 ease-in-out transform hover:scale-105"
             >
               Our Work
             </Link>
@@ -163,7 +163,7 @@ const Navbar: React.FC = () => {
           <li>
             <Link
               href="/career"
-              className="hover:text-[#ef4444] transition duration-300 ease-in-out transform hover:scale-105"
+              className="hover:text-[#967bb6] transition duration-300 ease-in-out transform hover:scale-105"
             >
               Career
             </Link>
@@ -171,7 +171,7 @@ const Navbar: React.FC = () => {
           <li>
             <Link
               href="/contact"
-              className="hover:text-[#ef4444] transition duration-300 ease-in-out transform hover:scale-105"
+              className="hover:text-[#967bb6] transition duration-300 ease-in-out transform hover:scale-105"
             >
               Contact
             </Link>
@@ -180,11 +180,11 @@ const Navbar: React.FC = () => {
 
         {/* Contact Section */}
         <div className="flex items-center space-x-4">
-          <div className="flex items-center text-[#ef4444] font-semibold text-lg">
+          <div className="flex items-center text-[#967bb6] font-semibold text-lg">
             <FaPhoneAlt className="mr-2" />
             <span>9801848492</span>
           </div>
-          <button className="border-2 border-[#ef4444] text-[#ef4444] px-4 py-2 rounded-full hover:bg-[#ef4444] hover:text-white transition hover:cursor-pointer">
+          <button className="border-2 border-[#967bb6] text-[#967bb6] px-4 py-2 rounded-full hover:bg-[#967bb6] hover:text-white transition hover:cursor-pointer">
             Quick Enquiry
           </button>
         </div>
