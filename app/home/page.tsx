@@ -3,6 +3,7 @@ import ServicesSection from '../../components/home/ServicesSection';
 import ExpertiseSection from '../../components/home/ExpertiseSection';
 import HowWeWork from '../../components/home/HowWeWork';
 import CompanyStats from "@/components/home/CompanyStats";
+import Footer from "@/components/Footer";
 
 
 function home () {
@@ -11,7 +12,8 @@ function home () {
       <ServicesSection />
       <ExpertiseSection />
       <HowWeWork />
-      <CompanyStats />      
+      <CompanyStats /> 
+      <Footer/>     
      
     </div>
   )

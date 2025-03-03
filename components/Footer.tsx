@@ -4,7 +4,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaInstagram, FaLink
 const Footer: React.FC = () => {
   return (
     <div>
-      <footer className="text-black py-12 px-6 relative">
+      <footer className="text-black py-12 pb-0 px-6 relative">
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
         {/* Development Services Section */}
         <div className="pl-8">
