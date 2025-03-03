@@ -11,8 +11,7 @@ function home () {
       <ServicesSection />
       <ExpertiseSection />
       <HowWeWork />
-      <CompanyStats />
-      
+      <CompanyStats />      
      
     </div>
   )
