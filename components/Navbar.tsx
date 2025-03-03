@@ -4,9 +4,11 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
+import { FaRegHandshake, FaSearchDollar } from "react-icons/fa"; // Additional icons for hover effect
 
 const Navbar: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
+  const [isPricingHovered, setIsPricingHovered] = useState(false); // State for hover effect on Pricing
 
   useEffect(() => {
     const handleScroll = () => {
@@ -124,14 +126,32 @@ const Navbar: React.FC = () => {
             </ul>
           </li>
 
-          <li>
-            <Link
-              href="/pricing"
-              className="hover:text-[#ef4444] transition duration-300 ease-in-out transform hover:scale-105"
-            >
-              Pricing
-            </Link>
-          </li>
+          {/* Pricing with Hover Effect */}
+          <li className="relative group">
+  <Link
+    href="#"
+    className="hover:text-[#ef4444] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
+  >
+    Pricing <MdKeyboardArrowDown className="ml-1" />
+  </Link>
+  <ul className="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded-md p-4 w-72">
+    <li className="mb-3">
+      <h4 className="font-semibold text-black">SEO Package</h4>
+      <p className="text-sm text-gray-600">
+        Typically offers a range of services including keyword research.
+      </p>
+    </li>
+    <li className="mb-3">
+      <h4 className="font-semibold text-black">Social Media Package</h4>
+      <p className="text-sm text-gray-600">
+        Typically offers a range of services tailored to clients' needs, including social media marketing.
+      </p>
+    </li>
+    {/* Add more pricing services as needed */}
+  </ul>
+</li>
+
+
           <li>
             <Link
               href="/work"
