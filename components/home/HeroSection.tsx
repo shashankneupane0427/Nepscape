@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Image from "next/image"
 
 function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -24,7 +25,7 @@ function HeroSection() {
 
   return (
     <div className="pt-16 overflow-hidden">
-      <div className="relative h-[70vh] md:h-[60vh] bg-gradient-to-br from-purple-50 via-purple-100 to-indigo-100 m-4 md:m-9 rounded-3xl md:rounded-none md:rounded-tr-[5rem] md:rounded-bl-[5rem] flex flex-col md:flex-row shadow-xl transition-all duration-500 hover:shadow-2xl border border-purple-200">
+      <div className="relative h-[70vh] md:h-[80vh]  bg-gradient-to-br from-purple-50 via-purple-100 to-indigo-100 m-4 md:m-9 rounded-3xl pt-52 pb-60 md:rounded-none md:rounded-tr-[5rem] md:rounded-bl-[5rem] flex flex-col md:flex-row  transition-all duration-500">
         {/* Animated background */}
         <div className="absolute inset-0 overflow-hidden rounded-3xl md:rounded-none md:rounded-tr-[5rem] md:rounded-bl-[5rem]">
           <div
@@ -72,7 +73,7 @@ function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-5">
             <button className="group bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium h-12 px-8 rounded-full shadow-lg hover:shadow-purple-300/50 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0">
               <span className="flex items-center justify-center">
-                Let's get Started
+                Let`&apos;`s get Started
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform"
@@ -122,7 +123,7 @@ function HeroSection() {
           <div className="relative">
             <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-purple-300 to-indigo-400 opacity-70 blur-2xl animate-pulse"></div>
             <div className="absolute -inset-6 rounded-full border-2 border-purple-200 opacity-30 animate-spin-slow"></div>
-            <img
+            <Image
               src="heroPicture.png"
               alt="IT Solutions"
               className="h-[35vh] md:h-[45vh] w-auto object-contain relative z-10 drop-shadow-2xl transform transition-transform duration-500 hover:scale-105 filter"

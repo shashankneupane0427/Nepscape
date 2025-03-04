@@ -63,7 +63,7 @@ const ServicesSection: React.FC = () => {
   ];
 
   return (
-    <div className="w-full mt-20 py-16 px-4 md:px-8 bg-white font-poppins">
+    <div className="w-full  py-16 px-4 md:px-8 bg-white font-poppins">
       {/* Header Section */}
       <div className="text-center mb-12">
         <p className="text-[#443d3d;] mb-2 flex items-center justify-center font-poppins">

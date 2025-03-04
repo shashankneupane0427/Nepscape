@@ -1,4 +1,3 @@
-import {redirect} from "next/navigation"
 
 function home() {
   return <div>Home</div>;

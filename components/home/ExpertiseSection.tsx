@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'
 
 const TechExpertiseSection = () => {
   return (
@@ -29,42 +30,54 @@ const TechExpertiseSection = () => {
         <div className="grid grid-cols-6 gap-8">
           {/* First row */}
           <div className="flex justify-center">
-          <img src="https://softbenz.com/media/technology/icons8-javascript-96.png" alt="Node.js" className="w-20 h-16" />
+          <Image
+ src="https://softbenz.com/media/technology/icons8-javascript-96.png" alt="Node.js" className="w-20 h-16" />
           </div>
           <div className="flex justify-center">
-            <img src="https://softbenz.com/media/technology/node.png" alt="Node.js" className="w-16 h-16" />
+            <Image
+ src="https://softbenz.com/media/technology/node.png" alt="Node.js" className="w-16 h-16" />
           </div>
           <div className="flex justify-center">
-            <img src="https://softbenz.com/media/technology/icons8-python-96.png" alt="Python" className="w-16 h-16" />
+            <Image
+ src="https://softbenz.com/media/technology/icons8-python-96.png" alt="Python" className="w-16 h-16" />
           </div>
           <div className="flex justify-center">
-          <img src="https://softbenz.com/media/technology/icons8-django-a-high-level-python-web-framework-that-encourages-rapid-development-96.png" alt="Node.js" className="w-13 h-14" />
+          <Image
+ src="https://softbenz.com/media/technology/icons8-django-a-high-level-python-web-framework-that-encourages-rapid-development-96.png" alt="Node.js" className="w-13 h-14" />
           </div>
           <div className="flex justify-center">
-            <img src="https://softbenz.com/media/technology/icons8-html5-96.png" alt="Node.js" className="w-16 h-16" />
+            <Image
+ src="https://softbenz.com/media/technology/icons8-html5-96.png" alt="Node.js" className="w-16 h-16" />
           </div>
           <div className="flex justify-center">
-            <img src="https://softbenz.com/media/technology/icons8-css3-96.png" alt="Python" className="w-16 h-16" />
+            <Image
+ src="https://softbenz.com/media/technology/icons8-css3-96.png" alt="Python" className="w-16 h-16" />
           </div>
           
           {/* Second row */}
           <div className="flex justify-center">
-          <img src="https://softbenz.com/media/technology/icons8-next.js-96.png" alt="React" className="w-16 h-16" />
+          <Image
+ src="https://softbenz.com/media/technology/icons8-next.js-96.png" alt="React" className="w-16 h-16" />
           </div>
           <div className="flex justify-center">
-            <img src="https://softbenz.com/media/technology/icons8-react-native-96_2lITedI.png" alt="React" className="w-16 h-16" />
+            <Image
+ src="https://softbenz.com/media/technology/icons8-react-native-96_2lITedI.png" alt="React" className="w-16 h-16" />
           </div>
           <div className="flex justify-center">
-            <img src="https://softbenz.com/media/technology/php.png" alt="PHP" className="w-16 h-16" />
+            <Image
+ src="https://softbenz.com/media/technology/php.png" alt="PHP" className="w-16 h-16" />
           </div>
           <div className="flex justify-center">
-          <img src="https://softbenz.com/media/technology/icons8-laravel-96.png" alt="React" className="w-16 h-16" />
+          <Image
+ src="https://softbenz.com/media/technology/icons8-laravel-96.png" alt="React" className="w-16 h-16" />
           </div>
           <div className="flex justify-center">
-            <img src="https://softbenz.com/media/technology/icons8-laravel-96.png" alt="React" className="w-16 h-16" />
+            <Image
+ src="https://softbenz.com/media/technology/icons8-laravel-96.png" alt="React" className="w-16 h-16" />
           </div>
           <div className="flex justify-center">
-            <img src="https://softbenz.com/media/technology/icons8-wordpress-96.png" alt="PHP" className="w-16 h-16" />
+            <Image
+ src="https://softbenz.com/media/technology/icons8-wordpress-96.png" alt="PHP" className="w-16 h-16" />
           </div>
         </div>
       </div>
@@ -78,7 +91,8 @@ const TechExpertiseSection = () => {
   <div className="relative z-10 flex justify-center items-center h-full">
     <div className="relative ml-8 p-20">
       {/* External Image */}
-      <img
+      <Image
+
         src="/ext.png"
         alt="Developer working from home"
         className="relative z-10"

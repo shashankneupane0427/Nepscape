@@ -1,14 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image"
 import Link from "next/link";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
-import { FaRegHandshake, FaSearchDollar } from "react-icons/fa"; // Additional icons for hover effect
 
 const Navbar: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [isPricingHovered, setIsPricingHovered] = useState(false); // State for hover effect on Pricing
+  const [isVisible, setIsVisible] = useState(true); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,14 +20,15 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`bg-white shadow-md py-3 px-6 w-full fixed top-0 left-0 z-50 transition-transform duration-300 ${
+      className={`bg-white  py-3 px-6 w-full fixed top-0 left-0 z-50 transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo Section */}
         <div className="flex items-center space-x-2">
-          <img src="/logo.png" alt="Nepscape Logo" className="h-10" />
+          <Image src="/logo.png" alt="Nepscape Logo" className="h-10" />
+          <p className="text-[#8044c9]">Nepscape</p>
         </div>
 
         {/* Navigation Links */}
@@ -144,7 +144,7 @@ const Navbar: React.FC = () => {
     <li className="mb-3">
       <h4 className="font-semibold text-black">Social Media Package</h4>
       <p className="text-sm text-gray-600">
-        Typically offers a range of services tailored to clients' needs, including social media marketing.
+        Typically offers a range of services tailored to clients `&apos;` needs, including social media marketing.
       </p>
     </li>
     {/* Add more pricing services as needed */}

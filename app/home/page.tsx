@@ -7,7 +7,7 @@ import HeroSection from "@/components/home/HeroSection";
 
 function home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white text-black">
       <HeroSection />
       <ServicesSection />
       <ExpertiseSection />
