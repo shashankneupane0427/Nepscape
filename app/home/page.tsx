@@ -1,12 +1,17 @@
-import React from "react";
 import ServicesSection from "../../components/home/ServicesSection";
-import HeroSection from "@/components/home/HeroSection";
+import ExpertiseSection from "../../components/home/ExpertiseSection";
+import HowWeWork from "../../components/home/HowWeWork";
+import CompanyStats from "@/components/home/CompanyStats";
+import Footer from "@/components/Footer";
 
 function home() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <HeroSection />
+    <div className="min-h-screen">
       <ServicesSection />
+      <ExpertiseSection />
+      <HowWeWork />
+      <CompanyStats />
+      <Footer />
     </div>
   );
 }
