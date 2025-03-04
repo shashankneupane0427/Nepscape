@@ -24,15 +24,16 @@ const Navbar: React.FC = () => {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container flex items-center justify-between mx-auto">
         {/* Logo Section */}
         <div className="flex items-center space-x-2">
-          <Image src="/logo.png" alt="Nepscape Logo" className="h-10" />
+        <Image src="/logo.png" alt="Nepscape Logo" width={40} height={40} />
+
           <p className="text-[#8044c9]">Nepscape</p>
         </div>
 
         {/* Navigation Links */}
-        <ul className="flex space-x-6 text-black font-medium">
+        <ul className="flex space-x-6 font-medium text-black">
           <li>
             <Link
               href="/"
@@ -50,7 +51,7 @@ const Navbar: React.FC = () => {
             >
               About <MdKeyboardArrowDown className="ml-1" />
             </Link>
-            <ul className="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded-md p-4 w-64">
+            <ul className="absolute left-0 hidden w-64 p-4 bg-white rounded-md shadow-lg top-full group-hover:block">
               <li className="mb-3">
                 <h4 className="font-semibold text-black">Introduction</h4>
                 <p className="text-sm text-gray-600">
@@ -86,7 +87,7 @@ const Navbar: React.FC = () => {
             >
               Service <MdKeyboardArrowDown className="ml-1" />
             </Link>
-            <ul className="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded-md p-4 w-72">
+            <ul className="absolute left-0 hidden p-4 bg-white rounded-md shadow-lg top-full group-hover:block w-72">
               <li className="mb-3">
                 <h4 className="font-semibold text-black">Development</h4>
                 <p className="text-sm text-gray-600">
@@ -134,7 +135,7 @@ const Navbar: React.FC = () => {
   >
     Pricing <MdKeyboardArrowDown className="ml-1" />
   </Link>
-  <ul className="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded-md p-4 w-72">
+  <ul className="absolute left-0 hidden p-4 bg-white rounded-md shadow-lg top-full group-hover:block w-72">
     <li className="mb-3">
       <h4 className="font-semibold text-black">SEO Package</h4>
       <p className="text-sm text-gray-600">

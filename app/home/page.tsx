@@ -5,9 +5,10 @@ import CompanyStats from "@/components/home/CompanyStats";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/home/HeroSection";
 
+
 function home() {
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen text-black bg-white">
       <HeroSection />
       <ServicesSection />
       <ExpertiseSection />
