@@ -4,6 +4,11 @@ import HowWeWork from "../../components/home/HowWeWork";
 import CompanyStats from "@/components/home/CompanyStats";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/home/HeroSection";
+import FAQ from "../FAQ/page";
+
+
+
+
 
 
 function home() {
