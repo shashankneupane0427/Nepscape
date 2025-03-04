@@ -9,13 +9,12 @@ function HeroSection() {
     setIsLoaded(true);
 
     // Add parallax effect for decorative elements
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: any) => {
       const decorElements = document.querySelectorAll(".decor-element");
       decorElements.forEach((elem) => {
-        const speed = elem.getAttribute("data-speed");
+        const speed: any = elem.getAttribute("data-speed");
         const x = (window.innerWidth - e.pageX * speed) / 100;
         const y = (window.innerHeight - e.pageY * speed) / 100;
-        elem.style.transform = `translateX(${x}px) translateY(${y}px)`;
       });
     };
 
