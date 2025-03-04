@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image"
 import Link from "next/link";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -27,7 +26,7 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo Section */}
         <div className="flex items-center space-x-2">
-          <Image src="/logo.png" alt="Nepscape Logo" className="h-10" />
+          <img src="/logo.png" alt="Nepscape Logo" className="h-10" />
           <p className="text-[#8044c9]">Nepscape</p>
         </div>
 

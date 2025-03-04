@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Image from "next/image"
 
 function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -113,7 +112,7 @@ function HeroSection() {
           </div>
         </div>
 
-        {/* Image */}
+        {/* img */}
         <div
           className={`flex justify-center items-center transform ${
             isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
@@ -122,9 +121,10 @@ function HeroSection() {
           <div className="relative">
             <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-purple-300 to-indigo-400 opacity-70 blur-2xl animate-pulse"></div>
             <div className="absolute -inset-6 rounded-full border-2 border-purple-200 opacity-30 animate-spin-slow"></div>
-            <Image
+            <img
               src="heroPicture.png"
               alt="IT Solutions"
+  
               className="h-[35vh] md:h-[45vh] w-auto object-contain relative z-10 drop-shadow-2xl transform transition-transform duration-500 hover:scale-105 filter"
             />
           </div>
