@@ -183,7 +183,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center space-x-4">
           <div className="flex items-center text-[#967bb6] font-semibold text-lg">
             <FaPhoneAlt className="mr-2" />
-            <span>9801848492</span>
+            <span>9812316018</span>
           </div>
           <button className="border-2 border-[#967bb6] text-[#967bb6] px-4 py-2 rounded-full hover:bg-[#967bb6] hover:text-white transition hover:cursor-pointer">
             Quick Enquiry
