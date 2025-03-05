@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import FAQ from "../FAQ/page";
 import termsandcondition from "../terms/page";
+import privacypolicy from "../privacy/page";
 
 
 

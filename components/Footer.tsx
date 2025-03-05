@@ -138,7 +138,7 @@ const Footer: React.FC = () => {
       
         </div>
       </div>
-    </footer>
+    </footer> 
         
     {/* Social Media Section */}
     <div className="bg-[#967bb6] py-4 mt-6 text-center text-white flex justify-between items-center px-6">
