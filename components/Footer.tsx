@@ -13,12 +13,14 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <div>
-      {/* Connect Section */}
+  
+      <div>
+      <footer className="text-black py-12 pb-0 pt-0   mt-0  relative">
+          {/* Connect Section */}
       <div
-        className="block overflow-hidden text-start"
+        className="block overflow-hidden text-start mb-12 bg-gray-50 "
         style={{
-          backgroundImage: "url(https://softbenz.com/static/site-assets/images/cta_bg1.png)",
+          // backgroundImage: "url(https://softbenz.com/static/site-assets/images/cta_bg1.png)",
           backgroundPosition: "50% 50%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -35,7 +37,7 @@ const Footer: React.FC = () => {
           unicodeBidi: "isolate",
           width: "100%",
           WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-          margin: "auto",
+       
           overflowX: "hidden",
           overflowY: "hidden",
         }}
@@ -76,164 +78,80 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Footer Section */}
-      <footer className="relative px-6 py-12 pb-0 text-black animate-fadeIn">
-        <div className="container grid grid-cols-1 gap-12 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {/* Development Services */}
-          <div className="pl-8">
-            <h4 className="mb-4 text-xl font-semibold">Development Services</h4>
-            <ul>
-              {["Website Development", "App Development", "System/Software Development", "UI/UX"].map(
-                (service, index) => (
-                  <li key={index} className="mb-2">
-                    <Link href="#" className="text-[#5d605d] hover:text-[#a46ede]">
-                      {service}
-                    </Link>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
-
-          {/* Marketing Services */}
-          <div>
-            <h4 className="mb-4 text-xl font-semibold">Marketing Services</h4>
-            <ul>
-              {["SEO", "SMM", "Graphic Design", "Content Writing", "Pay Per Click", "Digital Marketing"].map(
-                (service, index) => (
-                  <li key={index} className="mb-2">
-                    <Link href="#" className="text-[#5d605d] hover:text-[#a46ede]">
-                      {service}
-                    </Link>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
-
-          {/* Quick Links */}
-          <div className="pl-5">
-            <h4 className="mb-4 text-xl font-semibold">Quick Links</h4>
-            <ul>
-              {["About Us", "Our Services", "Contact Us", "Blog", "Career", "Our Work"].map((link, index) => (
-                <li key={index} className="mb-2">
-                  <Link
-                    href={`/${link.toLowerCase().replace(/ /g, "-")}`}
-                    className="text-[#5d605d] hover:text-[#a46ede]"
-                  >
-                    {link}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Connect With Us */}
-          <div className="text-black">
-            <h4 className="mb-6 text-xl font-semibold text-center sm:text-left">Connect with Us</h4>
-            <ul className="space-y-6">
-              <li className="flex items-center text-lg text-[#5d605d]">
-                <FaPhoneAlt className="mr-4 text-[#a46ede] text-2xl" />
-                <a href="tel:+9812316018" className="hover:text-[#a46ede] hover:underline">
-                  9812316018 , 01-4796657
-                </a>
-              </li>
-              <li className="flex items-center text-lg">
-                <FaEnvelope className="mr-4 text-[#a46ede] text-2xl" />
-                <a href="mailto:sales@Nepscape.com" className="hover:text-[#a46ede] hover:underline">
-                  sales@Nepscape.com
-                </a>
-              </li>
-              <li className="flex items-center text-lg text-[#5d605d]">
-                <FaMapMarkerAlt className="mr-4 text-[#a46ede] text-2xl" /> Putalisadak, Kathmandu
-              </li>
-            </ul>
-          </div>
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+        {/* Development Services Section */}
+        <div className="pl-8">
+          <h4 className="text-xl font-semibold mb-4">Development Services</h4>
+          <ul>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">Website Development</Link></li>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">App Development</Link></li>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">System/Software Development</Link></li>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">UI/UX</Link></li>
+          </ul>
         </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-[#a46ede] mt-12 pt-6 text-center text-sm text-black">
-  <div className="flex justify-center space-x-6">
-    {[
-      { href: "/FAQ", label: "FAQ" },
-      { href: "/terms", label: "Terms & Conditions" },
-      { href: "/privacy", label: "Privacy Policy" },
-    ].map((item, index, arr) => (
-      <span key={index} className="flex items-center space-x-2">
-        <Link href={item.href} className="hover:text-[#a46ede]">
-          {item.label}
-        </Link>
-        {index < arr.length - 1 && <span className="text-gray-500">|</span>}
-      </span>
-    ))}
-  </div>
-</div>
+        {/* Marketing Services Section */}
+        <div>
+          <h4 className="text-xl font-semibold mb-4">Marketing Services</h4>
+          <ul>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">Search Engine Optimization (SEO)</Link></li>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">Social Media Marketing (SMM)</Link></li>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">Graphic Design</Link></li>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">Content Writing</Link></li>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">Pay Per Click</Link></li>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">Digital Marketing</Link></li>
+          </ul>
+        </div>
 
-      </footer>
+        {/* Quick Links Section */}
+        <div className="pl-5">
+          <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
+          <ul>
+            <li className="mb-2"><Link href="/about" className="text-[#5d605d] hover:text-[#967bb6]">About Us</Link></li>
+            <li className="mb-2"><Link href="/services" className="text-[#5d605d] hover:text-[#967bb6]">Our Services</Link></li>
+            <li className="mb-2"><Link href="/contact" className="text-[#5d605d] hover:text-[#967bb6]">Contact Us</Link></li>
+            <li className="mb-2"><Link href="/blog" className="text-[#5d605d] hover:text-[#967bb6]">Blog</Link></li>
+            <li className="mb-2"><Link href="/career" className="text-[#5d605d] hover:text-[#967bb6]">Career</Link></li>
+            <li className="mb-2"><Link href="/our-work" className="text-[#5d605d] hover:text-[#967bb6]">Our Work</Link></li>
+          </ul>
+        </div>
 
-      {/* Social Media Section */}
-<div className="bg-[#a46ede] py-4 mt-6 text-center text-white flex justify-between items-center px-6 animate-slideUp">
-  <span className="text-lg text-white">© 2025 Softbenz Infosys. All Rights Reserved.</span>
-  
-  <div className="flex space-x-6 animate-fadeInUp">
-    {/* Updated social media links */}
-    <a 
-      href="https://wa.me/9812316018" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="text-2xl text-white transition-all duration-300 ease-in-out transform hover:scale-110 hover:rotate-12"
-    >
-      <FaWhatsapp />
-    </a>
-    
-    <a 
-      href="https://www.facebook.com/yourprofile" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="text-2xl text-white transition-all duration-300 ease-in-out transform hover:scale-110 hover:rotate-12"
-    >
-      <FaFacebook />
-    </a>
-    
-    <a 
-      href="https://www.instagram.com/yourprofile" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="text-2xl text-white transition-all duration-300 ease-in-out transform hover:scale-110 hover:rotate-12"
-    >
-      <FaInstagram />
-    </a>
-    
-    <a 
-      href="https://www.linkedin.com/in/yourprofile" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="text-2xl text-white transition-all duration-300 ease-in-out transform hover:scale-110 hover:rotate-12"
-    >
-      <FaLinkedin />
-    </a>
-    
-    <a 
-      href="https://twitter.com/yourprofile" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="text-2xl text-white transition-all duration-300 ease-in-out transform hover:scale-110 hover:rotate-12"
-    >
-      <FaTwitter />
-    </a>
-    
-    <a 
-      href="https://www.youtube.com/c/yourchannel" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="text-2xl text-white transition-all duration-300 ease-in-out transform hover:scale-110 hover:rotate-12"
-    >
-      <FaYoutube />
-    </a>
-  </div>
-</div>
+        {/* Connect With Us Section */}
+        <div className="text-black">
+          <h4 className="text-xl font-semibold mb-6 text-center sm:text-left">Connect with Us</h4>
+          <ul className="space-y-6">
+            <li className="flex items-center text-lg text-[#5d605d] "><FaPhoneAlt className="mr-4   text-[#967bb6] text-2xl" />  <a href="tel:+9801848492" className="text-[#5d605d] hover:text-[#967bb6] hover:underline">9801848492</a>, 01-4796657</li>
+            <li className="flex items-center text-lg"><FaEnvelope className="mr-4   text-[#967bb6] text-2xl" />  <a href="mailto:sales@Nepscape.com" className="text-[#5d605d] hover:text-[#967bb6] hover:underline">sales@Nepscape.com</a></li>
+            <li className="flex items-center text-lg text-[#5d605d] "><FaMapMarkerAlt className="mr-4   text-[#967bb6] text-2xl" /> Putalisadak, Kathmandu</li>
+          </ul>
+        </div>
+      </div>
 
+      {/* Bottom Section */}
+      <div className="border-t border-[#967bb6] mt-12 pt-6 text-center text-sm text-black">
+        <div className="flex justify-center space-x-6">
+          <Link href="/faq" className="hover:text-[#967bb6]">FAQ</Link>
+          <span className="mx-2">|</span>
+          <Link href="/terms" className="hover:text-[#967bb6]">Terms & Conditions</Link>
+          <span className="mx-2">|</span>
+          <Link href="/privacy" className="hover:text-[#967bb6]">Privacy Policy</Link>
+      
+        </div>
+      </div>
+    </footer>
+        
+    {/* Social Media Section */}
+    <div className="bg-[#967bb6] py-4 mt-6 text-center text-white flex justify-between items-center px-6">
+    <span className="text-white text-lg">© 2025 Softbenz Infosys. All Rights Reserved.</span>
+    <div className="flex space-x-4">
+      <a href="https://wa.me/9812316018" target="_blank" className="text-white text-2xl"><FaWhatsapp /></a>
+      <a href="#" target="_blank" className="text-white text-2xl"><FaFacebook /></a>
+      <a href="#" target="_blank" className="text-white text-2xl"><FaInstagram /></a>
+      <a href="#" target="_blank" className="text-white text-2xl"><FaLinkedin /></a>
+      <a href="#" target="_blank" className="text-white text-2xl"><FaTwitter /></a>
+      <a href="#" target="_blank" className="text-white text-2xl"><FaYoutube /></a>
+    </div>
+        </div>
     </div>
   );
 };

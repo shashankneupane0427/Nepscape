@@ -99,7 +99,8 @@ const FAQ = () => {
   };
 
   return (
-    <section className="bg-[#f8f5fc] py-24">
+    <div>
+        <section className="bg-[#f8f5fc] py-24">
       <div className="max-w-6xl px-6 mx-auto">
         <div className="grid items-center gap-12 md:grid-cols-2">
           {/* Left Side: Text + Image */}
@@ -143,9 +144,14 @@ const FAQ = () => {
             ))}
           </motion.div>
         </div>
-        <Footer />
+      
       </div>
+   
     </section>
+    <Footer />
+    </div>
+  
+     
   );
 };
 
