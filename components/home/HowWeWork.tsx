@@ -48,16 +48,16 @@ const HowWeWork: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white container mx-auto py-10 px-4">
+    <div className="bg-white container mx-auto py-14 px-4">
       <div className="text-center mb-8">
-        <p className="text-[#443d3d] inline-block py-1 px-8 border-[#967bb6]">How We Work</p>
-        <h2 className="text-4xl font-bold mt-2 text-[#443d3d]">Enjoy Seamless Service With <span className="text-[#967bb6]">Our Easy Steps!</span></h2>
+        <p className=" inline-block py-1 px-8 border-purple-500]">How We Work</p>
+        <h2 className="text-4xl font-bold mt-2 ">Enjoy Seamless Service With <span className="text-purple-500">Our Easy Steps!</span></h2>
       </div>
       
-      <div className="border border-purple-400 rounded-full py-4 px-6  flex items-center justify-between mb-12 mx-auto max-w-4xl">
+      <div className="border border-purple-500 rounded-full py-4 px-6  flex items-center justify-between mb-12 mx-auto max-w-4xl">
         <p className="text-[#443d3d]">Efficient workflow from requirements gathering to support and maintenance</p>
         <button className="flex items-center text-[#443d3d]">
-        <div className="ml-2 w-2 h-2 mr-2.5 rounded-full bg-[#967bb6]"></div>
+        <div className="ml-2 w-2 h-2 mr-2.5 rounded-full bg-purple-500"></div>
           <span>See All</span>
           
         </button>
@@ -65,7 +65,7 @@ const HowWeWork: React.FC = () => {
       
       <div className="space-y-8">
         {workflowSteps.map((step) => (
-          <div key={step.id} className="flex flex-col md:flex-row border-b pb-8">
+          <div key={step.id} className="flex flex-col p-2 md:flex-row border-b mb-0 border-gray-200 pb-8 hover:bg-purple-50 ">
             <div className="md:w-1/6 pr-4">
               <div className="text-6xl font-bold text-[#443d3d] opacity-75  p-4 rounded-lg inline-block">{step.number}</div>
             </div>

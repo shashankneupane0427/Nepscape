@@ -66,24 +66,26 @@ const ServicesSection: React.FC = () => {
     <div className="w-full  py-16 px-4 md:px-8 bg-white font-poppins">
       {/* Header Section */}
       <div className="text-center mb-12">
-        <p className="text-[#443d3d;] mb-2 flex items-center justify-center font-poppins">
-          <span className="border-t border-gray-300 font-extrabold w-12 mr-4"></span>
+        <p className=" mb-2 flex items-center justify-center font-poppins">
+          <span className="border-t border-gray-300 text-7xl font-extrabold w-12 mr-4"></span>
           Our Services
           <span className="border-t border-gray-300 font-extrabold w-12 ml-4"></span>
         </p>
-        <h2 className="text-3xl text-[#443d3d;] md:text-4xl font-bold mb-4 font-poppins">
+        <h2 className="text-7xl  md:text-4xl font-bold mb-4 font-poppins">
           Exceptional Services For Your 
-          <span className="text-[#967bb6] ml-2">
+          <span className="text-purple-500 ml-2">
             Business Growth
           </span>
         </h2>
-        <p className="text-[#443d3d;] max-w-3xl mx-auto font-poppins">
-          Discover our wide range of digital solutions to enhance your online presence.
-          <span className="ml-4 inline-flex items-center">
-            <span className="h-2 w-2 rounded-full mr-2 bg-[#967bb6]"></span>
-            See All
-          </span>
-        </p>
+        
+        <div className="border border-purple-500 rounded-full py-4 px-6  flex items-center justify-between mb-12 mx-auto max-w-4xl">
+        <p className="text-[#443d3d]">Discover our wide range of digital solutions to enhance your online presence.</p>
+        <button className="flex items-center text-[#443d3d]">
+        <div className="ml-2 w-2 h-2 mr-2.5 rounded-full bg-purple-500"></div>
+          <span>See All</span>
+          
+        </button>
+      </div>
       </div>
 
       {/* Services Grid */}
@@ -91,7 +93,7 @@ const ServicesSection: React.FC = () => {
         {services.map((service) => (
           <div 
             key={service.id} 
-            className="flex flex-col items-center text-center p-6 rounded-lg transition-all duration-300 hover:bg-purple-50 hover: cursor-pointer group font-poppins"
+            className="flex flex-col items-center text-center p-3 rounded-lg transition-all duration-300 hover:bg-purple-50 hover: cursor-pointer group font-poppins"
           >
             <div className="w-20 h-20 mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:animate-pulse">{service.icon}</div>
             <h3 className="text-xl font-bold mb-3 font-poppins">{service.title}</h3>

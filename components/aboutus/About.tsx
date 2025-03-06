@@ -3,6 +3,7 @@
 import React from "react";
 import { FaFlag } from "react-icons/fa";
 
+
 export default function About() {
   return (
     <div className="min-h-screen bg-white">
