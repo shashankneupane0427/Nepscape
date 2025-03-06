@@ -1,7 +1,13 @@
+import Main from "@/components/contactus/Main";
 import React from "react";
 
 function contact() {
-  return <div>contact</div>;
+  return (
+    <div className="mt-16">
+      j
+      <Main />
+    </div>
+  );
 }
 
 export default contact;
