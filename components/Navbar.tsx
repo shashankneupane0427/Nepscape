@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import {FaPhoneAlt} from "react-icons/fa";
 import Link from "next/link";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
