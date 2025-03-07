@@ -10,7 +10,13 @@ import {
   FaHeadset,
 } from "react-icons/fa";
 
-const FeatureCard = ({ icon: Icon, title }) => {
+// Define the type for FeatureCard props
+interface FeatureCardProps {
+  icon: React.ElementType; // Ensures it's a valid React component
+  title: string;
+}
+
+const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title }) => {
   return (
     <motion.div
       className="bg-purple-50 border border-purple-100 rounded-xl p-6 text-center 
@@ -34,8 +40,8 @@ const FeatureCard = ({ icon: Icon, title }) => {
   );
 };
 
-const ITSolutionsGrid = () => {
-  const features = [
+const ITSolutionsGrid: React.FC = () => {
+  const features: FeatureCardProps[] = [
     { icon: FaGlobe, title: "Customized Solutions" },
     { icon: FaClipboardCheck, title: "Proven Track Record" },
     { icon: FaUserTie, title: "Diverse Expertise" },
