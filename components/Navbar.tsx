@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { FaPhoneAlt } from "react-icons/fa";
 
 const Navbar: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true); 
@@ -19,7 +18,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`bg-white  py-3 px-6 w-full fixed top-0 left-0 z-50 transition-transform duration-300 ${
+      className={`bg-white shadow-sm  py-3 px-6 w-full fixed top-0 left-0 z-50 transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -46,37 +45,11 @@ const Navbar: React.FC = () => {
           {/* About Dropdown */}
           <li className="relative group">
             <Link
-              href="#"
+              href="aboutus"
               className="hover:text-[#967bb6] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
             >
-              About <MdKeyboardArrowDown className="ml-1" />
+              About 
             </Link>
-            <ul className="absolute left-0 hidden w-64 p-4 bg-white rounded-md shadow-lg top-full group-hover:block">
-              <li className="mb-3">
-                <h4 className="font-semibold text-black">Introduction</h4>
-                <p className="text-sm text-gray-600">
-                  Nepscape is an innovative tech company delivering cutting-edge digital solutions.
-                </p>
-              </li>
-              <li className="mb-3">
-                <h4 className="font-semibold text-black">How We Work</h4>
-                <p className="text-sm text-gray-600">
-                  Our team collaborates to build impactful digital experiences.
-                </p>
-              </li>
-              <li className="mb-3">
-                <h4 className="font-semibold text-black">Our Team</h4>
-                <p className="text-sm text-gray-600">
-                  A group of passionate experts driving technology forward.
-                </p>
-              </li>
-              <li>
-                <h4 className="font-semibold text-black">Our Activities</h4>
-                <p className="text-sm text-gray-600">
-                  Engaging in continuous learning and innovation.
-                </p>
-              </li>
-            </ul>
           </li>
 
           {/* Service Dropdown */}
@@ -161,14 +134,7 @@ const Navbar: React.FC = () => {
               Our Work
             </Link>
           </li>
-          <li>
-            <Link
-              href="/career"
-              className="hover:text-[#967bb6] transition duration-300 ease-in-out transform hover:scale-105"
-            >
-              Career
-            </Link>
-          </li>
+
           <li>
             <Link
               href="/contact"
@@ -185,6 +151,7 @@ const Navbar: React.FC = () => {
             <FaPhoneAlt className="mr-2" />
             <span>9812316018</span>
           </div>
+
           <button className="border-2 border-[#967bb6] text-[#967bb6] px-4 py-2 rounded-full hover:bg-[#967bb6] hover:text-white transition hover:cursor-pointer">
             Quick Enquiry
           </button>

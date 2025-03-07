@@ -69,9 +69,9 @@ function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-5">
-            <button className="group bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium h-12 px-8 rounded-full shadow-lg hover:shadow-purple-300/50 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0">
+            <button className="group cursor-pointer bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium h-12 px-8 rounded-full shadow-lg hover:shadow-purple-300/50 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0">
               <span className="flex items-center justify-center">
-                Let`&apos;`s get Started
+                Let&apos;s get Started
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform"

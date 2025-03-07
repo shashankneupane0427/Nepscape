@@ -62,15 +62,15 @@ const Footer: React.FC = () => {
 
             {/* Phone number with WhatsApp link */}
             <a
-              href="https://wa.me/9812316018"
+              href="https://wa.me/9862973810"
               className="text-4xl font-bold text-[#a46ede] my-2 cursor-pointer"
               target="_blank"
             >
-              9812316018
+              9862973810
             </a>
 
             <a
-              href="/contact"
+              href="/contactus"
               className="bg-[#a46ede] text-white px-6 py-3 rounded-full hover:bg-white hover:text-[#8b5cf6] border border-[#a46ede] transition duration-300 font-semibold"
             >
               Let's Start Conversation
@@ -120,8 +120,8 @@ const Footer: React.FC = () => {
         <div className="text-black">
           <h4 className="mb-6 text-xl font-semibold text-center sm:text-left">Connect with Us</h4>
           <ul className="space-y-6">
-            <li className="flex items-center text-lg text-[#5d605d] "><FaPhoneAlt className="mr-4   text-[#967bb6] text-2xl" />  <a href="tel:+9801848492" className="text-[#5d605d] hover:text-[#967bb6] hover:underline">9801848492</a>, 01-4796657</li>
-            <li className="flex items-center text-lg"><FaEnvelope className="mr-4   text-[#967bb6] text-2xl" />  <a href="mailto:sales@Nepscape.com" className="text-[#5d605d] hover:text-[#967bb6] hover:underline">sales@Nepscape.com</a></li>
+            <li className="flex items-center text-lg text-[#5d605d] "><FaPhoneAlt className="mr-4   text-[#967bb6] text-2xl" />  <a href="tel:+9801848492" className="text-[#5d605d] hover:text-[#967bb6] hover:underline">9862973810</a></li>
+            {/* <li className="flex items-center text-lg"><FaEnvelope className="mr-4   text-[#967bb6] text-2xl" />  <a href="mailto:sales@Nepscape.com" className="text-[#5d605d] hover:text-[#967bb6] hover:underline">sales@Nepscape.com</a></li> */}
             <li className="flex items-center text-lg text-[#5d605d] "><FaMapMarkerAlt className="mr-4   text-[#967bb6] text-2xl" /> Putalisadak, Kathmandu</li>
           </ul>
         </div>
@@ -144,12 +144,14 @@ const Footer: React.FC = () => {
     <div className="bg-[#967bb6] py-4 mt-6 text-center text-white flex justify-between items-center px-6">
     <span className="text-lg text-white">© 2025 Softbenz Infosys. All Rights Reserved.</span>
     <div className="flex space-x-4">
+
       <a href="https://wa.me/9812316018" target="_blank" className="text-2xl text-white"><FaWhatsapp /></a>
       <a href="#" target="_blank" className="text-2xl text-white"><FaFacebook /></a>
       <a href="#" target="_blank" className="text-2xl text-white"><FaInstagram /></a>
       <a href="#" target="_blank" className="text-2xl text-white"><FaLinkedin /></a>
       <a href="#" target="_blank" className="text-2xl text-white"><FaTwitter /></a>
       <a href="#" target="_blank" className="text-2xl text-white"><FaYoutube /></a>
+
     </div>
         </div>
     </div>

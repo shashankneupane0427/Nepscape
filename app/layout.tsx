@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description: "Nepscape specializes in web development and IT services, delivering high-performance, scalable digital products for businesses worldwide.",
     url: "https://yourwebsite.com", 
     type: "website",
-    imgs: [
+    images: [
       {
         url: "/logo.png",
         width: 1200,
