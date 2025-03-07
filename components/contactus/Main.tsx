@@ -34,7 +34,7 @@ const Main = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
     // Add your form submission logic here
