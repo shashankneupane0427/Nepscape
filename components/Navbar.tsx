@@ -102,29 +102,37 @@ const Navbar: React.FC = () => {
           </li>
 
           {/* Pricing with Hover Effect */}
-          <li className="relative group">
+<li className="relative group">
   <Link
     href="#"
     className="hover:text-[#967bb6] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
   >
     Pricing <MdKeyboardArrowDown className="ml-1" />
   </Link>
-  <ul className="absolute left-0 hidden p-4 bg-white rounded-md shadow-lg top-full group-hover:block w-72">
+  <ul className="absolute left-0 hidden p-4 bg-white rounded-md shadow-lg top-full group-hover:block w-72"
+      onMouseEnter={(e) => e.currentTarget.style.display = "block"}
+      onMouseLeave={(e) => e.currentTarget.style.display = "none"}
+  >
     <li className="mb-3">
-      <h4 className="font-semibold text-black">SEO Package</h4>
-      <p className="text-sm text-gray-600">
-        Typically offers a range of services including keyword research.
-      </p>
+      <Link href="/Pricing" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+        <h4 className="font-semibold text-black">SEO Package</h4>
+        <p className="text-sm text-gray-600">
+          Typically offers a range of services including keyword research.
+        </p>
+      </Link>
     </li>
     <li className="mb-3">
-      <h4 className="font-semibold text-black">Social Media Package</h4>
-      <p className="text-sm text-gray-600">
-        Typically offers a range of services tailored to clients `&apos;` needs, including social media marketing.
-      </p>
+      <Link href="/pricing/social-media" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+        <h4 className="font-semibold text-black">Social Media Package</h4>
+        <p className="text-sm text-gray-600">
+          Typically offers a range of services tailored to clients' needs, including social media marketing.
+        </p>
+      </Link>
     </li>
     {/* Add more pricing services as needed */}
   </ul>
 </li>
+
 
 
           <li>
