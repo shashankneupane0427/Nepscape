@@ -257,8 +257,14 @@ const Main = () => {
   );
 };
 
-// Contact Info Card Component
-const ContactInfoCard = ({ icon, title, content, delay }) => {
+interface ContactInfoProps {
+  icon: React.ReactNode;
+  title: string;
+  content: string;
+  delay: number;
+}
+
+const ContactInfoCard: React.FC<ContactInfoProps> = ({ icon, title, content, delay }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -276,8 +282,14 @@ const ContactInfoCard = ({ icon, title, content, delay }) => {
   );
 };
 
-// Support Card Component
-const SupportCard = ({ title, phone, icon, delay }) => {
+interface SupportCardProps {
+  title: string;
+  phone: string;
+  icon: React.ReactNode;
+  delay: number;
+}
+
+const SupportCard: React.FC<SupportCardProps> = ({ title, phone, icon, delay }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -297,8 +309,11 @@ const SupportCard = ({ title, phone, icon, delay }) => {
   );
 };
 
-// Social Icon Component
-const SocialIcon = ({ icon }) => {
+interface SocialIconProps {
+  icon: React.ReactNode;
+}
+
+const SocialIcon: React.FC<SocialIconProps> = ({ icon }) => {
   return (
     <motion.div
       whileHover={{ scale: 1.2 }}
