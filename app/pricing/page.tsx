@@ -1,10 +1,10 @@
-import Navbar from "@/components/Navbar";
+
 import Footer from "@/components/Footer";
 
 function Pricing() {
   return (
     <div className="min-h-screen text-black bg-white">
-      <Navbar />
+
 
       <div className="max-w-6xl px-6 py-16 mx-auto text-center">
         <h1 className="text-4xl font-extrabold text-[#a46ede] mb-6">
