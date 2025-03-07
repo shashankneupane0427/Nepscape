@@ -102,11 +102,11 @@ const Main = () => {
                 {/* Phone Input */}
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <FaPhone className="text-purple-500" />
+                    <FaPhone className="text-purple-500 " />
                   </div>
                   <div className="flex">
-                    <select className="bg-purple-100 text-purple-800 border border-purple-300 rounded-l-lg px-3 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300">
-                      <option>+977</option>
+                    <select className="bg-purple-100 pl-7 text-purple-800 border border-purple-300 rounded-l-lg px-3 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300">
+                      <option >+977</option>
                       <option>+1</option>
                       <option>+44</option>
                     </select>
@@ -116,7 +116,7 @@ const Main = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="Phone Number"
-                      className="w-full py-3 pl-3 pr-4 border border-purple-300 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300"
+                      className="w-full py-3  pl-3.5 pr-4 border border-purple-300 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300"
                     />
                   </div>
                 </div>

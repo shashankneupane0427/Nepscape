@@ -4,7 +4,6 @@ import React from "react";
 function contact() {
   return (
     <div className="mt-16">
-      j
       <Main />
     </div>
   );
