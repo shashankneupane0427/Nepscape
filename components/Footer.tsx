@@ -83,10 +83,10 @@ const Footer: React.FC = () => {
         <div className="pl-8">
           <h4 className="mb-4 text-xl font-semibold">Development Services</h4>
           <ul>
-            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">Website Development</Link></li>
-            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">App Development</Link></li>
-            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">System/Software Development</Link></li>
-            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">UI/UX</Link></li>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#7d2fd0]">Website Development</Link></li>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#7d2fd0]">App Development</Link></li>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#7d2fd0]">System/Software Development</Link></li>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#7d2fd0]">UI/UX</Link></li>
           </ul>
         </div>
 
@@ -94,12 +94,12 @@ const Footer: React.FC = () => {
         <div>
           <h4 className="mb-4 text-xl font-semibold">Marketing Services</h4>
           <ul>
-            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">Search Engine Optimization (SEO)</Link></li>
-            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">Social Media Marketing (SMM)</Link></li>
-            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">Graphic Design</Link></li>
-            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">Content Writing</Link></li>
-            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">Pay Per Click</Link></li>
-            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#967bb6]">Digital Marketing</Link></li>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#7d2fd0]">Search Engine Optimization (SEO)</Link></li>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#7d2fd0]">Social Media Marketing (SMM)</Link></li>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#7d2fd0]">Graphic Design</Link></li>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#7d2fd0]">Content Writing</Link></li>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#7d2fd0]">Pay Per Click</Link></li>
+            <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#7d2fd0]">Digital Marketing</Link></li>
           </ul>
         </div>
 
@@ -107,12 +107,12 @@ const Footer: React.FC = () => {
         <div className="pl-5">
           <h4 className="mb-4 text-xl font-semibold">Quick Links</h4>
           <ul>
-            <li className="mb-2"><Link href="/about" className="text-[#5d605d] hover:text-[#967bb6]">About Us</Link></li>
-            <li className="mb-2"><Link href="/services" className="text-[#5d605d] hover:text-[#967bb6]">Our Services</Link></li>
-            <li className="mb-2"><Link href="/contact" className="text-[#5d605d] hover:text-[#967bb6]">Contact Us</Link></li>
-            <li className="mb-2"><Link href="/blog" className="text-[#5d605d] hover:text-[#967bb6]">Blog</Link></li>
-            <li className="mb-2"><Link href="/career" className="text-[#5d605d] hover:text-[#967bb6]">Career</Link></li>
-            <li className="mb-2"><Link href="/our-work" className="text-[#5d605d] hover:text-[#967bb6]">Our Work</Link></li>
+            <li className="mb-2"><Link href="/about" className="text-[#5d605d] hover:text-[#7d2fd0]">About Us</Link></li>
+            <li className="mb-2"><Link href="/services" className="text-[#5d605d] hover:text-[#7d2fd0]">Our Services</Link></li>
+            <li className="mb-2"><Link href="/contact" className="text-[#5d605d] hover:text-[#7d2fd0]">Contact Us</Link></li>
+            <li className="mb-2"><Link href="/blog" className="text-[#5d605d] hover:text-[#7d2fd0]">Blog</Link></li>
+            <li className="mb-2"><Link href="/career" className="text-[#5d605d] hover:text-[#7d2fd0]">Career</Link></li>
+            <li className="mb-2"><Link href="/our-work" className="text-[#5d605d] hover:text-[#7d2fd0]">Our Work</Link></li>
           </ul>
         </div>
 
@@ -120,28 +120,28 @@ const Footer: React.FC = () => {
         <div className="text-black">
           <h4 className="mb-6 text-xl font-semibold text-center sm:text-left">Connect with Us</h4>
           <ul className="space-y-6">
-            <li className="flex items-center text-lg text-[#5d605d] "><FaPhoneAlt className="mr-4   text-[#967bb6] text-2xl" />  <a href="tel:+9801848492" className="text-[#5d605d] hover:text-[#967bb6] hover:underline">9862973810</a></li>
-            {/* <li className="flex items-center text-lg"><FaEnvelope className="mr-4   text-[#967bb6] text-2xl" />  <a href="mailto:sales@Nepscape.com" className="text-[#5d605d] hover:text-[#967bb6] hover:underline">sales@Nepscape.com</a></li> */}
-            <li className="flex items-center text-lg text-[#5d605d] "><FaMapMarkerAlt className="mr-4   text-[#967bb6] text-2xl" /> Putalisadak, Kathmandu</li>
+            <li className="flex items-center text-lg text-[#5d605d] "><FaPhoneAlt className="mr-4   text-[#7d2fd0] text-2xl" />  <a href="tel:+9801848492" className="text-[#5d605d] hover:text-[#7d2fd0] hover:underline">9862973810</a></li>
+            {/* <li className="flex items-center text-lg"><FaEnvelope className="mr-4   text-[#7d2fd0] text-2xl" />  <a href="mailto:sales@Nepscape.com" className="text-[#5d605d] hover:text-[#7d2fd0] hover:underline">sales@Nepscape.com</a></li> */}
+            <li className="flex items-center text-lg text-[#5d605d] "><FaMapMarkerAlt className="mr-4   text-[#7d2fd0] text-2xl" /> Putalisadak, Kathmandu</li>
           </ul>
         </div>
       </div>
 
       {/* Bottom Section */}
-      <div className="border-t border-[#967bb6] mt-12 pt-6 text-center text-sm text-black">
+      <div className="border-t border-[#7d2fd0] mt-12 pt-6 text-center text-sm text-black">
         <div className="flex justify-center space-x-6">
-          <Link href="/FAQ" className="hover:text-[#967bb6]">FAQ</Link>
+          <Link href="/FAQ" className="hover:text-[#7d2fd0]">FAQ</Link>
           <span className="mx-2">|</span>
-          <Link href="/terms" className="hover:text-[#967bb6]">Terms & Conditions</Link>
+          <Link href="/terms" className="hover:text-[#7d2fd0]">Terms & Conditions</Link>
           <span className="mx-2">|</span>
-          <Link href="/privacy" className="hover:text-[#967bb6]">Privacy Policy</Link>
+          <Link href="/privacy" className="hover:text-[#7d2fd0]">Privacy Policy</Link>
       
         </div>
       </div>
     </footer> 
         
     {/* Social Media Section */}
-    <div className="bg-[#967bb6] py-4 mt-6 text-center text-white flex justify-between items-center px-6">
+    <div className="bg-[#7d2fd0] py-4 mt-6 text-center text-white flex justify-between items-center px-6">
     <span className="text-lg text-white">© 2025 Softbenz Infosys. All Rights Reserved.</span>
     <div className="flex space-x-4">
 
