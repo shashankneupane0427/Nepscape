@@ -176,7 +176,7 @@ const SocialMediaPackagePage = () => {
               <div className="space-y-4">
                 <div>
                   <label className="block mb-1 text-sm font-medium text-gray-700">Business Name *</label>
-                  <input 
+                  <input  
                     type="text" 
                     placeholder="Your business name" 
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
