@@ -2,11 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import Link from "next/link";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowDown, MdClose } from "react-icons/md";
 
 const Navbar: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(true); 
+  const [isVisible, setIsVisible] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,161 +20,366 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
+
   return (
-    <nav
-      className={`bg-white shadow-sm py-3 px-6 w-full fixed top-0 left-0 z-50 transition-transform duration-300 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
-      <div className="container flex items-center justify-between mx-auto">
-        {/* Logo Section */}
-        <div className="flex items-center space-x-2">
-          <img src="/logo.png" alt="Nepscape Logo" className="h-10" />
-          <p className="text-[#8044c9]">Nepscape</p>
-        </div>
-
-        {/* Navigation Links */}
-        <ul className="flex space-x-6 font-medium text-black">
-          <li>
-            <Link
-              href="/"
-              className="hover:text-[#967bb6] font-medium transition duration-300 ease-in-out transform hover:scale-105"
-            >
-              Home
-            </Link>
-          </li>
-
-          {/* About Dropdown */}
-          <li className="relative group">
-            <Link
-              href="/aboutus"
-              className="hover:text-[#967bb6] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
-            >
-              About 
-            </Link>
-          </li>
-
-          {/* Service Dropdown */}
-          <li className="relative group">
-            <Link
-              href="#"
-              className="hover:text-[#967bb6] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
-            >
-              Service <MdKeyboardArrowDown className="ml-1" />
-            </Link>
-            <ul className="absolute left-0 hidden p-4 bg-white rounded-md shadow-lg top-full group-hover:block w-72">
-              <li className="mb-3">
-                <Link href="/services/development" className="block px-3 py-2 rounded-md hover:bg-gray-100">
-                  <h4 className="font-semibold text-black">Development</h4>
-                  <p className="text-sm text-gray-600">
-                    Creating digital experiences through coding, design, and user interaction principles.
-                  </p>
-                </Link>
-              </li>
-              <li className="mb-3">
-                <Link href="/services/marketing" className="block px-3 py-2 rounded-md hover:bg-gray-100">
-                  <h4 className="font-semibold text-black">Marketing</h4>
-                  <p className="text-sm text-gray-600">
-                    Promotion of products or services via online channels and strategies.
-                  </p>
-                </Link>
-              </li>
-              <li className="mb-3">
-                <Link href="/services/website-development" className="block px-3 py-2 rounded-md hover:bg-gray-100">
-                  <h4 className="font-semibold text-black">Website Development</h4>
-                  <p className="text-sm text-gray-600">
-                    Specialized Custom Website Development Services.
-                  </p>
-                </Link>
-              </li>
-              <li className="mb-3">
-                <Link href="/services/app-development" className="block px-3 py-2 rounded-md hover:bg-gray-100">
-                  <h4 className="font-semibold text-black">App Development</h4>
-                  <p className="text-sm text-gray-600">
-                    Building Custom Apps for Seamless User Experience.
-                  </p>
-                </Link>
-              </li>
-              <li className="mb-3">
-                <Link href="/services/system-development" className="block px-3 py-2 rounded-md hover:bg-gray-100">
-                  <h4 className="font-semibold text-black">System/Software Development</h4>
-                  <p className="text-sm text-gray-600">
-                    Cutting-edge System/Software Development Solutions.
-                  </p>
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/ui-ux" className="block px-3 py-2 rounded-md hover:bg-gray-100">
-                  <h4 className="font-semibold text-black">UI/UX</h4>
-                  <p className="text-sm text-gray-600">
-                    Design UI/UX interfaces for effortless user interaction.
-                  </p>
-                </Link>
-              </li>
-            </ul>
-          </li>
-
-          {/* Pricing with Hover Effect */}
-          <li className="relative group">
-            <Link
-              href="#"
-              className="hover:text-[#967bb6] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
-            >
-              Pricing <MdKeyboardArrowDown className="ml-1" />
-            </Link>
-            <ul className="absolute left-0 hidden p-4 bg-white rounded-md shadow-lg top-full group-hover:block w-72">
-            <li className="mb-3">
-  <Link href="/Pricing/seo-package" className="block px-3 py-2 rounded-md hover:bg-gray-100">
-    <h4 className="font-semibold text-black">SEO Package</h4>
-    <p className="text-sm text-gray-600">
-      Typically offers a range of services including keyword research.
-    </p>
-  </Link>
-</li>
-<li className="mb-3">
-  <Link href="/Pricing/social-media" className="block px-3 py-2 rounded-md hover:bg-gray-100">
-    <h4 className="font-semibold text-black">Social Media Package</h4>
-    <p className="text-sm text-gray-600">
-      Typically offers a range of services tailored to clients' needs, including social media marketing.
-    </p>
-  </Link>
-</li>
-              {/* Add more pricing services as needed */}
-            </ul>
-          </li>
-
-          <li>
-            <Link
-              href="/work"
-              className="hover:text-[#967bb6] transition duration-300 ease-in-out transform hover:scale-105"
-            >
-              Our Work
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              href="/contact"
-              className="hover:text-[#967bb6] transition duration-300 ease-in-out transform hover:scale-105"
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-
-        {/* Contact Section */}
-        <div className="flex items-center space-x-4">
-          <div className="flex items-center text-[#967bb6] font-semibold text-lg">
-            <FaPhoneAlt className="mr-2" />
-            <span>9862973810</span>
+    <>
+      {/* Main Navbar */}
+      <nav
+        className={`bg-white shadow-sm py-3 px-6 w-full fixed top-0 left-0 z-40 transition-transform duration-300 ${
+          isVisible ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <div className="container flex items-center justify-between mx-auto">
+          {/* Logo Section */}
+          <div className="flex items-center space-x-2">
+            <img src="/logo.png" alt="Nepscape Logo" className="h-10" />
+            <p className="text-[#8044c9]">Nepscape</p>
           </div>
 
-          <button className="border-2 border-[#967bb6] text-[#967bb6] px-4 py-2 rounded-full hover:bg-[#967bb6] hover:text-white transition hover:cursor-pointer">
-            Quick Enquiry
+          {/* Hamburger Menu Button - Visible on all devices */}
+          <button
+            className="md:hidden text-black p-2"
+            onClick={toggleSidebar}
+            aria-label="Open menu"
+          >
+            <FaBars className="w-6 h-6" />
+          </button>
+
+          {/* Desktop Navigation - Hidden on mobile */}
+          <ul className="hidden md:flex space-x-6 font-medium text-black">
+            <li>
+              <Link
+                href="/"
+                className="hover:text-[#967bb6] font-medium transition duration-300 ease-in-out transform hover:scale-105"
+              >
+                Home
+              </Link>
+            </li>
+
+            {/* About Dropdown */}
+            <li className="relative group">
+              <Link
+                href="/aboutus"
+                className="hover:text-[#967bb6] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
+              >
+                About 
+              </Link>
+            </li>
+
+            {/* Service Dropdown */}
+            <li className="relative group">
+              <Link
+                href="#"
+                className="hover:text-[#967bb6] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
+              >
+                Service <MdKeyboardArrowDown className="ml-1" />
+              </Link>
+              <ul className="absolute left-0 hidden p-4 bg-white rounded-md shadow-lg top-full group-hover:block w-72">
+                <li className="mb-3">
+                  <Link href="/services/development" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                    <h4 className="font-semibold text-black">Development</h4>
+                    <p className="text-sm text-gray-600">
+                      Creating digital experiences through coding, design, and user interaction principles.
+                    </p>
+                  </Link>
+                </li>
+                <li className="mb-3">
+                  <Link href="/services/marketing" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                    <h4 className="font-semibold text-black">Marketing</h4>
+                    <p className="text-sm text-gray-600">
+                      Promotion of products or services via online channels and strategies.
+                    </p>
+                  </Link>
+                </li>
+                <li className="mb-3">
+                  <Link href="/services/website-development" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                    <h4 className="font-semibold text-black">Website Development</h4>
+                    <p className="text-sm text-gray-600">
+                      Specialized Custom Website Development Services.
+                    </p>
+                  </Link>
+                </li>
+                <li className="mb-3">
+                  <Link href="/services/app-development" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                    <h4 className="font-semibold text-black">App Development</h4>
+                    <p className="text-sm text-gray-600">
+                      Building Custom Apps for Seamless User Experience.
+                    </p>
+                  </Link>
+                </li>
+                <li className="mb-3">
+                  <Link href="/services/system-development" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                    <h4 className="font-semibold text-black">System/Software Development</h4>
+                    <p className="text-sm text-gray-600">
+                      Cutting-edge System/Software Development Solutions.
+                    </p>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/ui-ux" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                    <h4 className="font-semibold text-black">UI/UX</h4>
+                    <p className="text-sm text-gray-600">
+                      Design UI/UX interfaces for effortless user interaction.
+                    </p>
+                  </Link>
+                </li>
+              </ul>
+            </li>
+
+            {/* Pricing with Hover Effect */}
+            <li className="relative group">
+              <Link
+                href="#"
+                className="hover:text-[#967bb6] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
+              >
+                Pricing <MdKeyboardArrowDown className="ml-1" />
+              </Link>
+              <ul className="absolute left-0 hidden p-4 bg-white rounded-md shadow-lg top-full group-hover:block w-72">
+                <li className="mb-3">
+                  <Link href="/Pricing/seo-package" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                    <h4 className="font-semibold text-black">SEO Package</h4>
+                    <p className="text-sm text-gray-600">
+                      Typically offers a range of services including keyword research.
+                    </p>
+                  </Link>
+                </li>
+                <li className="mb-3">
+                  <Link href="/Pricing/social-media" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                    <h4 className="font-semibold text-black">Social Media Package</h4>
+                    <p className="text-sm text-gray-600">
+                      Typically offers a range of services tailored to clients' needs, including social media marketing.
+                    </p>
+                  </Link>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <Link
+                href="/work"
+                className="hover:text-[#967bb6] transition duration-300 ease-in-out transform hover:scale-105"
+              >
+                Our Work
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/contact"
+                className="hover:text-[#967bb6] transition duration-300 ease-in-out transform hover:scale-105"
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+
+          {/* Contact Section - Only visible on desktop when width is greater than 1045px */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <div className="flex items-center text-[#967bb6] font-semibold text-lg">
+              <FaPhoneAlt className="mr-2" />
+              <span>9862973810</span>
+            </div>
+
+            <button className="border-2 border-[#967bb6] text-[#967bb6] px-4 py-2 rounded-full hover:bg-[#967bb6] hover:text-white transition hover:cursor-pointer">
+              Quick Enquiry
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Left Sidebar */}
+      <div 
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out ${
+          sidebarOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="flex justify-between items-center p-4 border-b">
+          <div className="flex items-center">
+            <img src="/logo.png" alt="Nepscape Logo" className="h-8" />
+            <p className="text-[#8044c9] ml-2">Nepscape</p>
+          </div>
+          <button 
+            onClick={toggleSidebar}
+            className="text-gray-500 hover:text-gray-700"
+          >
+            <MdClose className="w-6 h-6" />
           </button>
         </div>
+
+        <div className="p-4">
+          <ul className="space-y-4">
+            <li>
+              <Link
+                href="/"
+                className="block py-2 hover:text-[#967bb6]"
+                onClick={() => setSidebarOpen(false)}
+              >
+                Home
+              </Link>
+            </li>
+            
+            <li>
+              <Link
+                href="/aboutus"
+                className="block py-2 hover:text-[#967bb6]"
+                onClick={() => setSidebarOpen(false)}
+              >
+                About
+              </Link>
+            </li>
+
+            {/* Service Dropdown */}
+            <li>
+              <button
+                className="flex items-center justify-between w-full py-2 hover:text-[#967bb6]"
+                onClick={() => toggleDropdown("services")}
+              >
+                Service
+                <MdKeyboardArrowDown
+                  className={`ml-1 transform transition-transform ${
+                    activeDropdown === "services" ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              <div
+                className={`pl-4 transition-all duration-200 ease-in-out overflow-hidden ${
+                  activeDropdown === "services" 
+                    ? "max-h-96 opacity-100 py-2" 
+                    : "max-h-0 opacity-0"
+                }`}
+              >
+                <Link
+                  href="/services/development"
+                  className="block py-2 hover:text-[#967bb6]"
+                  onClick={() => setSidebarOpen(false)}
+                >
+                  Development
+                </Link>
+                <Link
+                  href="/services/marketing"
+                  className="block py-2 hover:text-[#967bb6]"
+                  onClick={() => setSidebarOpen(false)}
+                >
+                  Marketing
+                </Link>
+                <Link
+                  href="/services/website-development"
+                  className="block py-2 hover:text-[#967bb6]"
+                  onClick={() => setSidebarOpen(false)}
+                >
+                  Website Development
+                </Link>
+                <Link
+                  href="/services/app-development"
+                  className="block py-2 hover:text-[#967bb6]"
+                  onClick={() => setSidebarOpen(false)}
+                >
+                  App Development
+                </Link>
+                <Link
+                  href="/services/system-development"
+                  className="block py-2 hover:text-[#967bb6]"
+                  onClick={() => setSidebarOpen(false)}
+                >
+                  System/Software Development
+                </Link>
+                <Link
+                  href="/services/ui-ux"
+                  className="block py-2 hover:text-[#967bb6]"
+                  onClick={() => setSidebarOpen(false)}
+                >
+                  UI/UX
+                </Link>
+              </div>
+            </li>
+
+            {/* Pricing Dropdown */}
+            <li>
+              <button
+                className="flex items-center justify-between w-full py-2 hover:text-[#967bb6]"
+                onClick={() => toggleDropdown("pricing")}
+              >
+                Pricing
+                <MdKeyboardArrowDown
+                  className={`ml-1 transform transition-transform ${
+                    activeDropdown === "pricing" ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              <div
+                className={`pl-4 transition-all duration-200 ease-in-out overflow-hidden ${
+                  activeDropdown === "pricing" 
+                    ? "max-h-32 opacity-100 py-2" 
+                    : "max-h-0 opacity-0"
+                }`}
+              >
+                <Link
+                  href="/Pricing/seo-package"
+                  className="block py-2 hover:text-[#967bb6]"
+                  onClick={() => setSidebarOpen(false)}
+                >
+                  SEO Package
+                </Link>
+                <Link
+                  href="/Pricing/social-media"
+                  className="block py-2 hover:text-[#967bb6]"
+                  onClick={() => setSidebarOpen(false)}
+                >
+                  Social Media Package
+                </Link>
+              </div>
+            </li>
+
+            <li>
+              <Link
+                href="/work"
+                className="block py-2 hover:text-[#967bb6]"
+                onClick={() => setSidebarOpen(false)}
+              >
+                Our Work
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/contact"
+                className="block py-2 hover:text-[#967bb6]"
+                onClick={() => setSidebarOpen(false)}
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+
+          {/* Mobile Contact Section */}
+          <div className="mt-6 pt-6 border-t border-gray-200">
+            <div className="flex items-center text-[#967bb6] font-semibold mb-4">
+              <FaPhoneAlt className="mr-2" />
+              <span>9862973810</span>
+            </div>
+
+            <button className="w-full border-2 border-[#967bb6] text-[#967bb6] px-4 py-2 rounded-full hover:bg-[#967bb6] hover:text-white transition hover:cursor-pointer">
+              Quick Enquiry
+            </button>
+          </div>
+        </div>
       </div>
-    </nav>
+
+      {/* Overlay when sidebar is open - removed the black background */}
+      {sidebarOpen && (
+        <div 
+          className="fixed inset-0 z-40"
+          onClick={() => setSidebarOpen(false)}
+        ></div>
+      )}
+    </>
   );
 };
 

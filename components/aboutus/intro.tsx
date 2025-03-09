@@ -32,14 +32,14 @@ export default function Introduction() {
     <div className="bg-purple-50 min-h-screen">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid pl-6 md:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            <h1 className="text-4xl p- md:text-5xl font-bold text-gray-800 mb-6">
               Make It Possible With{" "}
               <span className="text-purple-600">Nepscape</span>
             </h1>
