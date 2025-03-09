@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import Link from "next/link";
 import Footer from "@/components/Footer";
 
 function Pricing() {
@@ -26,7 +25,7 @@ function Pricing() {
         </div>
 
         {/* Pricing Cards Container */}
-        <div className="grid grid-cols-1 gap-8 mb-16 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 mb-16 md:grid-cols-2 lg:grid-cols-3">
           {/* Standard Package */}
           <div className="relative p-6 overflow-hidden transition-all bg-white border-2 border-purple-200 shadow-lg rounded-xl hover:shadow-xl hover:border-purple-300 hover:transform hover:-translate-y-1">
             <div className="flex flex-col h-full">
@@ -371,74 +370,6 @@ function Pricing() {
             </div>
           </div>
 
-          {/* Custom Package */}
-          <div className="relative p-6 overflow-hidden transition-all bg-white border-2 border-purple-200 shadow-lg rounded-xl hover:shadow-xl hover:border-purple-300 hover:transform hover:-translate-y-1">
-            <div className="flex flex-col h-full">
-              <div className="mb-6">
-                <h2 className="text-2xl font-bold text-purple-800">
-                  Custom
-                </h2>
-                <div className="flex items-baseline mt-4 mb-2">
-                  <span className="text-4xl font-extrabold text-purple-700">Custom</span>
-                </div>
-                <p className="text-sm text-gray-600">
-                  Tailored Solutions for Unique Needs
-                </p>
-              </div>
-
-              <div className="p-4 mb-6 rounded-lg bg-purple-50">
-                <div className="flex items-center mb-2">
-                  <svg className="w-5 h-5 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="font-medium">Custom Keyword Strategy</span>
-                </div>
-                <div className="flex items-center mb-2">
-                  <svg className="w-5 h-5 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="font-medium">Tailored Content Production</span>
-                </div>
-                <div className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="font-medium">Specialized SEO Solutions</span>
-                </div>
-              </div>
-
-              <div className="flex-grow mb-6">
-                <p className="text-gray-700">
-                  Have unique requirements or need a specialized SEO strategy? Our custom packages are designed to meet your specific business needs and goals.
-                </p>
-                <ul className="mt-4 space-y-2 text-sm">
-                  <li className="flex">
-                    <svg className="w-4 h-4 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span>Dedicated Account Manager</span>
-                  </li>
-                  <li className="flex">
-                    <svg className="w-4 h-4 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span>24/7 Priority Support</span>
-                  </li>
-                  <li className="flex">
-                    <svg className="w-4 h-4 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span>Custom Strategy Sessions</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="mt-auto text-center">
-                <button className="w-full py-3 mt-4 text-white transition-all bg-purple-600 rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300">
-                  Contact Us
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Why Choose Us Section */}
@@ -502,8 +433,8 @@ function Pricing() {
         <div className="p-12 text-center bg-purple-600 rounded-2xl">
           <h2 className="mb-4 text-3xl font-bold text-white">Ready to Grow Your Online Presence?</h2>
           <p className="mb-8 text-lg text-purple-100">Schedule a free consultation call with our SEO experts today</p>
-          <button className="px-8 py-4 text-lg font-bold text-purple-700 transition-all bg-white rounded-lg hover:bg-purple-100 focus:outline-none focus:ring-4 focus:ring-purple-300">
-            Book Your Free Consultation
+          <button className="px-8 cursor-pointer py-4 text-lg font-bold text-purple-700 transition-all bg-white rounded-lg hover:bg-purple-100 focus:outline-none focus:ring-4 focus:ring-purple-300">
+            Contact Us For Free Consultation
           </button>
         </div>
       </div>
