@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import {FaPhoneAlt} from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 import Link from "next/link";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
@@ -19,16 +19,14 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`bg-white shadow-sm  py-3 px-6 w-full fixed top-0 left-0 z-50 transition-transform duration-300 ${
+      className={`bg-white shadow-sm py-3 px-6 w-full fixed top-0 left-0 z-50 transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="container flex items-center justify-between mx-auto">
         {/* Logo Section */}
         <div className="flex items-center space-x-2">
-
           <img src="/logo.png" alt="Nepscape Logo" className="h-10" />
-
           <p className="text-[#8044c9]">Nepscape</p>
         </div>
 
@@ -46,7 +44,7 @@ const Navbar: React.FC = () => {
           {/* About Dropdown */}
           <li className="relative group">
             <Link
-              href="aboutus"
+              href="/aboutus"
               className="hover:text-[#967bb6] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
             >
               About 
@@ -63,69 +61,84 @@ const Navbar: React.FC = () => {
             </Link>
             <ul className="absolute left-0 hidden p-4 bg-white rounded-md shadow-lg top-full group-hover:block w-72">
               <li className="mb-3">
-                <h4 className="font-semibold text-black">Development</h4>
-                <p className="text-sm text-gray-600">
-                  Creating digital experiences through coding, design, and user interaction principles.
-                </p>
+                <Link href="/services/development" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                  <h4 className="font-semibold text-black">Development</h4>
+                  <p className="text-sm text-gray-600">
+                    Creating digital experiences through coding, design, and user interaction principles.
+                  </p>
+                </Link>
               </li>
               <li className="mb-3">
-                <h4 className="font-semibold text-black">Marketing</h4>
-                <p className="text-sm text-gray-600">
-                  Promotion of products or services via online channels and strategies.
-                </p>
+                <Link href="/services/marketing" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                  <h4 className="font-semibold text-black">Marketing</h4>
+                  <p className="text-sm text-gray-600">
+                    Promotion of products or services via online channels and strategies.
+                  </p>
+                </Link>
               </li>
               <li className="mb-3">
-                <h4 className="font-semibold text-black">Website Development</h4>
-                <p className="text-sm text-gray-600">
-                  Specialized Custom Website Development Services.
-                </p>
+                <Link href="/services/website-development" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                  <h4 className="font-semibold text-black">Website Development</h4>
+                  <p className="text-sm text-gray-600">
+                    Specialized Custom Website Development Services.
+                  </p>
+                </Link>
               </li>
               <li className="mb-3">
-                <h4 className="font-semibold text-black">App Development</h4>
-                <p className="text-sm text-gray-600">
-                  Building Custom Apps for Seamless User Experience.
-                </p>
+                <Link href="/services/app-development" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                  <h4 className="font-semibold text-black">App Development</h4>
+                  <p className="text-sm text-gray-600">
+                    Building Custom Apps for Seamless User Experience.
+                  </p>
+                </Link>
               </li>
               <li className="mb-3">
-                <h4 className="font-semibold text-black">System/Software Development</h4>
-                <p className="text-sm text-gray-600">
-                  Cutting-edge System/Software Development Solutions.
-                </p>
+                <Link href="/services/system-development" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                  <h4 className="font-semibold text-black">System/Software Development</h4>
+                  <p className="text-sm text-gray-600">
+                    Cutting-edge System/Software Development Solutions.
+                  </p>
+                </Link>
               </li>
               <li>
-                <h4 className="font-semibold text-black">UI/UX</h4>
-                <p className="text-sm text-gray-600">
-                  Design UI/UX interfaces for effortless user interaction.
-                </p>
+                <Link href="/services/ui-ux" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                  <h4 className="font-semibold text-black">UI/UX</h4>
+                  <p className="text-sm text-gray-600">
+                    Design UI/UX interfaces for effortless user interaction.
+                  </p>
+                </Link>
               </li>
             </ul>
           </li>
 
           {/* Pricing with Hover Effect */}
           <li className="relative group">
-  <Link
-    href="#"
-    className="hover:text-[#967bb6] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
-  >
-    Pricing <MdKeyboardArrowDown className="ml-1" />
+            <Link
+              href="#"
+              className="hover:text-[#967bb6] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
+            >
+              Pricing <MdKeyboardArrowDown className="ml-1" />
+            </Link>
+            <ul className="absolute left-0 hidden p-4 bg-white rounded-md shadow-lg top-full group-hover:block w-72">
+            <li className="mb-3">
+  <Link href="/Pricing/seo-package" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+    <h4 className="font-semibold text-black">SEO Package</h4>
+    <p className="text-sm text-gray-600">
+      Typically offers a range of services including keyword research.
+    </p>
   </Link>
-  <ul className="absolute left-0 hidden p-4 bg-white rounded-md shadow-lg top-full group-hover:block w-72">
-    <li className="mb-3">
-      <h4 className="font-semibold text-black">SEO Package</h4>
-      <p className="text-sm text-gray-600">
-        Typically offers a range of services including keyword research.
-      </p>
-    </li>
-    <li className="mb-3">
-      <h4 className="font-semibold text-black">Social Media Package</h4>
-      <p className="text-sm text-gray-600">
-        Typically offers a range of services tailored to clients `&apos;` needs, including social media marketing.
-      </p>
-    </li>
-    {/* Add more pricing services as needed */}
-  </ul>
 </li>
-
+<li className="mb-3">
+  <Link href="/Pricing/social-media" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+    <h4 className="font-semibold text-black">Social Media Package</h4>
+    <p className="text-sm text-gray-600">
+      Typically offers a range of services tailored to clients' needs, including social media marketing.
+    </p>
+  </Link>
+</li>
+              {/* Add more pricing services as needed */}
+            </ul>
+          </li>
 
           <li>
             <Link
