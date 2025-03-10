@@ -72,7 +72,7 @@ const TechExpertiseSection = () => {
       {/* Right Content - External img with Floating Icons */}
       <div className="w-full md:w-1/2 relative px-4 md:pr-8"> 
         <div className="absolute inset-0 transform -translate-y-0.5">
-          <div className="w-3/4 h-3/4 mx-auto bg-purple-100 rounded-full"></div>
+          <div className="w-3/4 h-3/4 mx-auto  rounded-full"></div>
         </div>
          
         <div className="relative z-10 flex justify-center items-center h-full">
@@ -81,7 +81,7 @@ const TechExpertiseSection = () => {
             <img
               src="/illuss.png"
               alt="Developer working from home"
-              className="relative z-10 w-full max-w-md"
+              className="relative z-10 pl-3.5 w-full max-w-md"
             />
           </div>
         </div>

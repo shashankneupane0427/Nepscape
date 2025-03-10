@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
     <div>
       <footer className="relative py-12 pt-0 pb-0 mt-0 text-black">
         {/* Connect Section */}
-        <div className="block overflow-hidden text-start bg-gray-50 py-10 md:py-12 lg:py-16">
+        <div className="block overflow-hidden pl-14 pr-14 text-start bg-purple-50 py-10 md:py-12 lg:py-16">
           <div className="container px-4 mx-auto">
             <div className="flex flex-col items-center justify-center md:flex-row md:justify-between">
               {/* Left Section */}

@@ -186,7 +186,7 @@ const Main = () => {
           <ContactInfoCard
             icon={<FaPhone size={24} />}
             title="Our Phone Number"
-            content="+997 986-2973810"
+            content="+977 9862973810"
             delay={0.2}
           />
 
@@ -219,21 +219,21 @@ const Main = () => {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
           <SupportCard
             title="For Sales"
-            phone="9801848492"
+            phone="+977 9862973810"
             icon={<FaBriefcase size={20} />}
             delay={0.3}
           />
 
           <SupportCard
             title="For Career"
-            phone="9801848493"
+            phone="+977 9827394116"
             icon={<FaUser size={20} />}
             delay={0.5}
           />
 
           <SupportCard
             title="For Support"
-            phone="9801848493"
+            phone="+977 9862973810"
             icon={<FaHeadset size={20} />}
             delay={0.7}
           />
