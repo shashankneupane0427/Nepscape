@@ -113,19 +113,19 @@ function HeroSection() {
           </div>
         </div>
 
-        {/* Image */}
+        {/* Image - UPDATED TO BE LARGER */}
         <div
           className={`flex justify-center items-center mt-8 md:mt-0 transform ${
             isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          } transition-all duration-700 delay-300 ease-out relative z-10`}
+          } transition-all duration-700 delay-300 ease-out relative z-10 w-full md:w-1/2`}
         >
-          <div className="relative">
-            <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-purple-300 to-indigo-400 opacity-70 blur-2xl animate-pulse"></div>
-            <div className="absolute -inset-6 rounded-full border-2 border-purple-200 opacity-30 animate-spin-slow"></div>
+          <div className="relative w-full flex justify-center">
+            <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-purple-300 to-indigo-400 opacity-70 blur-2xl animate-pulse"></div>
+            <div className="absolute -inset-8 rounded-full border-2 border-purple-200 opacity-30 animate-spin-slow"></div>
             <img
               src="heroPicture.png"
               alt="IT Solutions"
-              className="h-[25vh] xs:h-[30vh] sm:h-[35vh] md:h-[40vh] lg:h-[45vh] w-auto object-contain relative z-10 drop-shadow-2xl transform transition-transform duration-500 hover:scale-105 filter"
+              className="h-[35vh] xs:h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[55vh] w-auto object-contain relative z-10 drop-shadow-2xl transform transition-transform duration-500 hover:scale-105 filter"
             />
           </div>
         </div>
@@ -186,11 +186,11 @@ function HeroSection() {
         
         /* Extra small screen support */
         @media (min-width: 400px) {
-          .xs\:flex-row {
+          .xs\\:flex-row {
             flex-direction: row;
           }
-          .xs\:h-\[30vh\] {
-            height: 30vh;
+          .xs\\:h-\\[40vh\\] {
+            height: 40vh;
           }
         }
       `}</style>
