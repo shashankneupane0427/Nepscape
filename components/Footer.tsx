@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
                 <div className="border-l-4 border-[#a46ede] pl-4">
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-black">
                     Let&apos;s <span className="text-black">connect</span>
-                    <span className="text-[#a46ede]"> and turn your vision into reality.</span>
+                    <span className="text-purple-700"> and turn your vision into reality.</span>
                   </h2>
                 </div>
                 <p className="mt-4 text-base sm:text-lg text-gray-600">
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
                 {/* Phone number with WhatsApp link */}
                 <a
                   href="https://wa.me/9862973810"
-                  className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#a46ede] my-2 cursor-pointer"
+                  className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-700 my-2 cursor-pointer"
                   target="_blank"
                 >
                   9862973810
@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
 
                 <a
                   href="/contactus"
-                  className="bg-[#a46ede] text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full hover:bg-white hover:text-[#8b5cf6] border border-[#a46ede] transition duration-300 font-semibold text-sm sm:text-base"
+                  className="bg-purple-700 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full hover:bg-white hover:text-purple-700 border border-[#a46ede] transition duration-300 font-semibold text-sm sm:text-base"
                 >
                   Let's Start Conversation
                 </a>

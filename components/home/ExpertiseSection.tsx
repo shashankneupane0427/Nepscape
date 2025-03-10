@@ -2,7 +2,7 @@ import React from 'react';
 
 const TechExpertiseSection = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between w-full bg-purple-50 p-4 md:p-8 lg:p-16">
+    <div className="flex flex-col md:flex-row items-center justify-between w-full bg-gray-50 p-4 md:p-8 lg:p-16">
       {/* Left Content */}
       <div className="w-full md:w-1/2 mb-8 md:mb-0">
         <div className="flex items-center gap-2 justify-center md:justify-start">
@@ -17,7 +17,7 @@ const TechExpertiseSection = () => {
         </h2>
         
         <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-8">   
-          <span className="text-purple-500 font-medium">Web Development</span>
+          <span className="text-[#443d3d] font-medium">Web Development</span>
           <div className="hidden md:block h-full w-px bg-gray-300"></div>
           <span className="text-[#443d3d] font-medium">App Development</span>
           <div className="hidden md:block h-full w-px bg-gray-300"></div>

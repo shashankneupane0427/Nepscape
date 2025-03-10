@@ -61,7 +61,7 @@ function HeroSection() {
           </h1>
 
           <p className="text-purple-900 mb-2 text-sm sm:text-base font-medium">
-            The most innovative IT company in Nepal
+            The most innovative IT company
           </p>
 
           <p className="text-gray-600 text-sm sm:text-base mb-4 sm:mb-8 transform transition-all duration-700 delay-200 ease-out max-w-md">

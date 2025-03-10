@@ -186,7 +186,7 @@ const Main = () => {
           <ContactInfoCard
             icon={<FaPhone size={24} />}
             title="Our Phone Number"
-            content="01-4796657"
+            content="+997 986-2973810"
             delay={0.2}
           />
 
@@ -210,7 +210,7 @@ const Main = () => {
           <ContactInfoCard
             icon={<FaMapMarkerAlt size={24} />}
             title="Our Office"
-            content="Shankhamul-31, Kathmandu"
+            content="Putalisadak, Kathmandu"
             delay={0.8}
           />
         </div>

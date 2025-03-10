@@ -44,7 +44,7 @@ export default function Introduction() {
               <span className="text-purple-600">Nepscape</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8">
-              Step into the future of IT solutions with Softbenz Infosys! We
+              Step into the future of IT solutions with Nepscape! We
               offer you a wide range of services, including Web Development,
               SEO, Mobile App Development, and Digital Marketing! Let us be your
               trusted guide to navigate the dynamic digital landscape!

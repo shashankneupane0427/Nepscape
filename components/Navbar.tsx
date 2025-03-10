@@ -38,14 +38,14 @@ const Navbar: React.FC = () => {
       >
         <div className="container flex items-center justify-between mx-auto">
           {/* Logo Section */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 hover:animate-pulse transition-all duration-500">
             <img src="/logo.png" alt="Nepscape Logo" className="h-10" />
             <p className="text-[#8044c9]">Nepscape</p>
           </div>
 
           {/* Hamburger Menu Button - Visible on all devices */}
           <button
-            className="md:hidden text-black p-2"
+            className="md:hidden text-black p-2 hover:rotate-90 transition-all duration-500"
             onClick={toggleSidebar}
             aria-label="Open menu"
           >
@@ -54,22 +54,22 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Navigation - Hidden on mobile */}
           <ul className="hidden md:flex space-x-6 font-medium text-black">
-            <li>
+            <li className="overflow-hidden">
               <Link
                 href="/"
-                className="hover:text-[#967bb6] font-medium transition duration-300 ease-in-out transform hover:scale-105"
+                className="nav-link hover:text-[#967bb6] font-medium inline-block transition-all duration-300"
               >
                 Home
               </Link>
             </li>
 
             {/* About Dropdown */}
-            <li className="relative group">
+            <li className="relative group overflow-hidden">
               <Link
                 href="/aboutus"
-                className="hover:text-[#967bb6] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
+                className="nav-link hover:text-[#967bb6] flex items-center inline-block transition-all duration-300"
               >
-                About 
+                About
               </Link>
             </li>
 
@@ -77,53 +77,53 @@ const Navbar: React.FC = () => {
             <li className="relative group">
               <Link
                 href="#"
-                className="hover:text-[#967bb6] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
+                className="nav-link hover:text-[#967bb6] flex items-center transition-all duration-300"
               >
-                Service <MdKeyboardArrowDown className="ml-1" />
+                Service <MdKeyboardArrowDown className="ml-1 transition-transform duration-500 group-hover:rotate-180 group-hover:scale-125" />
               </Link>
-              <ul className="absolute left-0 hidden p-4 bg-white rounded-md shadow-lg top-full group-hover:block w-72">
-                <li className="mb-3">
-                  <Link href="/services/development" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+              <ul className="absolute left-0 hidden p-4 bg-white rounded-md shadow-lg top-full group-hover:block w-72 animate-fadeIn">
+                <li className="mb-3 transition-all duration-300">
+                  <Link href="/services/development" className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all duration-300 hover:translate-x-2 hover:shadow-md">
                     <h4 className="font-semibold text-black">Development</h4>
                     <p className="text-sm text-gray-600">
                       Creating digital experiences through coding, design, and user interaction principles.
                     </p>
                   </Link>
                 </li>
-                <li className="mb-3">
-                  <Link href="/services/marketing" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                <li className="mb-3 transition-all duration-300">
+                  <Link href="/services/marketing" className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all duration-300 hover:translate-x-2 hover:shadow-md">
                     <h4 className="font-semibold text-black">Marketing</h4>
                     <p className="text-sm text-gray-600">
                       Promotion of products or services via online channels and strategies.
                     </p>
                   </Link>
                 </li>
-                <li className="mb-3">
-                  <Link href="/services/website-development" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                <li className="mb-3 transition-all duration-300">
+                  <Link href="/services/website-development" className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all duration-300 hover:translate-x-2 hover:shadow-md">
                     <h4 className="font-semibold text-black">Website Development</h4>
                     <p className="text-sm text-gray-600">
                       Specialized Custom Website Development Services.
                     </p>
                   </Link>
                 </li>
-                <li className="mb-3">
-                  <Link href="/services/app-development" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                <li className="mb-3 transition-all duration-300">
+                  <Link href="/services/app-development" className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all duration-300 hover:translate-x-2 hover:shadow-md">
                     <h4 className="font-semibold text-black">App Development</h4>
                     <p className="text-sm text-gray-600">
                       Building Custom Apps for Seamless User Experience.
                     </p>
                   </Link>
                 </li>
-                <li className="mb-3">
-                  <Link href="/services/system-development" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                <li className="mb-3 transition-all duration-300">
+                  <Link href="/services/system-development" className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all duration-300 hover:translate-x-2 hover:shadow-md">
                     <h4 className="font-semibold text-black">System/Software Development</h4>
                     <p className="text-sm text-gray-600">
                       Cutting-edge System/Software Development Solutions.
                     </p>
                   </Link>
                 </li>
-                <li>
-                  <Link href="/services/ui-ux" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                <li className="transition-all duration-300">
+                  <Link href="/services/ui-ux" className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all duration-300 hover:translate-x-2 hover:shadow-md">
                     <h4 className="font-semibold text-black">UI/UX</h4>
                     <p className="text-sm text-gray-600">
                       Design UI/UX interfaces for effortless user interaction.
@@ -137,21 +137,21 @@ const Navbar: React.FC = () => {
             <li className="relative group">
               <Link
                 href="#"
-                className="hover:text-[#967bb6] flex items-center transition duration-300 ease-in-out transform hover:scale-105"
+                className="nav-link hover:text-[#967bb6] flex items-center transition-all duration-300"
               >
-                Pricing <MdKeyboardArrowDown className="ml-1" />
+                Pricing <MdKeyboardArrowDown className="ml-1 transition-transform duration-500 group-hover:rotate-180 group-hover:scale-125" />
               </Link>
-              <ul className="absolute left-0 hidden p-4 bg-white rounded-md shadow-lg top-full group-hover:block w-72">
-                <li className="mb-3">
-                  <Link href="/Pricing/seo-package" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+              <ul className="absolute left-0 hidden p-4 bg-white rounded-md shadow-lg top-full group-hover:block w-72 animate-fadeIn">
+                <li className="mb-3 transition-all duration-300">
+                  <Link href="/Pricing/seo-package" className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all duration-300 hover:translate-x-2 hover:shadow-md">
                     <h4 className="font-semibold text-black">SEO Package</h4>
                     <p className="text-sm text-gray-600">
                       Typically offers a range of services including keyword research.
                     </p>
                   </Link>
                 </li>
-                <li className="mb-3">
-                  <Link href="/Pricing/social-media" className="block px-3 py-2 rounded-md hover:bg-gray-100">
+                <li className="mb-3 transition-all duration-300">
+                  <Link href="/Pricing/social-media" className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all duration-300 hover:translate-x-2 hover:shadow-md">
                     <h4 className="font-semibold text-black">Social Media Package</h4>
                     <p className="text-sm text-gray-600">
                       Typically offers a range of services tailored to clients' needs, including social media marketing.
@@ -161,19 +161,19 @@ const Navbar: React.FC = () => {
               </ul>
             </li>
 
-            <li>
+            <li className="overflow-hidden">
               <Link
                 href="/work"
-                className="hover:text-[#967bb6] transition duration-300 ease-in-out transform hover:scale-105"
+                className="nav-link hover:text-[#967bb6] inline-block transition-all duration-300"
               >
                 Our Work
               </Link>
             </li>
 
-            <li>
+            <li className="overflow-hidden">
               <Link
                 href="/contact"
-                className="hover:text-[#967bb6] transition duration-300 ease-in-out transform hover:scale-105"
+                className="nav-link hover:text-[#967bb6] inline-block transition-all duration-300"
               >
                 Contact
               </Link>
@@ -182,12 +182,12 @@ const Navbar: React.FC = () => {
 
           {/* Contact Section - Only visible on desktop when width is greater than 1045px */}
           <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center text-[#967bb6] font-semibold text-lg">
-              <FaPhoneAlt className="mr-2" />
+            <div className="flex items-center text-[#967bb6] font-semibold text-lg hover:scale-110 transition-transform duration-300">
+              <FaPhoneAlt className="mr-2 animate-bounce" />
               <span>9862973810</span>
             </div>
 
-            <button className="border-2 border-[#967bb6] text-[#967bb6] px-4 py-2 rounded-full hover:bg-[#967bb6] hover:text-white transition hover:cursor-pointer">
+            <button className="border-2 border-[#967bb6] text-[#967bb6] px-4 py-2 rounded-full hover:bg-[#967bb6] hover:text-white transition-all duration-500 hover:scale-110 hover:shadow-lg hover:rotate-1">
               Quick Enquiry
             </button>
           </div>
@@ -207,7 +207,7 @@ const Navbar: React.FC = () => {
           </div>
           <button 
             onClick={toggleSidebar}
-            className="text-gray-500 hover:text-gray-700"
+            className="text-gray-500 hover:text-gray-700 transition-all duration-300 hover:rotate-90"
           >
             <MdClose className="w-6 h-6" />
           </button>
@@ -218,7 +218,7 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 href="/"
-                className="block py-2 hover:text-[#967bb6]"
+                className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium side-link"
                 onClick={() => setSidebarOpen(false)}
               >
                 Home
@@ -228,7 +228,7 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 href="/aboutus"
-                className="block py-2 hover:text-[#967bb6]"
+                className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium side-link"
                 onClick={() => setSidebarOpen(false)}
               >
                 About
@@ -238,18 +238,18 @@ const Navbar: React.FC = () => {
             {/* Service Dropdown */}
             <li>
               <button
-                className="flex items-center justify-between w-full py-2 hover:text-[#967bb6]"
+                className="flex items-center justify-between w-full py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium side-link"
                 onClick={() => toggleDropdown("services")}
               >
                 Service
                 <MdKeyboardArrowDown
-                  className={`ml-1 transform transition-transform ${
+                  className={`ml-1 transform transition-transform duration-500 ${
                     activeDropdown === "services" ? "rotate-180" : ""
                   }`}
                 />
               </button>
               <div
-                className={`pl-4 transition-all duration-200 ease-in-out overflow-hidden ${
+                className={`pl-4 transition-all duration-500 ease-in-out overflow-hidden ${
                   activeDropdown === "services" 
                     ? "max-h-96 opacity-100 py-2" 
                     : "max-h-0 opacity-0"
@@ -257,42 +257,42 @@ const Navbar: React.FC = () => {
               >
                 <Link
                   href="/services/development"
-                  className="block py-2 hover:text-[#967bb6]"
+                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
                   onClick={() => setSidebarOpen(false)}
                 >
                   Development
                 </Link>
                 <Link
                   href="/services/marketing"
-                  className="block py-2 hover:text-[#967bb6]"
+                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
                   onClick={() => setSidebarOpen(false)}
                 >
                   Marketing
                 </Link>
                 <Link
                   href="/services/website-development"
-                  className="block py-2 hover:text-[#967bb6]"
+                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
                   onClick={() => setSidebarOpen(false)}
                 >
                   Website Development
                 </Link>
                 <Link
                   href="/services/app-development"
-                  className="block py-2 hover:text-[#967bb6]"
+                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
                   onClick={() => setSidebarOpen(false)}
                 >
                   App Development
                 </Link>
                 <Link
                   href="/services/system-development"
-                  className="block py-2 hover:text-[#967bb6]"
+                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
                   onClick={() => setSidebarOpen(false)}
                 >
                   System/Software Development
                 </Link>
                 <Link
                   href="/services/ui-ux"
-                  className="block py-2 hover:text-[#967bb6]"
+                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
                   onClick={() => setSidebarOpen(false)}
                 >
                   UI/UX
@@ -303,18 +303,18 @@ const Navbar: React.FC = () => {
             {/* Pricing Dropdown */}
             <li>
               <button
-                className="flex items-center justify-between w-full py-2 hover:text-[#967bb6]"
+                className="flex items-center justify-between w-full py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium side-link"
                 onClick={() => toggleDropdown("pricing")}
               >
                 Pricing
                 <MdKeyboardArrowDown
-                  className={`ml-1 transform transition-transform ${
+                  className={`ml-1 transform transition-transform duration-500 ${
                     activeDropdown === "pricing" ? "rotate-180" : ""
                   }`}
                 />
               </button>
               <div
-                className={`pl-4 transition-all duration-200 ease-in-out overflow-hidden ${
+                className={`pl-4 transition-all duration-500 ease-in-out overflow-hidden ${
                   activeDropdown === "pricing" 
                     ? "max-h-32 opacity-100 py-2" 
                     : "max-h-0 opacity-0"
@@ -322,14 +322,14 @@ const Navbar: React.FC = () => {
               >
                 <Link
                   href="/Pricing/seo-package"
-                  className="block py-2 hover:text-[#967bb6]"
+                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
                   onClick={() => setSidebarOpen(false)}
                 >
                   SEO Package
                 </Link>
                 <Link
                   href="/Pricing/social-media"
-                  className="block py-2 hover:text-[#967bb6]"
+                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
                   onClick={() => setSidebarOpen(false)}
                 >
                   Social Media Package
@@ -340,7 +340,7 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 href="/work"
-                className="block py-2 hover:text-[#967bb6]"
+                className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium side-link"
                 onClick={() => setSidebarOpen(false)}
               >
                 Our Work
@@ -350,7 +350,7 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 href="/contact"
-                className="block py-2 hover:text-[#967bb6]"
+                className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium side-link"
                 onClick={() => setSidebarOpen(false)}
               >
                 Contact
@@ -361,11 +361,11 @@ const Navbar: React.FC = () => {
           {/* Mobile Contact Section */}
           <div className="mt-6 pt-6 border-t border-gray-200">
             <div className="flex items-center text-[#967bb6] font-semibold mb-4">
-              <FaPhoneAlt className="mr-2" />
+              <FaPhoneAlt className="mr-2 animate-bounce" />
               <span>9862973810</span>
             </div>
 
-            <button className="w-full border-2 border-[#967bb6] text-[#967bb6] px-4 py-2 rounded-full hover:bg-[#967bb6] hover:text-white transition hover:cursor-pointer">
+            <button className="w-full border-2 border-[#967bb6] text-[#967bb6] px-4 py-2 rounded-full hover:bg-[#967bb6] hover:text-white transition-all duration-500 hover:scale-105 hover:shadow-lg hover:rotate-1">
               Quick Enquiry
             </button>
           </div>
@@ -379,6 +379,108 @@ const Navbar: React.FC = () => {
           onClick={() => setSidebarOpen(false)}
         ></div>
       )}
+
+      {/* Add some custom keyframes animation styles */}
+      <style jsx global>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(-10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        /* Fast movement animations for nav links */
+        @keyframes pulse-fast {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.05); }
+          100% { transform: scale(1); }
+        }
+        
+        @keyframes shake-x {
+          0%, 100% { transform: translateX(0); }
+          25% { transform: translateX(-2px); }
+          75% { transform: translateX(2px); }
+        }
+        
+        @keyframes shake-y {
+          0%, 100% { transform: translateY(0); }
+          25% { transform: translateY(-2px); }
+          75% { transform: translateY(2px); }
+        }
+        
+        @keyframes float {
+          0% { transform: translateY(0); }
+          50% { transform: translateY(-5px); }
+          100% { transform: translateY(0); }
+        }
+        
+        @keyframes bright-flash {
+          0% { filter: brightness(1); }
+          50% { filter: brightness(1.25); }
+          100% { filter: brightness(1); }
+        }
+        
+        @keyframes wiggle {
+          0%, 100% { transform: rotate(-1deg); }
+          50% { transform: rotate(1deg); }
+        }
+        
+        /* Apply animations to nav links on hover */
+        .nav-link:hover {
+          animation: shake-x 0.3s ease-in-out;
+        }
+        
+        /* Apply different animations to each nav item */
+        .nav-link:nth-child(1):hover {
+          animation: pulse-fast 0.3s ease-in-out;
+        }
+        
+        li:nth-child(1) .nav-link:hover {
+          animation: shake-x 0.3s ease-in-out;
+        }
+        
+        li:nth-child(2) .nav-link:hover {
+          animation: float 0.5s ease-in-out;
+        }
+        
+        li:nth-child(3) .nav-link:hover {
+          animation: bright-flash 0.4s ease-in-out;
+        }
+        
+        li:nth-child(4) .nav-link:hover {
+          animation: wiggle 0.4s ease-in-out;
+        }
+        
+        li:nth-child(5) .nav-link:hover {
+          animation: shake-y 0.3s ease-in-out;
+        }
+        
+        li:nth-child(6) .nav-link:hover {
+          animation: pulse-fast 0.3s ease-in-out;
+        }
+        
+        /* Fast sweep effect for mobile sidebar links */
+        .side-link {
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .side-link::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(150, 123, 182, 0.1), transparent);
+          transition: left 0.3s ease;
+        }
+        
+        .side-link:hover::before {
+          left: 100%;
+        }
+      `}</style>
     </>
   );
 };
