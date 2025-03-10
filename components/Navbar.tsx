@@ -6,7 +6,7 @@ import { FaBars } from "react-icons/fa";
 import Link from "next/link";
 import { MdKeyboardArrowDown, MdClose } from "react-icons/md";
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
 
           {/* Hamburger Menu Button - Visible on all devices */}
           <button
-            className="md:hidden text-black p-2 hover:rotate-90 transition-all duration-500"
+            className="p-2 text-black transition-all duration-500 md:hidden hover:rotate-90"
             onClick={toggleSidebar}
             aria-label="Open menu"
           >
@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
           </button>
 
           {/* Desktop Navigation - Hidden on mobile */}
-          <ul className="hidden md:flex space-x-6 font-medium text-black">
+          <ul className="hidden space-x-6 font-medium text-black md:flex">
             <li className="overflow-hidden">
               <Link
                 href="/"
@@ -71,11 +71,11 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
 
-            {/* About Dropdown */}
-            <li className="relative group overflow-hidden">
+            {/* About Link */}
+            <li className="relative overflow-hidden group">
               <Link
                 href="/aboutus"
-                className="nav-link hover:text-[#967bb6] flex items-center inline-block transition-all duration-300"
+                className="nav-link hover:text-[#967bb6] items-center inline-block transition-all duration-300"
               >
                 About
               </Link>
@@ -89,56 +89,75 @@ const Navbar: React.FC = () => {
               >
                 Service <MdKeyboardArrowDown className="ml-1 transition-transform duration-500 group-hover:rotate-180 group-hover:scale-125" />
               </Link>
-              <ul className="absolute left-0 hidden p-4 bg-white rounded-md shadow-lg top-full group-hover:block w-72 animate-fadeIn">
-                <li className="mb-3 transition-all duration-300">
-                  <Link href="/services/development" className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all duration-300 hover:translate-x-2 hover:shadow-md">
-                    <h4 className="font-semibold text-black">Development</h4>
-                    <p className="text-sm text-gray-600">
-                      Creating digital experiences through coding, design, and user interaction principles.
-                    </p>
-                  </Link>
-                </li>
-                <li className="mb-3 transition-all duration-300">
-                  <Link href="/services/marketing" className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all duration-300 hover:translate-x-2 hover:shadow-md">
-                    <h4 className="font-semibold text-black">Marketing</h4>
-                    <p className="text-sm text-gray-600">
-                      Promotion of products or services via online channels and strategies.
-                    </p>
-                  </Link>
-                </li>
-                <li className="mb-3 transition-all duration-300">
-                  <Link href="/services/website-development" className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all duration-300 hover:translate-x-2 hover:shadow-md">
-                    <h4 className="font-semibold text-black">Website Development</h4>
-                    <p className="text-sm text-gray-600">
-                      Specialized Custom Website Development Services.
-                    </p>
-                  </Link>
-                </li>
-                <li className="mb-3 transition-all duration-300">
-                  <Link href="/services/app-development" className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all duration-300 hover:translate-x-2 hover:shadow-md">
-                    <h4 className="font-semibold text-black">App Development</h4>
-                    <p className="text-sm text-gray-600">
-                      Building Custom Apps for Seamless User Experience.
-                    </p>
-                  </Link>
-                </li>
-                <li className="mb-3 transition-all duration-300">
-                  <Link href="/services/system-development" className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all duration-300 hover:translate-x-2 hover:shadow-md">
-                    <h4 className="font-semibold text-black">System/Software Development</h4>
-                    <p className="text-sm text-gray-600">
-                      Cutting-edge System/Software Development Solutions.
-                    </p>
-                  </Link>
-                </li>
-                <li className="transition-all duration-300">
-                  <Link href="/services/ui-ux" className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all duration-300 hover:translate-x-2 hover:shadow-md">
-                    <h4 className="font-semibold text-black">UI/UX</h4>
-                    <p className="text-sm text-gray-600">
-                      Design UI/UX interfaces for effortless user interaction.
-                    </p>
-                  </Link>
-                </li>
-              </ul>
+              <div className="absolute left-0 hidden w-full bg-white rounded-md shadow-lg top-full group-hover:block min-w-max animate-fadeIn">
+                <div className="grid grid-cols-2 gap-6 p-4">
+                  {/* Development Section */}
+                  <div>
+                    <h3 className="px-3 py-1 font-bold text-[#8044c9] border-b border-gray-200 mb-3">Development</h3>
+                    <ul>
+                      <li className="mb-3 transition-all duration-300">
+                        <Link href="/services/website-development" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-gray-100 hover:translate-x-2 hover:shadow-md">
+                          <h4 className="font-semibold text-black">Website Development</h4>
+                          <p className="text-sm text-gray-600">
+                            Specialized Custom Website Development Services.
+                          </p>
+                        </Link>
+                      </li>
+                      
+                    
+                      <li className="transition-all duration-300">
+                        <Link href="/services/ui-ux" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-gray-100 hover:translate-x-2 hover:shadow-md">
+                          <h4 className="font-semibold text-black">UI/UX</h4>
+                          <p className="text-sm text-gray-600">
+                            Design UI/UX interfaces for effortless user interaction.
+                          </p>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  {/* Marketing Section */}
+                  <div>
+                    <h3 className="px-3 py-1 font-bold text-[#8044c9] border-b border-gray-200 mb-3">Marketing</h3>
+                    <ul>
+                      <li className="mb-3 transition-all duration-300">
+                        <Link href="/services/seo" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-gray-100 hover:translate-x-2 hover:shadow-md">
+                          <h4 className="font-semibold text-black">Search Engine Optimization (SEO)</h4>
+                          <p className="text-sm text-gray-600">
+                            Enhance Search Engine Ranking with Effective SEO.
+                          </p>
+                        </Link>
+                      </li>
+                      <li className="mb-3 transition-all duration-300">
+                        <Link href="/services/social-media-marketing" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-gray-100 hover:translate-x-2 hover:shadow-md">
+                          <h4 className="font-semibold text-black">Social Media Marketing (SMM)</h4>
+                          <p className="text-sm text-gray-600">
+                            Boost online presence, engage audience.
+                          </p>
+                        </Link>
+                      </li>
+                      <li className="mb-3 transition-all duration-300">
+                        <Link href="/services/graphic-design" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-gray-100 hover:translate-x-2 hover:shadow-md">
+                          <h4 className="font-semibold text-black">Graphic Design</h4>
+                          <p className="text-sm text-gray-600">
+                            Bringing Ideas to Visual Life.
+                          </p>
+                        </Link>
+                      </li>
+                     
+                     
+                      <li className="transition-all duration-300">
+                        <Link href="/services/digital-marketing" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-gray-100 hover:translate-x-2 hover:shadow-md">
+                          <h4 className="font-semibold text-black">Digital Marketing</h4>
+                          <p className="text-sm text-gray-600">
+                            Designing Digital Paths That Echo with Audiences.
+                          </p>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </li>
 
             {/* Pricing with Hover Effect */}
@@ -151,7 +170,7 @@ const Navbar: React.FC = () => {
               </Link>
               <ul className="absolute left-0 hidden p-4 bg-white rounded-md shadow-lg top-full group-hover:block w-72 animate-fadeIn">
                 <li className="mb-3 transition-all duration-300">
-                  <Link href="/Pricing/seo-package" className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all duration-300 hover:translate-x-2 hover:shadow-md">
+                  <Link href="/Pricing/seo-package" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-gray-100 hover:translate-x-2 hover:shadow-md">
                     <h4 className="font-semibold text-black">SEO Package</h4>
                     <p className="text-sm text-gray-600">
                       Typically offers a range of services including keyword research.
@@ -159,7 +178,7 @@ const Navbar: React.FC = () => {
                   </Link>
                 </li>
                 <li className="mb-3 transition-all duration-300">
-                  <Link href="/Pricing/social-media" className="block px-3 py-2 rounded-md hover:bg-gray-100 transition-all duration-300 hover:translate-x-2 hover:shadow-md">
+                  <Link href="/Pricing/social-media" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-gray-100 hover:translate-x-2 hover:shadow-md">
                     <h4 className="font-semibold text-black">Social Media Package</h4>
                     <p className="text-sm text-gray-600">
                       Typically offers a range of services tailored to clients' needs, including social media marketing.
@@ -189,8 +208,8 @@ const Navbar: React.FC = () => {
           </ul>
 
           {/* Contact Section - Only visible on desktop when width is greater than 1045px */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center text-purple-700 font-semibold text-lg ">
+          <div className="items-center hidden space-x-4 lg:flex">
+            <div className="flex items-center text-[#967bb6] font-semibold text-lg hover:scale-110 transition-transform duration-300">
               <FaPhoneAlt className="mr-2 animate-bounce" />
               <span>+977 9862973810</span>
             </div>
@@ -208,20 +227,20 @@ const Navbar: React.FC = () => {
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex justify-between items-center p-4 border-b">
+        <div className="flex items-center justify-between p-4 border-b">
           <div className="flex items-center">
             <img src="/logo.png" alt="Nepscape Logo" className="h-8" />
             <p className="text-purple-700 ml-2">Nepscape</p>
           </div>
           <button 
             onClick={toggleSidebar}
-            className="text-gray-500 hover:text-gray-700 transition-all duration-300 hover:rotate-90"
+            className="text-gray-500 transition-all duration-300 hover:text-gray-700 hover:rotate-90"
           >
             <MdClose className="w-6 h-6" />
           </button>
         </div>
 
-        <div className="p-4">
+        <div className="p-4 overflow-y-auto max-h-[calc(100vh-80px)]">
           <ul className="space-y-4">
             <li>
               <Link
@@ -259,24 +278,12 @@ const Navbar: React.FC = () => {
               <div
                 className={`pl-4 transition-all duration-500 ease-in-out overflow-hidden ${
                   activeDropdown === "services" 
-                    ? "max-h-96 opacity-100 py-2" 
+                    ? "max-h-[500px] opacity-100 py-2" 
                     : "max-h-0 opacity-0"
                 }`}
               >
-                <Link
-                  href="/services/development"
-                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
-                  onClick={() => setSidebarOpen(false)}
-                >
-                  Development
-                </Link>
-                <Link
-                  href="/services/marketing"
-                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
-                  onClick={() => setSidebarOpen(false)}
-                >
-                  Marketing
-                </Link>
+                {/* Development */}
+                <p className="font-bold text-[#8044c9] mb-2 mt-1">Development</p>
                 <Link
                   href="/services/website-development"
                   className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
@@ -304,6 +311,51 @@ const Navbar: React.FC = () => {
                   onClick={() => setSidebarOpen(false)}
                 >
                   UI/UX
+                </Link>
+                
+                {/* Marketing */}
+                <p className="font-bold text-[#8044c9] mb-2 mt-3">Marketing</p>
+                <Link
+                  href="/services/seo"
+                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
+                  onClick={() => setSidebarOpen(false)}
+                >
+                  SEO
+                </Link>
+                <Link
+                  href="/services/social-media-marketing"
+                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
+                  onClick={() => setSidebarOpen(false)}
+                >
+                  Social Media Marketing
+                </Link>
+                <Link
+                  href="/services/graphic-design"
+                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
+                  onClick={() => setSidebarOpen(false)}
+                >
+                  Graphic Design
+                </Link>
+                <Link
+                  href="/services/content-writing"
+                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
+                  onClick={() => setSidebarOpen(false)}
+                >
+                  Content Writing
+                </Link>
+                <Link
+                  href="/services/pay-per-click"
+                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
+                  onClick={() => setSidebarOpen(false)}
+                >
+                  Pay Per Click
+                </Link>
+                <Link
+                  href="/services/digital-marketing"
+                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
+                  onClick={() => setSidebarOpen(false)}
+                >
+                  Digital Marketing
                 </Link>
               </div>
             </li>
@@ -367,7 +419,7 @@ const Navbar: React.FC = () => {
           </ul>
 
           {/* Mobile Contact Section */}
-          <div className="mt-6 pt-6 border-t border-gray-200">
+          <div className="pt-6 mt-6 border-t border-gray-200">
             <div className="flex items-center text-[#967bb6] font-semibold mb-4">
               <FaPhoneAlt className="mr-2 animate-bounce" />
               <span>+977 9862973810</span>
@@ -380,7 +432,7 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Overlay when sidebar is open - removed the black background */}
+      {/* Overlay when sidebar is open */}
       {sidebarOpen && (
         <div 
           className="fixed inset-0 z-40"
@@ -388,7 +440,7 @@ const Navbar: React.FC = () => {
         ></div>
       )}
 
-      {/* Add some custom keyframes animation styles */}
+      {/* Custom keyframes animation styles */}
       <style jsx global>{`
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(-10px); }

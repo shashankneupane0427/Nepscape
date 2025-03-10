@@ -1,3 +1,4 @@
+import React from 'react';
 import ServicesSection from "../../components/home/ServicesSection";
 import ExpertiseSection from "../../components/home/ExpertiseSection";
 import HowWeWork from "../../components/home/HowWeWork";
@@ -27,10 +28,7 @@ const blogPosts = [
   }
 ];
 
-
-
-
-function home() {
+function Home() {
   return (
     <div className="min-h-screen text-black bg-white">
       <HeroSection />
@@ -39,10 +37,12 @@ function home() {
       <HowWeWork />
       <CompanyStats />
       <TestimonialsSection />
-      <BlogSection  blogPosts={blogPosts}/>
+      <BlogSection blogPosts={blogPosts}/>
+     
       <Footer />
     </div>
   );
 }
 
-export default home;
+// Make sure the component is properly exported
+export default Home;
