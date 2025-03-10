@@ -1,5 +1,8 @@
 'use client';
 
+import { SiNextdotjs, SiTypescript, SiPhp, SiGooglecloud, SiDigitalocean } from 'react-icons/si';
+import { FaReact, FaHtml5, FaCss3, FaNodeJs, FaDatabase, FaAws, FaDocker, FaPython, FaGitAlt } from "react-icons/fa";
+import { SiTailwindcss, SiMongodb, SiFirebase, SiGraphql, SiPostgresql } from "react-icons/si";
 import React, { useState } from 'react';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
@@ -364,228 +367,417 @@ const WebsiteDevelopment = () => {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="py-16 bg-green-50">
-        <div className="container px-4 mx-auto md:px-6 lg:px-8">
-          <div className="flex flex-col items-center md:flex-row">
-            <div className="mb-8 md:w-1/2 md:mb-0">
-              <h1 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-                Website Development
-              </h1>
-              <p className="mb-6 text-lg text-gray-700">
-                <span className="font-semibold">Highly functional and visually appealing website designed to meet your needs.</span>
-              </p>
-              <p className="mb-6 text-gray-600">
-                Crafting Digital Excellence: Elevate Your Online Presence with Innovative Website Development Solutions. Perfect Design, Seamless Functionality, and Future-Ready.
-              </p>
-              <p className="mb-8 text-gray-600">
-                We specialize in developing websites that not only look great but also deliver results.
-              </p>
-              <button className="px-8 py-3 text-white transition duration-300 bg-purple-600 rounded-full hover:bg-green-600">
-                Get Free Consultation
-              </button>
+      <section className="relative py-20 overflow-hidden text-white bg-gradient-to-r from-purple-500 to-indigo-600">
+  {/* Background decoration */}
+  <div className="absolute top-0 left-0 w-full h-full opacity-10">
+    <div className="absolute w-40 h-40 bg-white rounded-full top-10 left-10 blur-3xl"></div>
+    <div className="absolute bg-purple-300 rounded-full bottom-10 right-10 w-60 h-60 blur-3xl"></div>
+  </div>
+
+  <div className="container relative z-10 px-6 mx-auto md:px-12 lg:px-16">
+    <div className="flex flex-col items-center md:flex-row md:items-start">
+      
+      {/* Left Section - Text Content */}
+      <div className="mb-12 md:w-1/2 md:mb-0 md:pr-8">
+        <h1 className="mb-6 text-4xl font-extrabold leading-tight md:text-5xl lg:text-6xl">
+          Website <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-200">Development</span>
+        </h1>
+        <p className="mb-6 text-lg text-gray-100">
+          <span className="font-semibold">Highly functional and visually appealing websites tailored to your needs.</span>
+        </p>
+        <p className="mb-6 text-gray-200">
+          Elevate your online presence with seamless design, cutting-edge technology, and future-ready solutions.
+        </p>
+        <p className="mb-8 text-gray-300">
+          Our websites not only look stunning but are built for high performance and user engagement.
+        </p>
+        <button className="px-8 py-3 text-lg font-semibold text-purple-600 transition-all duration-300 transform bg-white rounded-full shadow-lg hover:bg-gray-50 hover:scale-105 hover:shadow-xl">
+          Get Free Consultation
+        </button>
+      </div>
+
+      {/* Right Section - Image & Stats */}
+      <div className="relative flex justify-center md:w-1/2">
+        <div className="relative">
+          <img
+            src="/website-development-hero.svg"
+            alt="Website Development"
+            className="max-w-full transition duration-500 transform drop-shadow-xl hover:scale-105"
+          />
+
+          {/* Stats Cards - Glassmorphism Effect */}
+          <div className="absolute px-4 py-3 border shadow-xl bg-white/20 backdrop-blur-md rounded-xl -top-8 -right-8 border-white/30">
+            <div className="flex items-center">
+              <div className="p-1 mr-2 rounded-full bg-white/20">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 6L9 17L4 12" stroke="#22C55E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
+              <span className="text-lg font-bold">300+</span>
             </div>
-            <div className="flex justify-center md:w-1/2">
-              <div className="relative">
-                <img src="/images/website-development-hero.png" alt="Website Development" className="max-w-full" />
-                <div className="absolute px-4 py-2 bg-white rounded-lg shadow-md -top-8 -right-8">
-                  <div className="flex items-center">
-                    <div className="mr-2 text-purple-600">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 6L9 17L4 12" stroke="#7d2fd0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
-                    <span className="text-sm font-medium">300+</span>
-                  </div>
-                  <p className="text-xs text-gray-500">Projects</p>
-                </div>
-                <div className="absolute px-4 py-2 bg-white rounded-lg shadow-md top-16 -right-12">
-                  <div className="flex items-center">
-                    <div className="mr-2 text-purple-600">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2L15.09 8.26L22 9.27 L22 9.27L15.09 15.74L16.24 23.01L12 19.54L7.76 23.01L8.91 15.74L2 9.27L9.27 8.26L12 2Z" stroke="#7d2fd0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
-                    <span className="text-sm font-medium">400+</span>
-                  </div>
-                  <p className="text-xs text-gray-500">Happy Clients</p>
-                </div>
-                <div className="absolute px-4 py-2 bg-white rounded-lg shadow-md -bottom-6 -left-8">
-                  <div className="flex items-center">
-                    <div className="mr-2 text-purple-600">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17 20H22V18C22 16.3431 20.6569 15 19 15C18.0444 15 17.1931 15.4468 16.6438 16.1429M17 20H7M17 20V18C17 17.3438 16.8736 16.717 16.6438 16.1429M7 20H2V18C2 16.3431 3.34315 15 5 15C5.95561 15 6.80686 15.4468 7.35625 16.1429M7 20V18C7 17.3438 7.12642 16.717 7.35625 16.1429M7.35625 16.1429C8.0935 14.301 9.89482 13 12 13C14.1052 13 15.9065 14.301 16.6438 16.1429M15 7C15 8.65685 13.6569 10 12 10C10.3431 10 9 8.65685 9 7C9 5.34315 10.3431 4 12 4C13.6569 4 15 5.34315 15 7ZM21 10C21 11.1046 20.1046 12 19 12C17.8954 12 17 11.1046 17 10C17 8.89543 17.8954 8 19 8C20.1046 8 21 8.89543 21 10ZM7 10C7 11.1046 6.10457 12 5 12C3.89543 12 3 11.1046 3 10C3 8.89543 3.89543 8 5 8C6.10457 8 7 8.89543 7 10Z" stroke="#7d2fd0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
-                    <span className="text-sm font-medium">60+</span>
-                  </div>
-                  <p className="text-xs text-gray-500">Team Members</p>
-                </div>
+            <p className="text-sm text-gray-200">Projects</p>
+          </div>
+
+          <div className="absolute px-4 py-3 border shadow-xl bg-white/20 backdrop-blur-md rounded-xl top-16 -right-12 border-white/30">
+            <div className="flex items-center">
+              <div className="p-1 mr-2 rounded-full bg-white/20">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L15.09 8.26L22 9.27L15.09 15.74L16.24 23.01L12 19.54L7.76 23.01L8.91 15.74L2 9.27L9.27 8.26L12 2Z" stroke="#FACC15" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
               </div>
+              <span className="text-lg font-bold">400+</span>
+            </div>
+            <p className="text-sm text-gray-200">Happy Clients</p>
+          </div>
+
+          <div className="absolute px-4 py-3 border shadow-xl bg-white/20 backdrop-blur-md rounded-xl -bottom-6 -left-8 border-white/30">
+            <div className="flex items-center">
+              <div className="p-1 mr-2 rounded-full bg-white/20">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 20H22V18C22 16.3431 20.6569 15 19 15C18.0444 15 17.1931 15.4468 16.6438 16.1429M17 20H7M17 20V18C17 17.3438 16.8736 16.717 16.6438 16.1429M7 20H2V18C2 16.3431 3.34315 15 5 15C5.95561 15 6.80686 15.4468 7.35625 16.1429M7 20V18C7 17.3438 7.12642 16.717 7.35625 16.1429M7.35625 16.1429C8.0935 14.301 9.89482 13 12 13C14.1052 13 15.9065 14.301 16.6438 16.1429M15 7C15 8.65685 13.6569 10 12 10C10.3431 10 9 8.65685 9 7C9 5.34315 10.3431 4 12 4C13.6569 4 15 5.34315 15 7ZM21 10C21 11.1046 20.1046 12 19 12C17.8954 12 17 11.1046 17 10C17 8.89543 17.8954 8 19 8C20.1046 8 21 8.89543 21 10ZM7 10C7 11.1046 6.10457 12 5 12C3.89543 12 3 11.1046 3 10C3 8.89543 3.89543 8 5 8C6.10457 8 7 8.89543 7 10Z" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
+              <span className="text-lg font-bold">60+</span>
+            </div>
+            <p className="text-sm text-gray-200">Team Members</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  {/* Subtle decoration */}
+  <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-r from-purple-500/10 to-indigo-600/10 backdrop-blur-sm"></div>
+</section>
+
+    {/* Features Section */}
+<section className="py-24 overflow-hidden bg-gradient-to-b from-gray-50 to-white">
+  <div className="container px-6 mx-auto md:px-12 lg:px-16">
+    {/* Section Header */}
+    <div className="max-w-3xl mx-auto mb-16 text-center">
+      <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">Powerful Features for Your Success</h2>
+      <p className="mt-4 text-lg text-gray-600">Discover the tools designed to elevate your experience and drive results.</p>
+    </div>
+    
+    {/* Features Grid */}
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+      {features.map((feature, index) => (
+        <div
+          key={index}
+          className={`relative flex flex-col items-center p-8 rounded-2xl transition duration-300 transform hover:-translate-y-2 ${
+            index === 1 
+              ? 'bg-gradient-to-br from-purple-600 to-indigo-700 text-white shadow-xl' 
+              : 'bg-gradient-to-br from-green-50 to-green-100 border border-green-200 shadow-lg'
+          }`}
+          style={{
+            clipPath: index === 1 
+              ? 'polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 10%)' 
+              : 'polygon(0 0, 90% 0, 100% 90%, 100% 100%, 0 100%)'
+          }}
+        >
+          {/* Feature Icon */}
+          <div 
+            className={`mb-6 w-16 h-16 flex items-center justify-center rounded-full ${
+              index === 1 ? 'bg-white bg-opacity-20' : 'bg-white shadow-md'
+            }`}
+          >
+            {/* Replace with actual SVG icons */}
+            {index === 0 && (
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            )}
+            {index === 1 && (
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            )}
+            {index === 2 && (
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            )}
+          </div>
+
+          {/* Feature Title */}
+          <h3 className={`text-xl font-bold mb-3 ${index === 1 ? 'text-white' : 'text-gray-800'}`}>
+            {feature.title || `Feature ${index + 1}`}
+          </h3>
+
+          {/* Feature Description */}
+          <p className={`text-center mb-6 ${index === 1 ? 'text-gray-100' : 'text-gray-600'}`}>
+            {feature.description || "This feature provides exceptional value with its innovative approach and practical applications."}
+          </p>
+          
+          {/* Feature CTA */}
+          <a 
+            href="#" 
+            className={`mt-auto font-medium transition flex items-center ${
+              index === 1 ? 'text-white hover:text-gray-100' : 'text-purple-600 hover:text-purple-700'
+            }`}
+          >
+            Learn more
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+          
+          {/* Decorative Elements */}
+          <div className="absolute top-0 right-0 -mt-2 -mr-2">
+            {index === 1 ? (
+              <div className="w-16 h-16 bg-purple-400 rounded-full bg-opacity-30 blur-sm"></div>
+            ) : (
+              <div className="w-16 h-16 bg-green-200 rounded-full bg-opacity-70 blur-sm"></div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    {/* Decorative Background Elements */}
+    <div className="absolute left-0 w-64 h-64 bg-purple-100 rounded-full top-1/4 mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+    <div className="absolute right-0 bg-green-100 rounded-full top-1/3 w-80 h-80 mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+  </div>
+</section>
+
+{/* Services Section */}
+<section className="relative py-24 overflow-hidden bg-gray-50">
+  {/* Background Decoration */}
+  <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+  
+  <div className="container relative z-10 px-4 mx-auto md:px-6 lg:px-8">
+    {/* Section Header */}
+    <div className="max-w-3xl mx-auto mb-20 text-center">
+      <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">Our Premium Services</h2>
+      <p className="mt-4 text-lg text-gray-600">Tailored solutions designed to meet your specific needs and exceed expectations.</p>
+    </div>
+    
+    <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+      {services.map((service, index) => (
+        <div 
+          key={index} 
+          className="flex flex-col overflow-hidden transition duration-300 bg-white shadow-xl lg:flex-row rounded-2xl hover:shadow-2xl"
+        >
+          <div 
+            className={`lg:w-1/2 p-8 ${
+              index % 2 === 0 
+                ? 'bg-gradient-to-br from-purple-600 to-purple-800 text-white' 
+                : 'bg-gradient-to-br from-green-50 to-green-100'
+            }`}
+          >
+            <h3 className={`text-2xl font-bold mb-4 ${index % 2 === 0 ? 'text-white' : 'text-gray-800'}`}>
+              {service.title || `Service ${index + 1}`}
+            </h3>
+            <p className={`mb-6 ${index % 2 === 0 ? 'text-white opacity-90' : 'text-gray-600'}`}>
+              {service.description || "This service delivers exceptional results through our proven methodology and expert approach."}
+            </p>
+            <a 
+              href="#" 
+              className={`inline-flex items-center font-medium ${
+                index % 2 === 0 
+                  ? 'text-white hover:text-gray-100' 
+                  : 'text-purple-600 hover:text-purple-700'
+              }`}
+            >
+              Explore service
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+            
+            {/* Decorative Pattern */}
+            <div className="absolute bottom-0 right-0">
+              <svg className="w-64 h-64 text-white opacity-10" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M37.5,-48.1C52.1,-39.4,69.7,-31.6,76.6,-18.1C83.5,-4.6,79.7,14.5,70.8,29.9C61.9,45.3,47.9,56.9,32.8,60.4C17.7,63.9,1.5,59.2,-15,55.3C-31.5,51.3,-48.2,48,-57.1,37.4C-66.1,26.7,-67.3,8.5,-63.4,-6.6C-59.5,-21.7,-50.7,-33.8,-39.5,-43.5C-28.4,-53.1,-14.2,-60.2,-0.7,-59.4C12.9,-58.5,25.7,-49.6,37.5,-48.1Z" transform="translate(100 100)" />
+              </svg>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16">
-        <div className="container px-4 mx-auto md:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {features.map((feature, index) => (
-              <div key={index} className={`p-6 rounded-lg ${index === 1 ? 'bg-purple-600 text-white' : 'bg-white shadow-lg'}`}>
-                <div className="mb-4">
-                  {feature.svg}
-                </div>
-                <h3 className="mb-2 text-xl font-semibold">{feature.title}</h3>
-                <p className={index === 1 ? 'text-white opacity-90' : 'text-gray-600'}>{feature.description}</p>
+          
+          <div className="flex items-center justify-center p-8 lg:w-1/2">
+            {/* Custom Illustration for each service */}
+            {index === 0 && (
+              <div className="relative w-64 h-64">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                  <path fill="#8B5CF6" d="M45.7,-77.9C59.1,-69.5,69.9,-55.6,77.7,-40.4C85.5,-25.2,90.4,-8.7,87.2,6.2C84,21,72.7,34.2,61.6,46.2C50.5,58.1,39.6,68.8,26.2,74.2C12.8,79.6,-3.1,79.8,-19.2,76.5C-35.3,73.3,-51.5,66.6,-62.2,54.9C-72.9,43.2,-78,26.5,-79.7,9.5C-81.4,-7.5,-79.6,-24.7,-71.7,-37.6C-63.8,-50.5,-49.8,-59,-35.8,-66.9C-21.9,-74.8,-7.9,-82.2,7.1,-84.1C22.2,-86,38.4,-82.3,45.7,-77.9Z" transform="translate(100 100)" />
+                  <circle cx="100" cy="90" r="30" fill="white" />
+                  <circle cx="85" cy="85" r="7" fill="#1F2937" />
+                  <circle cx="115" cy="85" r="7" fill="#1F2937" />
+                  <path d="M85,105 Q100,120 115,105" stroke="#1F2937" strokeWidth="3" fill="none" />
+                </svg>
               </div>
-            ))}
+            )}
+            {index === 1 && (
+              <div className="relative w-64 h-64">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                  <path fill="#10B981" d="M48.2,-73.3C62.7,-66.3,75,-53.4,80.8,-38.1C86.5,-22.8,85.7,-5,80.1,9.7C74.5,24.4,64.1,36,52.5,44.4C40.8,52.8,28,58,14.3,63.3C0.7,68.5,-13.8,73.9,-28.2,71.5C-42.6,69.2,-56.8,59.2,-65.9,45.5C-75,31.8,-78.8,14.4,-77.7,-2.4C-76.5,-19.3,-70.4,-35.5,-59.6,-44.5C-48.8,-53.5,-33.3,-55.2,-19.4,-61.9C-5.5,-68.6,6.9,-80.3,21,-82.8C35.1,-85.3,50.8,-78.6,48.2,-73.3Z" transform="translate(100 100)" />
+                  <rect x="60" y="80" width="80" height="50" rx="5" fill="white" />
+                  <line x1="70" y1="95" x2="130" y2="95" stroke="#1F2937" strokeWidth="3" />
+                  <line x1="70" y1="105" x2="110" y2="105" stroke="#1F2937" strokeWidth="3" />
+                  <line x1="70" y1="115" x2="120" y2="115" stroke="#1F2937" strokeWidth="3" />
+                </svg>
+              </div>
+            )}
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+  
+  {/* Decorative Elements */}
+  <div className="absolute w-64 h-64 bg-purple-200 rounded-full opacity-50 -bottom-16 -left-16 mix-blend-multiply filter blur-3xl"></div>
+  <div className="absolute w-64 h-64 bg-green-200 rounded-full opacity-50 -top-16 -right-16 mix-blend-multiply filter blur-3xl"></div>
+</section>
 
-      {/* Proud to Deliver Section */}
-      <section className="py-12 text-center">
-        <div className="container px-4 mx-auto md:px-6 lg:px-8">
-          <div className="mb-8">
-            <div className="inline-block mb-3">
-              <div className="flex items-center">
-                <div className="flex-grow w-24 h-px bg-gray-300"></div>
-                <span className="mx-4 text-sm text-gray-500">Standards We Serve</span>
-                <div className="flex-grow w-24 h-px bg-gray-300"></div>
-              </div>
-            </div>
-            <h2 className="text-3xl font-bold">
-              Proud To Deliver Excellence <span className="text-purple-600">Every Time</span>
-            </h2>
-          </div>
-
-          <div className="flex flex-wrap justify-center">
-            {stats.map((stat, index) => (
-              <div key={index} className="w-full px-4 mb-8 sm:w-1/3">
-                <div className="mb-2 text-3xl font-bold text-purple-600 md:text-4xl">{stat.number}</div>
-                <p className="text-gray-600">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container px-4 mx-auto md:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            {services.map((service, index) => (
-              <div key={index} className="flex overflow-hidden bg-white rounded-lg">
-                <div className={`w-1/2 p-6 ${index % 2 === 0 ? 'bg-purple-600 text-white' : 'bg-green-50'}`}>
-                  <h3 className={`text-xl font-semibold mb-3 ${index % 2 === 0 ? 'text-white' : 'text-gray-800'}`}>{service.title}</h3>
-                  <p className={index % 2 === 0 ? 'text-white opacity-90' : 'text-gray-600'}>{service.description}</p>
-                </div>
-                <div className="flex items-center justify-center w-1/2 p-6">
-                  {service.svg}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+{/* Add necessary CSS */}
+<style jsx>{`
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .bg-grid-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+`}</style>
 
       {/* Technologies Section */}
-      <section className="py-16">
-        <div className="container px-4 mx-auto md:px-6 lg:px-8">
-          <div className="mb-12 text-center">
-            <div className="inline-block mb-3">
-              <div className="flex items-center">
-                <div className="flex-grow w-24 h-px bg-gray-300"></div>
-                <span className="mx-4 text-sm text-gray-500">Technology Stack</span>
-                <div className="flex-grow w-24 h-px bg-gray-300"></div>
-              </div>
-            </div>
-            <h2 className="text-3xl font-bold">
-              Technology We Work With In <span className="text-purple-600">Website Development</span>
-            </h2>
-          </div>
-
-          <div className="flex flex-col md:flex-row">
-            <div className="mb-8 md:w-3/5 md:mb-0">
-              <div className="mb-8">
-                <h3 className="mb-4 text-xl font-semibold">Frontend</h3>
-                <div className="flex flex-wrap gap-4">
-                  {technologies.frontend.map((tech, index) => (
-                    <div key={index} className="px-6 py-3 bg-white rounded-lg shadow-md">
-                      {tech}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mb-8">
-                <h3 className="mb-4 text-xl font-semibold">Backend</h3>
-                <div className="flex flex-wrap gap-4">
-                  {technologies.backend.map((tech, index) => (
-                    <div key={index} className="px-6 py-3 bg-white rounded-lg shadow-md">
-                      {tech}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <h3 className="mb-4 text-xl font-semibold">Infrastructure</h3>
-                <div className="flex flex-wrap gap-4">
-                  {technologies.infrastructure.map((tech, index) => (
-                    <div key={index} className="px-6 py-3 bg-white rounded-lg shadow-md">
-                      {tech}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div className="flex justify-center md:w-2/5">
-              <img src="/developer.png" alt="Developer" className="max-w-full" />
-            </div>
-          </div>
+<section className="py-16 bg-green-50">
+  <div className="container px-4 mx-auto md:px-6 lg:px-8">
+    <div className="mb-12 text-center">
+      <div className="inline-block mb-3">
+        <div className="flex items-center">
+          <div className="flex-grow w-24 h-px bg-gray-300"></div>
+          <span className="mx-4 text-sm font-medium tracking-wider text-gray-500 uppercase">Technology Stack</span>
+          <div className="flex-grow w-24 h-px bg-gray-300"></div>
         </div>
-      </section>
+      </div>
+      <h2 className="text-3xl font-bold text-gray-800">
+        Technology We Work With In <span className="text-green-600">Website Development</span>
+      </h2>
+    </div>
 
-      {/* Roadmap Section */}
-      <section className="py-16 bg-green-50">
-        <div className="container px-4 mx-auto md:px-6 lg:px-8">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold">Roadmap</h2>
-            <p className="max-w-2xl mx-auto text-gray-600">
-              Our systematic approach ensures smooth development and successful project delivery.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {roadmap.slice(0, 4).map((item, index) => (
-              <div key={index} className="p-6 bg-white rounded-lg shadow-md">
-                <div className="flex items-center mb-4">
-                  <div className="p-3 mr-4 bg-green-100 rounded-full">
-                    {item.svg}
-                  </div>
-                  <h3 className="text-lg font-semibold">{item.step}</h3>
-                </div>
-                <p className="text-gray-600">{item.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-4">
-            {roadmap.slice(4, 8).map((item, index) => (
-              <div key={index + 4} className="p-6 bg-white rounded-lg shadow-md">
-                <div className="flex items-center mb-4">
-                  <div className="p-3 mr-4 bg-green-100 rounded-full">
-                    {item.svg}
-                  </div>
-                  <h3 className="text-lg font-semibold">{item.step}</h3>
-                </div>
-                <p className="text-gray-600">{item.description}</p>
+    <div className="flex flex-col md:flex-row">
+      <div className="mb-8 md:w-3/5 md:mb-0 md:pr-8">
+        <div className="mb-8">
+          <h3 className="mb-4 text-xl font-semibold text-gray-800">Frontend</h3>
+          <div className="flex flex-wrap gap-4">
+            {technologies.frontend.map((tech, index) => (
+              <div key={index} className="flex items-center px-6 py-3 transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg">
+                <img src={`/icons/${tech.toLowerCase()}.svg`} alt={tech} className="w-6 h-6 mr-2" />
+                {tech}
               </div>
             ))}
           </div>
         </div>
-      </section>
+
+        <div className="mb-8">
+          <h3 className="mb-4 text-xl font-semibold text-gray-800">Backend</h3>
+          <div className="flex flex-wrap gap-4">
+            {technologies.backend.map((tech, index) => (
+              <div key={index} className="flex items-center px-6 py-3 transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg">
+                <img src={`/icons/${tech.toLowerCase()}.svg`} alt={tech} className="w-6 h-6 mr-2" />
+                {tech}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h3 className="mb-4 text-xl font-semibold text-gray-800">Infrastructure</h3>
+          <div className="flex flex-wrap gap-4">
+            {technologies.infrastructure.map((tech, index) => (
+              <div key={index} className="flex items-center px-6 py-3 transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg">
+                <img src={`/icons/${tech.toLowerCase()}.svg`} alt={tech} className="w-6 h-6 mr-2" />
+                {tech}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="relative flex justify-center md:w-2/5">
+        <div className="absolute w-64 h-64 transform -translate-x-1/2 -translate-y-1/2 bg-green-100 rounded-full top-1/2 left-1/2 -z-10"></div>
+        <img src="/developer.png" alt="Developer" className="relative z-10 max-w-full" />
+        <div className="absolute top-4 right-4 animate-pulse">
+          <div className="px-2 py-1 text-xs bg-white rounded shadow-sm">HTML</div>
+        </div>
+        <div className="absolute delay-300 bottom-8 left-4 animate-pulse">
+          <div className="px-2 py-1 text-xs bg-white rounded shadow-sm">React</div>
+        </div>
+        <div className="absolute delay-700 top-1/2 right-8 animate-pulse">
+          <div className="px-2 py-1 text-xs bg-white rounded shadow-sm">AWS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Roadmap Section */}
+<section className="py-16 bg-green-50">
+  <div className="container px-4 mx-auto md:px-6 lg:px-8">
+    <div className="mb-12 text-center">
+      <h2 className="mb-4 text-3xl font-bold text-gray-800">Roadmap</h2>
+      <p className="max-w-2xl mx-auto text-gray-600">
+        Our systematic approach ensures smooth development and successful project delivery.
+      </p>
+    </div>
+
+    <div className="relative grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+      {/* Connecting line for desktop view */}
+      <div className="hidden lg:block absolute left-1/2 top-8 w-3/4 h-0.5 bg-green-300 transform -translate-x-1/2 -translate-y-4 z-0"></div>
+      
+      {roadmap.slice(0, 4).map((item, index) => (
+        <div key={index} className="relative p-6 transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg">
+          <div className="absolute flex items-center justify-center w-8 h-8 text-xs font-bold text-white bg-green-500 rounded-full -top-4 left-6">
+            {index + 1}
+          </div>
+          <div className="flex items-center mb-4">
+            <div className="p-3 mr-4 bg-green-100 rounded-full">
+              {item.svg}
+            </div>
+            <h3 className="text-lg font-semibold">{item.step}</h3>
+          </div>
+          <p className="text-gray-600">{item.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div className="relative grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-4">
+      {/* Connecting line for desktop view */}
+      <div className="hidden lg:block absolute left-1/2 top-8 w-3/4 h-0.5 bg-green-300 transform -translate-x-1/2 -translate-y-4 z-0"></div>
+      
+      {roadmap.slice(4, 8).map((item, index) => (
+        <div key={index + 4} className="relative p-6 transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg">
+          <div className="absolute flex items-center justify-center w-8 h-8 text-xs font-bold text-white bg-green-500 rounded-full -top-4 left-6">
+            {index + 5}
+          </div>
+          <div className="flex items-center mb-4">
+            <div className="p-3 mr-4 bg-green-100 rounded-full">
+              {item.svg}
+            </div>
+            <h3 className="text-lg font-semibold">{item.step}</h3>
+          </div>
+          <p className="text-gray-600">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Why Choose Us Section */}
       <section className="py-16">
@@ -655,7 +847,7 @@ const WebsiteDevelopment = () => {
                 <div className="p-4">
                   <h3 className="mb-1 text-lg font-semibold">Project Title {item}</h3>
                   <p className="mb-3 text-gray-600">Category</p>
-                  <Link href="#" className="flex items-center font-medium text-purple-600 hover:text-green-600">
+                  <Link href="#" className="flex items-center font-medium text-purple-600 hover:text-purple-600">
                     View Details
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>

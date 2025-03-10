@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className="container flex items-center justify-between mx-auto">
           {/* Logo Section */}
           
-          <div className="flex cursor-pointer items-center space-x-2 ">
+          <div className="flex items-center space-x-2 cursor-pointer ">
           <Link
                 href="/"
                 className="nav-link "
@@ -285,7 +285,7 @@ const Navbar = () => {
                 {/* Development */}
                 <p className="font-bold text-[#8044c9] mb-2 mt-1">Development</p>
                 <Link
-                  href="/services/website-development"
+                  href="/services/websitedevelopment"
                   className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
                   onClick={() => setSidebarOpen(false)}
                 >
