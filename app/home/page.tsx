@@ -1,15 +1,13 @@
+import React from 'react';
 import ServicesSection from "../../components/home/ServicesSection";
 import ExpertiseSection from "../../components/home/ExpertiseSection";
 import HowWeWork from "../../components/home/HowWeWork";
 import CompanyStats from "@/components/home/CompanyStats";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/home/HeroSection";
-import FAQ from "../FAQ/page";
-import termsandcondition from "../terms/page";
-import privacypolicy from "../privacy/page";
 import TestimonialsSection from "@/components/home/Testimonial";
 import BlogSection from '@/components/home/BlogSection';
-
+import WebsiteDevelopmentPage from '@/src/pages/services/website-development';
 
 const blogPosts = [
   {
@@ -30,10 +28,7 @@ const blogPosts = [
   }
 ];
 
-
-
-
-function home() {
+function Home() {
   return (
     <div className="min-h-screen text-black bg-white">
       <HeroSection />
@@ -42,10 +37,12 @@ function home() {
       <HowWeWork />
       <CompanyStats />
       <TestimonialsSection />
-      <BlogSection  blogPosts={blogPosts}/>
+      <BlogSection blogPosts={blogPosts}/>
+      <WebsiteDevelopmentPage />
       <Footer />
     </div>
   );
 }
 
-export default home;
+// Make sure the component is properly exported
+export default Home;

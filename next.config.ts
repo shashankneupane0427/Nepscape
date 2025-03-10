@@ -7,11 +7,10 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: '/',
-        destination: '/home',
-        permanent: true, // Set to true if you want a 301 permanent redirect
+        source: '/',         // Redirect from root URL
+        destination: '/home', // Redirect to /home
+        permanent: true,     // Permanent redirect (301)
       },
-
     ];
   },
 };
