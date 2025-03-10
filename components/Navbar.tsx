@@ -38,9 +38,15 @@ const Navbar: React.FC = () => {
       >
         <div className="container flex items-center justify-between mx-auto">
           {/* Logo Section */}
-          <div className="flex items-center space-x-2 hover:animate-pulse transition-all duration-500">
+          
+          <div className="flex cursor-pointer items-center space-x-2 hover:animate-pulse transition-all duration-500">
+          <Link
+                href="/"
+                className="nav-link hover:text-[#967bb6] font-medium inline-block transition-all duration-300"
+              >
             <img src="/logo.png" alt="Nepscape Logo" className="h-10" />
             <p className="text-[#8044c9]">Nepscape</p>
+            </Link>
           </div>
 
           {/* Hamburger Menu Button - Visible on all devices */}
