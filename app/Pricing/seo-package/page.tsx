@@ -33,8 +33,8 @@ function Pricing() {
               <div className="mb-6">
                 <h2 className="text-2xl font-bold text-purple-800">Standard</h2>
                 <div className="flex items-baseline mt-4 mb-2">
-                  <span className="text-lg text-gray-500">₹</span>
-                  <span className="text-4xl font-extrabold text-purple-700">34,000</span>
+                  <span className="text-lg text-gray-500">$</span>
+                  <span className="text-4xl font-extrabold text-purple-700">199</span>
                   <span className="ml-1 text-xl text-gray-500">/month</span>
                 </div>
                 <p className="text-sm text-gray-600">Preferred For Small Businesses</p>
@@ -138,6 +138,7 @@ function Pricing() {
           {/* Premium Package */}
           <div className="relative p-6 overflow-hidden transition-all bg-white border-2 border-purple-400 shadow-xl rounded-xl hover:shadow-2xl hover:border-purple-500 hover:transform hover:-translate-y-1">
             {/* Best Value Badge */}
+            
             <div className="absolute top-0 right-0">
               <div className="w-32 h-32 overflow-hidden transform translate-x-16 -translate-y-16">
                 <div className="absolute transform rotate-45 bg-purple-600 text-white text-xs font-bold py-1 right-[-35px] top-[32px] w-[170px] text-center">
@@ -152,8 +153,8 @@ function Pricing() {
                   Premium
                 </h2>
                 <div className="flex items-baseline mt-4 mb-3">
-                  <span className="text-lg text-gray-500">₹</span>
-                  <span className="text-4xl font-extrabold text-purple-700">59,000</span>
+                  <span className="text-lg text-gray-500">$</span>
+                  <span className="text-4xl font-extrabold text-purple-700">399</span>
                   <span className="ml-1 text-xl text-gray-500">/month</span>
                 </div>
                 <p className="text-sm text-gray-600">
@@ -265,8 +266,8 @@ function Pricing() {
                   Enterprise
                 </h2>
                 <div className="flex items-baseline mt-4 mb-2">
-                  <span className="text-lg text-gray-500">₹</span>
-                  <span className="text-4xl font-extrabold text-purple-700">119,000</span>
+                  <span className="text-lg text-gray-500">$</span>
+                  <span className="text-4xl font-extrabold text-purple-700">799</span>
                   <span className="ml-1 text-xl text-gray-500">/month</span>
                 </div>
                 <p className="text-sm text-gray-600">

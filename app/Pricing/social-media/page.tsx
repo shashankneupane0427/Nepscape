@@ -64,17 +64,30 @@ const SocialMediaPackagePage = () => {
 
   return (
     <>
-      <div className="px-6 pt-24 pb-12 mx-auto max-w-7xl">
-        <h1 className="mb-8 text-4xl font-bold text-center text-purple-600">
-          Social Media Marketing Packages
-        </h1>
+      <div className="px-6 pt-24 pb-12 mx-auto max-w-7xl  bg-white border-2 border-purple-200">
+      <div className="mb-16 text-center">
+          <span className="inline-block px-3 py-1 mt-2 mb-4 text-sm font-medium text-purple-700 bg-purple-100 rounded-full">
+            Subscription Plans
+          </span>
+
+          <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-gray-800 md:text-5xl">
+            Social Media Marketing Package
+          </h1>
+          <p className="max-w-2xl mx-auto text-lg text-gray-600">
+            Boost your online presence with our comprehensive Social Marketting Package tailored to your business needs
+          </p>
+        </div>
         
         <div className="grid gap-8 mt-10 md:grid-cols-3">
           {/* Starter Package */}
           <div className="p-6 transition-all duration-300 border rounded-lg shadow-md hover:shadow-xl" style={{ borderColor: colors.light }}>
             <h2 className="mb-4 text-2xl font-semibold text-purple-600">Starter Package</h2>
             <p className="mb-4 text-gray-600">Establish your social media presence with essential management.</p>
-            <div className="mb-6 text-3xl font-bold text-purple-600">$349<span className="text-lg font-normal">/mo</span></div>
+            <div className="flex items-baseline mt-4 mb-2">
+                  <span className="text-lg text-gray-500">$</span>
+                  <span className="text-4xl font-extrabold text-purple-700">99</span>
+                  <span className="ml-1 text-xl text-gray-500">/month</span>
+                </div>
             
             <ul className="mb-6 space-y-3">
               {["2 social media platforms", "8 posts per month", "Basic content creation", "Monthly performance report"].map((item, index) => (
@@ -102,7 +115,11 @@ const SocialMediaPackagePage = () => {
             </div>
             <h2 className="mb-4 text-2xl font-semibold text-purple-600">Growth Package</h2>
             <p className="mb-4 text-gray-600">Enhance your social media presence and engagement.</p>
-            <div className="mb-6 text-3xl font-bold text-purple-600">$649<span className="text-lg font-normal">/mo</span></div>
+            <div className="flex items-baseline mt-4 mb-2">
+                  <span className="text-lg text-gray-500">$</span>
+                  <span className="text-4xl font-extrabold text-purple-700">199</span>
+                  <span className="ml-1 text-xl text-gray-500">/month</span>
+                </div>
             
             <ul className="mb-6 space-y-3">
               {[
@@ -129,10 +146,14 @@ const SocialMediaPackagePage = () => {
           </div>
           
           {/* Premium Package */}
-          <div className="p-6 transition-all duration-300 border rounded-lg shadow-md hover:shadow-xl" style={{ borderColor: colors.light }}>
+          <div className="p-6 transition-all duration-300 border rounded-lg shadow-md hover:shadow-xl  bg-white  border-purple-200" style={{ borderColor: colors.light }}>
             <h2 className="mb-4 text-2xl font-semibold text-purple-600">Premium Package</h2>
             <p className="mb-4 text-gray-600">Complete social media management with advanced strategies.</p>
-            <div className="mb-6 text-3xl font-bold text-purple-600">$1,099<span className="text-lg font-normal">/mo</span></div>
+            <div className="flex items-baseline mt-4 mb-2">
+                  <span className="text-lg text-gray-500">$</span>
+                  <span className="text-4xl font-extrabold text-purple-700">299</span>
+                  <span className="ml-1 text-xl text-gray-500">/month</span>
+                </div>
             
             <ul className="mb-6 space-y-3">
               {[
