@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import TestimonialsSection from "@/components/home/Testimonial";
 import BlogSection from '@/components/home/BlogSection';
-
+import StructuredData from '../components/StructuredData';
 
 const blogPosts = [
   {
@@ -33,6 +33,7 @@ const blogPosts = [
 function page() {
   return (
     <div className="min-h-screen text-black bg-white">
+      <StructuredData />
       <HeroSection />
       <ServicesSection />
       <ExpertiseSection />
