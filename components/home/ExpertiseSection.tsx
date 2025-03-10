@@ -79,7 +79,7 @@ const TechExpertiseSection = () => {
           <div className="relative p-8 md:p-12 lg:p-20">
             {/* External img */}
             <img
-              src="/ext.png"
+              src="/illuss.png"
               alt="Developer working from home"
               className="relative z-10 w-full max-w-md"
             />

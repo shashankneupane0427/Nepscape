@@ -123,7 +123,7 @@ function HeroSection() {
             <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-purple-300 to-indigo-400 opacity-70 blur-2xl animate-pulse"></div>
             <div className="absolute -inset-8 rounded-full border-2 border-purple-200 opacity-30 animate-spin-slow"></div>
             <img
-              src="heroPicture.png"
+              src="hero.svg"
               alt="IT Solutions"
               className="h-[35vh] xs:h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[55vh] w-auto object-contain relative z-10 drop-shadow-2xl transform transition-transform duration-500 hover:scale-105 filter"
             />

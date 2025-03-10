@@ -1,4 +1,4 @@
-# Nepscape - IT Company Website
+# Nepscape - IT Company
 
 <img src="/public/site.png">
 
