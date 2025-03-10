@@ -190,12 +190,12 @@ const Navbar: React.FC = () => {
 
           {/* Contact Section - Only visible on desktop when width is greater than 1045px */}
           <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center text-[#967bb6] font-semibold text-lg hover:scale-110 transition-transform duration-300">
+            <div className="flex items-center text-purple-700 font-semibold text-lg ">
               <FaPhoneAlt className="mr-2 animate-bounce" />
-              <span>9862973810</span>
+              <span>+977 9862973810</span>
             </div>
 
-            <button className="border-2 border-[#967bb6] text-[#967bb6] px-4 py-2 rounded-full hover:bg-[#967bb6] hover:text-white transition-all duration-500 hover:scale-110 hover:shadow-lg hover:rotate-1">
+            <button className="border-2 border-purple-700  text-purple-700 px-4 py-2 rounded-full hover:bg-purple-700 hover:text-white transition-all duration-500 cursor-pointer">
               Quick Enquiry
             </button>
           </div>
@@ -211,7 +211,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center p-4 border-b">
           <div className="flex items-center">
             <img src="/logo.png" alt="Nepscape Logo" className="h-8" />
-            <p className="text-[#8044c9] ml-2">Nepscape</p>
+            <p className="text-purple-700 ml-2">Nepscape</p>
           </div>
           <button 
             onClick={toggleSidebar}
@@ -370,7 +370,7 @@ const Navbar: React.FC = () => {
           <div className="mt-6 pt-6 border-t border-gray-200">
             <div className="flex items-center text-[#967bb6] font-semibold mb-4">
               <FaPhoneAlt className="mr-2 animate-bounce" />
-              <span>9862973810</span>
+              <span>+977 9862973810</span>
             </div>
 
             <button className="w-full border-2 border-[#967bb6] text-[#967bb6] px-4 py-2 rounded-full hover:bg-[#967bb6] hover:text-white transition-all duration-500 hover:scale-105 hover:shadow-lg hover:rotate-1">

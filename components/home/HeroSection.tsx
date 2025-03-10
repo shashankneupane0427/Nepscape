@@ -54,7 +54,7 @@ function HeroSection() {
           </span>
 
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-800 font-bold mb-3 sm:mb-6 leading-tight">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600">
+            <span className="bg-clip-text text-purple-800">
               Transform
             </span>{" "}
             your vision into a Digital Reality
@@ -69,48 +69,48 @@ function HeroSection() {
             solutions that empower your business in the digital landscape.
           </p>
 
-          <div className="flex flex-col xs:flex-row gap-3 sm:gap-5">
-            <button className="group cursor-pointer bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium h-10 sm:h-12 px-5 sm:px-8 text-sm sm:text-base rounded-full shadow-lg hover:shadow-purple-300/50 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0">
-              <span className="flex items-center justify-center">
-                Let&apos;s get Started
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 sm:h-5 sm:w-5 ml-2 transform group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
-                </svg>
-              </span>
-            </button>
-
-            <button className="relative overflow-hidden border-2 border-purple-500 text-purple-700 font-medium h-10 sm:h-12 px-5 sm:px-8 text-sm sm:text-base rounded-full hover:bg-purple-50 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 group">
-              <span className="relative z-10 flex items-center justify-center">
-                Discover our work
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 sm:h-5 sm:w-5 ml-2 opacity-0 group-hover:opacity-100 transform -translate-x-3 group-hover:translate-x-0 transition-all duration-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 15l-5-5 5-5"
-                  />
-                </svg>
-              </span>
-              <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-purple-500 to-indigo-500 group-hover:w-full transition-all duration-500"></span>
-            </button>
-          </div>
+          <div className="flex flex-col lg:flex-row gap-3 sm:gap-5">
+      <button className="group cursor-pointer bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium h-10 sm:h-12 px-5 sm:px-8 text-sm sm:text-base rounded-full shadow-lg hover:shadow-purple-300/50 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0">
+        <span className="flex items-center justify-center">
+          Let&apos;s get Started
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4 sm:h-5 sm:w-5 ml-2 transform group-hover:translate-x-1 transition-transform"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            />
+          </svg>
+        </span>
+      </button>
+      
+      <button className="relative overflow-hidden border-2 border-purple-500 text-purple-700 font-medium h-10 sm:h-12 px-5 sm:px-8 text-sm sm:text-base rounded-full hover:bg-purple-50 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 group">
+        <span className="relative z-10 flex items-center justify-center">
+          Discover our work
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4 sm:h-5 sm:w-5 ml-2 opacity-0 group-hover:opacity-100 transform -translate-x-3 group-hover:translate-x-0 transition-all duration-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 15l-5-5 5-5"
+            />
+          </svg>
+        </span>
+        <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-purple-500 to-indigo-500 group-hover:w-full transition-all duration-500"></span>
+      </button>
+    </div>
         </div>
 
         {/* Image - UPDATED TO BE LARGER */}
