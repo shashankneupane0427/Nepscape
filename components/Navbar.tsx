@@ -39,13 +39,15 @@ const Navbar: React.FC = () => {
         <div className="container flex items-center justify-between mx-auto">
           {/* Logo Section */}
           
-          <div className="flex cursor-pointer items-center space-x-2 hover:animate-pulse transition-all duration-500">
+          <div className="flex cursor-pointer items-center space-x-2 ">
           <Link
                 href="/"
-                className="nav-link hover:text-[#967bb6] font-medium inline-block transition-all duration-300"
+                className="nav-link "
               >
+                <div className="flex">
             <img src="/logo.png" alt="Nepscape Logo" className="h-10" />
-            <p className="text-[#8044c9]">Nepscape</p>
+            <p className="text-[#8044c9] pt-2.5 pl-4">Nepscape</p>
+            </div>
             </Link>
           </div>
 
