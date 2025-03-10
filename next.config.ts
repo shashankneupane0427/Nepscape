@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true, // Disables ESLint during builds
   },
+
   async redirects() {
     return [
       {
@@ -13,6 +14,9 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+
+
+
 };
 
 export default nextConfig;

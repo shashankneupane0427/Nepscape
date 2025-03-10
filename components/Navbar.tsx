@@ -38,9 +38,17 @@ const Navbar = () => {
       >
         <div className="container flex items-center justify-between mx-auto">
           {/* Logo Section */}
-          <div className="flex items-center space-x-2 transition-all duration-500 hover:animate-pulse">
+          
+          <div className="flex cursor-pointer items-center space-x-2 ">
+          <Link
+                href="/"
+                className="nav-link "
+              >
+                <div className="flex">
             <img src="/logo.png" alt="Nepscape Logo" className="h-10" />
-            <p className="text-[#8044c9]">Nepscape</p>
+            <p className="text-[#8044c9] pt-2.5 pl-4">Nepscape</p>
+            </div>
+            </Link>
           </div>
 
           {/* Hamburger Menu Button - Visible on all devices */}

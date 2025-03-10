@@ -14,9 +14,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nepscape",
-  description: "Nepscape is a leading software company providing top-tier Web development and IT services. We build scalable, high-performance digital products tailored to your business needs.",
-  icons: "/logo.png",
+  title: 'Nepscape | IT Company | Website, App & Digital Marketing Services',
+  description: 'We have Top website developer to design and develop your website. Contact Us. Highly functional and visually appealing website designed to meet your needs. Professional Designs. Free Consultation. SEO Optimized.',
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   keywords: [
     "Nepscape",
     "Web Development",
@@ -33,10 +40,9 @@ export const metadata: Metadata = {
     "Business Automation",
     "Next.js Development"
   ], openGraph: {
-    title: "Nepscape",
-    description: "Nepscape specializes in web development and IT services, delivering high-performance, scalable digital products for businesses worldwide.",
-    url: "https://yourwebsite.com", 
-    type: "website",
+    title: 'Nepscape | IT Company | Website, App & Digital Marketing Services',
+    description: 'We have top website developer to design and develop your website. Contact Us. Highly functional and visually appealing website designed to meet your needs.',
+    url: 'https://nepscape.com',
     images: [
       {
         url: "/logo.png",
