@@ -125,7 +125,7 @@ function HeroSection() {
             <img
               src="hero.svg"
               alt="IT Solutions"
-              className="h-[35vh] xs:h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[55vh] w-auto object-contain relative z-10 drop-shadow-2xl transform transition-transform duration-500 hover:scale-105 filter"
+              className="h-[35vh] xs:h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[55vh] w-auto object-contain relative z-10 drop-shadow-2xl transform transition-transform duration-500 hover: filter"
             />
           </div>
         </div>
