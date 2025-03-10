@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import TestimonialsSection from "@/components/home/Testimonial";
 import BlogSection from '@/components/home/BlogSection';
-import WebsiteDevelopmentPage from '@/src/pages/services/website-development';
+
 
 const blogPosts = [
   {
@@ -38,7 +38,7 @@ function Home() {
       <CompanyStats />
       <TestimonialsSection />
       <BlogSection blogPosts={blogPosts}/>
-      <WebsiteDevelopmentPage />
+     
       <Footer />
     </div>
   );
