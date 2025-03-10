@@ -10,10 +10,11 @@ function HeroSection() {
     // Add parallax effect for decorative elements
     const handleMouseMove = (e: any) => {
       const decorElements = document.querySelectorAll(".decor-element");
-      decorElements.forEach((elem) => {
-        const speed: any = elem.getAttribute("data-speed");
+      decorElements.forEach((elem: any) => {
+        const speed = elem.getAttribute("data-speed");
         const x = (window.innerWidth - e.pageX * speed) / 100;
         const y = (window.innerHeight - e.pageY * speed) / 100;
+        elem.style.transform = `translate(${x}px, ${y}px)`;
       });
     };
 
@@ -22,20 +23,20 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="pt-16 overflow-hidden">
-      <div className="relative h-[70vh] md:h-[80vh]  bg-gradient-to-br from-purple-50 via-purple-100 to-indigo-100 m-4 md:m-9 rounded-3xl pt-52 pb-60 md:rounded-none md:rounded-tr-[5rem] md:rounded-bl-[5rem] flex flex-col md:flex-row  transition-all duration-500">
+    <div className="pt-4 sm:pt-8 md:pt-16 overflow-hidden">
+      <div className="relative min-h-[60vh] sm:h-[70vh] md:h-[80vh] bg-gradient-to-br from-purple-50 via-purple-100 to-indigo-100 m-2 sm:m-4 md:m-9 rounded-2xl sm:rounded-3xl md:rounded-none md:rounded-tr-[5rem] md:rounded-bl-[5rem] pt-20 sm:pt-32 md:pt-52 pb-20 sm:pb-40 md:pb-60 flex flex-col md:flex-row transition-all duration-500">
         {/* Animated background */}
-        <div className="absolute inset-0 overflow-hidden rounded-3xl md:rounded-none md:rounded-tr-[5rem] md:rounded-bl-[5rem]">
+        <div className="absolute inset-0 overflow-hidden rounded-2xl sm:rounded-3xl md:rounded-none md:rounded-tr-[5rem] md:rounded-bl-[5rem]">
           <div
-            className="decor-element absolute top-10 left-10 w-32 h-32 bg-purple-300 rounded-full opacity-10 animate-pulse"
+            className="decor-element absolute top-10 left-10 w-20 sm:w-24 md:w-32 h-20 sm:h-24 md:h-32 bg-purple-300 rounded-full opacity-10 animate-pulse"
             data-speed="2"
           ></div>
           <div
-            className="decor-element absolute top-1/3 right-1/4 w-40 h-40 bg-indigo-400 rounded-full opacity-10 animate-blob animation-delay-4000"
+            className="decor-element absolute top-1/3 right-1/4 w-24 sm:w-32 md:w-40 h-24 sm:h-32 md:h-40 bg-indigo-400 rounded-full opacity-10 animate-blob animation-delay-4000"
             data-speed="3"
           ></div>
           <div
-            className="decor-element absolute bottom-10 left-1/4 w-48 h-48 bg-violet-500 rounded-full opacity-10 animate-blob animation-delay-2000"
+            className="decor-element absolute bottom-10 left-1/4 w-32 sm:w-40 md:w-48 h-32 sm:h-40 md:h-48 bg-violet-500 rounded-full opacity-10 animate-blob animation-delay-2000"
             data-speed="1"
           ></div>
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-purple-200 opacity-50"></div>
@@ -43,38 +44,38 @@ function HeroSection() {
 
         {/* Text Content */}
         <div
-          className={`md:w-1/2 p-8 md:p-12 h-full flex flex-col justify-center transform ${
+          className={`w-full md:w-1/2 p-4 sm:p-6 md:p-12 h-full flex flex-col justify-center transform ${
             isLoaded ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
           } transition-all duration-700 ease-out relative z-10`}
         >
-          <div className="absolute -left-3 top-1/4 h-20 w-1 bg-gradient-to-b from-purple-400 to-indigo-600 rounded-full"></div>
-          <span className="uppercase tracking-wider text-xs font-semibold text-purple-700 mb-2 animate-pulse">
+          <div className="hidden sm:block absolute -left-3 top-1/4 h-16 sm:h-20 w-1 bg-gradient-to-b from-purple-400 to-indigo-600 rounded-full"></div>
+          <span className="uppercase tracking-wider text-xs font-semibold text-purple-700 mb-1 sm:mb-2 animate-pulse">
             Premier IT Solutions
           </span>
 
-          <h1 className="text-3xl md:text-5xl text-gray-800 font-bold mb-6 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-800 font-bold mb-3 sm:mb-6 leading-tight">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600">
               Transform
             </span>{" "}
             your vision into a Digital Reality
           </h1>
 
-          <p className="text-purple-900 mb-2 font-medium">
+          <p className="text-purple-900 mb-2 text-sm sm:text-base font-medium">
             The most innovative IT company in Nepal
           </p>
 
-          <p className="text-gray-600 mb-8 transform transition-all duration-700 delay-200 ease-out max-w-md">
+          <p className="text-gray-600 text-sm sm:text-base mb-4 sm:mb-8 transform transition-all duration-700 delay-200 ease-out max-w-md">
             We blend creativity with cutting-edge technology to deliver
             solutions that empower your business in the digital landscape.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-5">
-            <button className="group cursor-pointer bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium h-12 px-8 rounded-full shadow-lg hover:shadow-purple-300/50 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0">
+          <div className="flex flex-col xs:flex-row gap-3 sm:gap-5">
+            <button className="group cursor-pointer bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium h-10 sm:h-12 px-5 sm:px-8 text-sm sm:text-base rounded-full shadow-lg hover:shadow-purple-300/50 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0">
               <span className="flex items-center justify-center">
                 Let&apos;s get Started
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform"
+                  className="h-4 w-4 sm:h-5 sm:w-5 ml-2 transform group-hover:translate-x-1 transition-transform"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -89,12 +90,12 @@ function HeroSection() {
               </span>
             </button>
 
-            <button className="relative overflow-hidden border-2 border-purple-500 text-purple-700 font-medium h-12 px-8 rounded-full hover:bg-purple-50 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 group">
+            <button className="relative overflow-hidden border-2 border-purple-500 text-purple-700 font-medium h-10 sm:h-12 px-5 sm:px-8 text-sm sm:text-base rounded-full hover:bg-purple-50 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 group">
               <span className="relative z-10 flex items-center justify-center">
                 Discover our work
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 ml-2 opacity-0 group-hover:opacity-100 transform -translate-x-3 group-hover:translate-x-0 transition-all duration-300"
+                  className="h-4 w-4 sm:h-5 sm:w-5 ml-2 opacity-0 group-hover:opacity-100 transform -translate-x-3 group-hover:translate-x-0 transition-all duration-300"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -112,9 +113,9 @@ function HeroSection() {
           </div>
         </div>
 
-        {/* img */}
+        {/* Image */}
         <div
-          className={`flex justify-center items-center transform ${
+          className={`flex justify-center items-center mt-8 md:mt-0 transform ${
             isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           } transition-all duration-700 delay-300 ease-out relative z-10`}
         >
@@ -124,8 +125,7 @@ function HeroSection() {
             <img
               src="heroPicture.png"
               alt="IT Solutions"
-  
-              className="h-[35vh] md:h-[45vh] w-auto object-contain relative z-10 drop-shadow-2xl transform transition-transform duration-500 hover:scale-105 filter"
+              className="h-[25vh] xs:h-[30vh] sm:h-[35vh] md:h-[40vh] lg:h-[45vh] w-auto object-contain relative z-10 drop-shadow-2xl transform transition-transform duration-500 hover:scale-105 filter"
             />
           </div>
         </div>
@@ -182,6 +182,16 @@ function HeroSection() {
         }
         .animation-delay-4000 {
           animation-delay: 4s;
+        }
+        
+        /* Extra small screen support */
+        @media (min-width: 400px) {
+          .xs\:flex-row {
+            flex-direction: row;
+          }
+          .xs\:h-\[30vh\] {
+            height: 30vh;
+          }
         }
       `}</style>
     </div>
