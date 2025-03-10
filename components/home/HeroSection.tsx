@@ -24,7 +24,7 @@ function HeroSection() {
 
   return (
     <div className="pt-4 sm:pt-8 md:pt-16 overflow-hidden">
-      <div className="relative min-h-[60vh] sm:h-[70vh] md:h-[80vh] bg-gradient-to-br from-purple-50 via-purple-100 to-indigo-100 m-2 sm:m-4 md:m-9 rounded-2xl sm:rounded-3xl md:rounded-none md:rounded-tr-[5rem] md:rounded-bl-[5rem] pt-20 sm:pt-32 md:pt-52 pb-20 sm:pb-40 md:pb-60 flex flex-col md:flex-row transition-all duration-500">
+      <div className="relative min-h-[60vh] sm:h-[70vh] md:h-[80vh] bg-white m-2 sm:m-4 md:m-9 rounded-2xl sm:rounded-3xl md:rounded-none md:rounded-tr-[5rem] md:rounded-bl-[5rem] pt-20 sm:pt-32 md:pt-52 pb-20 sm:pb-40 md:pb-60 flex flex-col md:flex-row transition-all duration-500">
         {/* Animated background */}
         <div className="absolute inset-0 overflow-hidden rounded-2xl sm:rounded-3xl md:rounded-none md:rounded-tr-[5rem] md:rounded-bl-[5rem]">
           <div
