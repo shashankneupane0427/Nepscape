@@ -34,7 +34,8 @@ export default function Home() {
     },
   ]);
 
-  const categories = ['All', 'Website Development', , 'Graphics Design'];
+  // Fix: Remove the extra comma that created an undefined entry
+  const categories = ['All', 'Website Development', 'Mobile Application', 'Graphics Design'];
 
   const filteredProjects = activeFilter === 'All' 
     ? projects 
