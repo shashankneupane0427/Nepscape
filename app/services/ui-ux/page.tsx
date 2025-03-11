@@ -1,5 +1,4 @@
 'use client';
-
 import { SiAdobexd, SiFigma, SiSketch, SiInvision, SiLaravel, SiFramer } from 'react-icons/si';
 import { useState } from 'react';
 import Footer from '@/components/Footer';
@@ -303,18 +302,7 @@ const UiUxDesign = () => {
         </svg>
       ),
     },
-    {
-      title: "App Development",
-      description: "Intuitive, feature-rich mobile applications designed for modern users.",
-      svg: (
-        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="20" y="8" width="24" height="48" rx="4" stroke="#7d2fd0" strokeWidth="3" />
-          <circle cx="32" cy="48" r="3" fill="#7d2fd0" />
-          <path d="M20 16H44" stroke="#7d2fd0" strokeWidth="3" />
-          <path d="M20 40H44" stroke="#7d2fd0" strokeWidth="3" />
-        </svg>
-      ),
-    },
+    
     {
       title: "Search Engine Optimization (SEO)",
       description: "Strategic optimization for enhanced visibility and organic traffic growth.",
@@ -389,114 +377,319 @@ const UiUxDesign = () => {
 
   return (
     <div className="bg-gray-50">
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden text-white bg-gradient-to-r from-purple-500 to-indigo-600">
-        {/* Background decoration */}
-        <div className="absolute top-0 left-0 w-full h-full opacity-10">
-          <div className="absolute w-40 h-40 bg-white rounded-full top-10 left-10 blur-3xl"></div>
-          <div className="absolute bg-purple-300 rounded-full bottom-10 right-10 w-60 h-60 blur-3xl"></div>
+{/* Hero Section */}
+<section className="relative py-24 overflow-hidden text-white bg-gradient-to-br from-purple-500 via-indigo-500 to-purple-600 md:py-28">
+  {/* Background Decoration */}
+  <div className="absolute inset-0">
+    <div className="absolute w-64 h-64 bg-purple-300 rounded-full opacity-30 blur-3xl top-10 left-10 md:w-80 md:h-80"></div>
+    <div className="absolute bg-indigo-400 rounded-full w-80 h-80 opacity-30 blur-3xl bottom-10 right-10 md:w-96 md:h-96"></div>
+  </div>
+
+  <div className="relative z-10 px-6 mx-auto max-w-7xl md:px-12 lg:px-16">
+    <div className="flex flex-col items-center md:flex-row md:items-center">
+      
+      {/* Text Content */}
+      <div className="w-full text-center md:w-1/2 md:text-left">
+        <h1 className="mb-6 text-5xl font-extrabold leading-tight md:text-6xl lg:text-7xl">
+          Elevate Your <span className="text-purple-200">UI/UX</span> Design
+        </h1>
+        <p className="mb-8 text-base text-purple-100 md:text-lg">
+          We craft seamless digital experiences by blending aesthetics with intuitive functionality. Let’s build designs that captivate and convert.
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
+          <Link href="/contact" className="px-6 py-3 text-base font-semibold text-purple-900 transition-all bg-white rounded-lg shadow-lg hover:bg-purple-300 hover:text-purple-900 md:px-8 md:py-4 md:text-lg">
+            Get Started
+          </Link>
+        </div>
+      </div>
+
+      {/* Image Section (Pushed Right & More Responsive) */}
+      <div className="w-full md:w-[50%] flex justify-center md:justify-end mt-8 md:mt-0">
+        <div className="relative w-full max-w-xs sm:max-w-md md:max-w-lg">
+          <div className="relative z-10 overflow-hidden bg-white rounded-lg shadow-2xl">
+            <Image 
+              src="/ui-ux.jpg" 
+              alt="UI/UX Design" 
+              width={700} 
+              height={500}
+              className="object-cover w-full h-auto rounded-lg"
+            />
+          </div>
+          {/* Glow Effects */}
+          <div className="absolute top-0 right-0 -mt-6 -mr-6 bg-purple-300 rounded-full w-28 h-28 opacity-40 blur-3xl md:w-40 md:h-40 md:-mt-10 md:-mr-10"></div>
+          <div className="absolute bottom-0 left-0 w-24 h-24 -mb-6 -ml-6 bg-indigo-300 rounded-full opacity-40 blur-3xl md:w-32 md:h-32 md:-mb-8 md:-ml-8"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{/* Stats Section */}
+<section className="py-12 bg-gradient-to-b from-purple-50 to-white md:py-16">
+  <div className="container px-6 mx-auto md:px-12 lg:px-16">
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+      {stats.map((stat, index) => (
+        <div 
+          key={index} 
+          className="relative p-4 text-center transition-all duration-300 bg-white shadow-md bg-opacity-80 backdrop-blur-lg rounded-xl hover:shadow-lg hover:scale-105 sm:p-5"
+        >
+          {/* Floating Glow Effect */}
+          <div className="absolute inset-0 w-full h-full bg-purple-100 opacity-20 rounded-xl blur-xl"></div>
+          
+          <div className="relative z-10">
+            <div className="mb-1 text-2xl font-bold text-purple-700 sm:text-3xl">{stat.number}</div>
+            <div className="text-xs font-medium text-gray-700 sm:text-sm">{stat.label}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+{/* Features Section */}
+<section className="relative py-24 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
+  {/* Abstract Shapes Background */}
+  <div className="absolute inset-0 z-0 opacity-10">
+    <div className="absolute bg-purple-600 rounded-full -top-20 -left-20 w-96 h-96"></div>
+    <div className="absolute right-0 bg-indigo-400 rounded-full top-1/2 w-80 h-80"></div>
+    <div className="absolute bottom-0 w-64 h-64 bg-purple-400 rounded-full left-1/3"></div>
+  </div>
+  
+  <div className="container relative z-10 px-6 mx-auto md:px-12 lg:px-16">
+    {/* Section Header */}
+    <div className="max-w-3xl mx-auto mb-20 text-center">
+      <span className="inline-block px-4 py-1 mb-4 text-sm font-medium text-purple-700 bg-purple-100 rounded-full">Our Expertise</span>
+      <h2 className="mb-6 text-4xl font-bold text-gray-900 md:text-5xl">
+        Crafting <span className="text-purple-600">Experiences</span>, One Pixel at a Time
+      </h2>
+      <div className="w-24 h-1 mx-auto mb-6 rounded-full bg-gradient-to-r from-purple-400 to-purple-600"></div>
+      <p className="text-gray-600 md:text-lg">
+        Our UI/UX approach combines creativity, functionality, and user psychology to create experiences that delight and engage.
+      </p>
+    </div>
+
+    {/* Features Grid */}
+    <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      
+      {/* Feature 1: Human-Centered Design */}
+      <div className="relative p-8 transition-all duration-500 bg-white border border-purple-100 shadow-xl rounded-2xl hover:shadow-2xl hover:-translate-y-2 group">
+        <div className="flex items-center justify-center w-20 h-20 mb-6 text-white transition-transform duration-300 shadow-lg bg-gradient-to-br from-purple-600 to-indigo-500 rounded-2xl group-hover:scale-110">
+          <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+          </svg>
+        </div>
+        <h3 className="mb-4 text-2xl font-semibold text-gray-900 transition-colors group-hover:text-purple-600">Human-Centered Design</h3>
+        <p className="text-gray-700">We focus on user needs, creating intuitive and seamless experiences that feel natural and delightful.</p>
+        <div className="absolute inset-0 transition-all duration-300 border-2 border-transparent rounded-2xl group-hover:border-purple-400"></div>
+        <div className="pt-6 mt-6 border-t border-gray-100">
+          <a href="#" className="inline-flex items-center font-medium text-purple-600 hover:text-purple-800">
+            Learn more 
+            <svg className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      {/* Feature 2: Pixel-Perfect Precision */}
+      <div className="relative p-8 transition-all duration-500 bg-white border border-purple-100 shadow-xl rounded-2xl hover:shadow-2xl hover:-translate-y-2 group">
+        <div className="flex items-center justify-center w-20 h-20 mb-6 text-white transition-transform duration-300 shadow-lg bg-gradient-to-br from-purple-600 to-pink-500 rounded-2xl group-hover:scale-110">
+          <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fillRule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clipRule="evenodd"></path>
+          </svg>
+        </div>
+        <h3 className="mb-4 text-2xl font-semibold text-gray-900 transition-colors group-hover:text-purple-600">Pixel-Perfect Precision</h3>
+        <p className="text-gray-700">We focus on every detail, ensuring flawless design elements that combine beauty and functionality.</p>
+        <div className="absolute inset-0 transition-all duration-300 border-2 border-transparent rounded-2xl group-hover:border-purple-400"></div>
+        <div className="pt-6 mt-6 border-t border-gray-100">
+          <a href="#" className="inline-flex items-center font-medium text-purple-600 hover:text-purple-800">
+            Learn more 
+            <svg className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      {/* Feature 3: Seamless User Journeys */}
+      <div className="relative p-8 transition-all duration-500 bg-white border border-purple-100 shadow-xl rounded-2xl hover:shadow-2xl hover:-translate-y-2 group">
+        <div className="flex items-center justify-center w-20 h-20 mb-6 text-white transition-transform duration-300 shadow-lg bg-gradient-to-br from-purple-600 to-blue-500 rounded-2xl group-hover:scale-110">
+          <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fillRule="evenodd" d="M9.504 1.132a1 1 0 01.992 0l1.75 1a1 1 0 11-.992 1.736L10 3.152l-1.254.716a1 1 0 11-.992-1.736l1.75-1zM5.618 4.504a1 1 0 01-.372 1.364L5.016 6l.23.132a1 1 0 11-.992 1.736L4 7.723V8a1 1 0 01-2 0V6a.996.996 0 01.52-.878l1.734-.99a1 1 0 011.364.372zm8.764 0a1 1 0 011.364-.372l1.733.99A1.002 1.002 0 0118 6v2a1 1 0 11-2 0v-.277l-.254.145a1 1 0 11-.992-1.736l.23-.132-.23-.132a1 1 0 01-.372-1.364zm-7 4a1 1 0 011.364-.372L10 8.848l1.254-.716a1 1 0 11.992 1.736L11 10.58V12a1 1 0 11-2 0v-1.42l-1.246-.712a1 1 0 01-.372-1.364zM3 11a1 1 0 011 1v1.42l1.246.712a1 1 0 11-.992 1.736l-1.75-1A1 1 0 012 14v-2a1 1 0 011-1zm14 0a1 1 0 011 1v2a1 1 0 01-.504.868l-1.75 1a1 1 0 11-.992-1.736L16 13.42V12a1 1 0 011-1zm-9.618 5.504a1 1 0 011.364-.372l.254.145V16a1 1 0 112 0v.277l.254-.145a1 1 0 11.992 1.736l-1.735.992a.995.995 0 01-1.022 0l-1.735-.992a1 1 0 01-.372-1.364z" clipRule="evenodd"></path>
+          </svg>
+        </div>
+        <h3 className="mb-4 text-2xl font-semibold text-gray-900 transition-colors group-hover:text-purple-600">Seamless User Journeys</h3>
+        <p className="text-gray-700">We create smooth and efficient user flows that enhance interaction and drive engagement.</p>
+        <div className="absolute inset-0 transition-all duration-300 border-2 border-transparent rounded-2xl group-hover:border-purple-400"></div>
+        <div className="pt-6 mt-6 border-t border-gray-100">
+          <a href="#" className="inline-flex items-center font-medium text-purple-600 hover:text-purple-800">
+            Learn more 
+            <svg className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{/* Services Section */}
+{/* Services Section */}
+<section className="py-20 bg-white">
+  <div className="container px-6 mx-auto md:px-12 lg:px-16">
+    {/* Section Header */}
+    <div className="max-w-3xl mx-auto mb-16 text-center">
+      <span className="inline-block px-3 py-1 mb-4 text-xs font-medium text-purple-600 rounded-md bg-purple-50">Our Services</span>
+      <h2 className="mb-6 text-3xl font-semibold text-gray-900 md:text-4xl">
+        Tailored UI/UX Solutions for Every Industry
+      </h2>
+      <div className="w-16 h-1 mx-auto mb-6 bg-purple-600"></div>
+      <p className="text-gray-600">
+        Discover how our custom UI/UX design services are tailored to meet the unique needs of various industries and help you achieve your business goals.
+      </p>
+    </div>
+
+    {/* Services Grid */}
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+      
+      {/* Service 1: Mobile App Design */}
+      <div className="overflow-hidden transition-all duration-300 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md hover:border-purple-200 group">
+        <div className="p-6">
+          <div className="flex items-center justify-center w-12 h-12 mb-4 text-white bg-purple-600 rounded-lg">
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM8 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM12 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM12 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM16 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6 10a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zM3 6a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"></path>
+            </svg>
+          </div>
+          <h3 className="mb-2 text-lg font-medium text-gray-900 group-hover:text-purple-600">
+            Mobile App Design
+          </h3>
+          <p className="text-gray-600">
+            Create engaging mobile experiences with intuitive navigation and beautiful interfaces.
+          </p>
+        </div>
+        <div className="px-6 py-4 text-sm text-purple-600 border-t border-gray-100">
+          <a href="#" className="inline-flex items-center font-medium">
+            Learn more
+            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      {/* Service 2: Web Interface Design */}
+      <div className="overflow-hidden transition-all duration-300 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md hover:border-purple-200 group">
+        <div className="p-6">
+          <div className="flex items-center justify-center w-12 h-12 mb-4 text-white bg-purple-600 rounded-lg">
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fillRule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clipRule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 className="mb-2 text-lg font-medium text-gray-900 group-hover:text-purple-600">
+            Web Interface Design
+          </h3>
+          <p className="text-gray-600">
+            Craft responsive web interfaces that provide seamless experiences across all devices.
+          </p>
+        </div>
+        <div className="px-6 py-4 text-sm text-purple-600 border-t border-gray-100">
+          <a href="#" className="inline-flex items-center font-medium">
+            Learn more
+            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      {/* Service 3: UX Research */}
+      <div className="overflow-hidden transition-all duration-300 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md hover:border-purple-200 group">
+        <div className="p-6">
+          <div className="flex items-center justify-center w-12 h-12 mb-4 text-white bg-purple-600 rounded-lg">
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 className="mb-2 text-lg font-medium text-gray-900 group-hover:text-purple-600">
+            UX Research
+          </h3>
+          <p className="text-gray-600">
+            Understand your users through data-driven research, usability testing, and user interviews.
+          </p>
+        </div>
+        <div className="px-6 py-4 text-sm text-purple-600 border-t border-gray-100">
+          <a href="#" className="inline-flex items-center font-medium">
+            Learn more
+            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      {/* Service 4: Design Systems */}
+      <div className="overflow-hidden transition-all duration-300 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md hover:border-purple-200 group">
+        <div className="p-6">
+          <div className="flex items-center justify-center w-12 h-12 mb-4 text-white bg-purple-600 rounded-lg">
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path>
+            </svg>
+          </div>
+          <h3 className="mb-2 text-lg font-medium text-gray-900 group-hover:text-purple-600">
+            Design Systems
+          </h3>
+          <p className="text-gray-600">
+            Create scalable design systems that ensure consistency across all products and platforms.
+          </p>
+        </div>
+        <div className="px-6 py-4 text-sm text-purple-600 border-t border-gray-100">
+          <a href="#" className="inline-flex items-center font-medium">
+            Learn more
+            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    {/* Features Grid */}
+    <div className="max-w-6xl mx-auto mt-24">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        
+        {/* Feature 1: Human-Centered Design */}
+        <div className="p-6 transition-all duration-300 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md hover:border-purple-200 group">
+          <div className="flex items-center mb-4">
+            <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 mr-4 text-white bg-purple-600 rounded-full">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+              </svg>
+            </div>
+            <h3 className="text-lg font-medium text-gray-900 group-hover:text-purple-600">Human-Centered Design</h3>
+          </div>
+          <p className="text-gray-600">We focus on user needs, creating intuitive and seamless experiences that feel natural and delightful.</p>
         </div>
 
-        <div className="container relative z-10 px-6 mx-auto md:px-12 lg:px-16">
-          <div className="flex flex-col items-center md:flex-row md:items-start">
-            <div className="w-full mb-8 md:w-1/2 md:mb-0 md:pr-8">
-              <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-                UI/UX Design
-              </h1>
-              <p className="mb-8 text-lg md:text-xl">
-                  Create intuitive experiences with our UI/UX design services. We blend beautiful interfaces with seamless functionality, ensuring your users enjoy every interaction with your digital products.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Link href="/contact" className="px-6 py-3 text-white transition-all bg-white border border-white rounded-lg bg-opacity-20 hover:bg-opacity-30">
-                    Get Started
-                  </Link>
-                  <Link href="/portfolio" className="px-6 py-3 text-purple-600 transition-all bg-white rounded-lg hover:bg-gray-100">
-                    View Portfolio
-                  </Link>
-                </div>
-              </div>
-              <div className="w-full md:w-1/2">
-                <div className="relative">
-                  <div className="relative z-10 overflow-hidden bg-white rounded-lg shadow-xl">
-                    <Image 
-                      src="/img/ui-ux-design-hero.jpg" 
-                      alt="UI/UX Design" 
-                      width={600} 
-                      height={400}
-                      className="object-cover w-full h-auto rounded-lg"
-                    />
-                  </div>
-                  <div className="absolute top-0 right-0 w-32 h-32 -mt-10 -mr-10 bg-purple-300 rounded-full blur-2xl opacity-60"></div>
-                  <div className="absolute bottom-0 left-0 w-24 h-24 -mb-8 -ml-8 bg-indigo-300 rounded-full blur-2xl opacity-60"></div>
-                </div>
-              </div>
+        {/* Feature 2: Pixel-Perfect Precision */}
+        <div className="p-6 transition-all duration-300 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md hover:border-purple-200 group">
+          <div className="flex items-center mb-4">
+            <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 mr-4 text-white bg-purple-600 rounded-full">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fillRule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clipRule="evenodd"></path>
+              </svg>
             </div>
+            <h3 className="text-lg font-medium text-gray-900 group-hover:text-purple-600">Pixel-Perfect Precision</h3>
           </div>
-        </section>
+          <p className="text-gray-600">We focus on every detail, ensuring flawless design elements that combine beauty and functionality.</p>
+        </div>
 
-        {/* Stats Section */}
-        <section className="py-12 bg-white">
-          <div className="container px-6 mx-auto md:px-12 lg:px-16">
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-              {stats.map((stat, index) => (
-                <div key={index} className="p-6 text-center transition-all bg-white rounded-lg shadow-md hover:shadow-lg">
-                  <div className="mb-3 text-4xl font-bold text-purple-600">{stat.number}</div>
-                  <div className="text-lg text-gray-700">{stat.label}</div>
-                </div>
-              ))}
+        {/* Feature 3: Seamless User Journeys */}
+        <div className="p-6 transition-all duration-300 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md hover:border-purple-200 group">
+          <div className="flex items-center mb-4">
+            <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 mr-4 text-white bg-purple-600 rounded-full">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fillRule="evenodd" d="M9.504 1.132a1 1 0 01.992 0l1.75 1a1 1 0 11-.992 1.736L10 3.152l-1.254.716a1 1 0 11-.992-1.736l1.75-1zM5.618 4.504a1 1 0 01-.372 1.364L5.016 6l.23.132a1 1 0 11-.992 1.736L4 7.723V8a1 1 0 01-2 0V6a.996.996 0 01.52-.878l1.734-.99a1 1 0 011.364.372zm8.764 0a1 1 0 011.364-.372l1.733.99A1.002 1.002 0 0118 6v2a1 1 0 11-2 0v-.277l-.254.145a1 1 0 11-.992-1.736l.23-.132-.23-.132a1 1 0 01-.372-1.364zm-7 4a1 1 0 011.364-.372L10 8.848l1.254-.716a1 1 0 11.992 1.736L11 10.58V12a1 1 0 11-2 0v-1.42l-1.246-.712a1 1 0 01-.372-1.364zM3 11a1 1 0 011 1v1.42l1.246.712a1 1 0 11-.992 1.736l-1.75-1A1 1 0 012 14v-2a1 1 0 011-1zm14 0a1 1 0 011 1v2a1 1 0 01-.504.868l-1.75 1a1 1 0 11-.992-1.736L16 13.42V12a1 1 0 011-1zm-9.618 5.504a1 1 0 011.364-.372l.254.145V16a1 1 0 112 0v.277l.254-.145a1 1 0 11.992 1.736l-1.735.992a.995.995 0 01-1.022 0l-1.735-.992a1 1 0 01-.372-1.364z" clipRule="evenodd"></path>
+              </svg>
             </div>
+            <h3 className="text-lg font-medium text-gray-900 group-hover:text-purple-600">Seamless User Journeys</h3>
           </div>
-        </section>
+          <p className="text-gray-600">We create smooth and efficient user flows that enhance interaction and drive engagement.</p>
+        </div>
 
-        {/* Features Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container px-6 mx-auto md:px-12 lg:px-16">
-            <div className="max-w-3xl mx-auto mb-12 text-center">
-              <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
-                Why Choose Our UI/UX Design Services
-              </h2>
-              <p className="text-gray-600 md:text-lg">
-                We transform complex interfaces into intuitive, engaging experiences that delight users and drive business success.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-              {features.map((feature, index) => (
-                <div key={index} className="p-6 transition-all bg-white rounded-lg shadow-md hover:shadow-lg">
-                  <div className="mb-4">{feature.svg}</div>
-                  <h3 className="mb-3 text-xl font-semibold text-gray-900">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-16 bg-white">
-          <div className="container px-6 mx-auto md:px-12 lg:px-16">
-            <div className="max-w-3xl mx-auto mb-12 text-center">
-              <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
-                Industry-Specific UI/UX Solutions
-              </h2>
-              <p className="text-gray-600 md:text-lg">
-                Explore our specialized UI/UX design services tailored for different industries and business needs.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-              {services.map((service, index) => (
-                <div key={index} className="p-6 transition-all bg-white rounded-lg shadow-md hover:shadow-lg">
-                  <div className="flex items-center justify-center mb-6">
-                    {service.svg}
-                  </div>
-                  <h3 className="mb-3 text-xl font-semibold text-center text-gray-900">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* Design Process Section */}
         <section className="py-16 bg-gray-50">
@@ -585,130 +778,61 @@ const UiUxDesign = () => {
           </div>
         </section>
 
-        {/* Digital Services Section */}
-        <section className="py-16 bg-white">
-          <div className="container px-6 mx-auto md:px-12 lg:px-16">
-            <div className="max-w-3xl mx-auto mb-12 text-center">
-              <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
-                Complementary Digital Services
-              </h2>
-              <p className="text-gray-600 md:text-lg">
-                Enhance your digital presence with our comprehensive suite of digital services.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-              {digitalServices.map((service, index) => (
-                <div key={index} className="p-6 transition-all bg-white rounded-lg shadow-md hover:shadow-lg">
-                  <div className="flex items-center justify-center mb-6">
-                    {service.svg}
-                  </div>
-                  <h3 className="mb-3 text-xl font-semibold text-center text-gray-900">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Trusted Companies Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container px-6 mx-auto md:px-12 lg:px-16">
-            <div className="max-w-3xl mx-auto mb-12 text-center">
-              <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
-                Trusted By Leading Companies
-              </h2>
-              <p className="text-gray-600 md:text-lg">
-                Join the roster of satisfied clients who have transformed their digital experiences with our UI/UX design services.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
-              {trustedCompanies.map((company, index) => (
-                <div key={index} className="flex items-center justify-center p-6 transition-all bg-white rounded-lg shadow-md hover:shadow-lg">
-                  <Image 
-                    src={`/img/companies/${company.logo}`} 
-                    alt={company.name} 
-                    width={120} 
-                    height={60}
-                    className="object-contain w-full h-12"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+       
 
         {/* FAQ Section */}
-        <section className="py-16 bg-white">
-          <div className="container px-6 mx-auto md:px-12 lg:px-16">
-            <div className="max-w-3xl mx-auto mb-12 text-center">
-              <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-gray-600 md:text-lg">
-                Find answers to common questions about our UI/UX design services.
-              </p>
-            </div>
+        <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+  <div className="container px-6 mx-auto md:px-12 lg:px-16">
+    {/* Section Header */}
+    <div className="max-w-3xl mx-auto mb-12 text-center">
+      <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
+        Frequently Asked Questions
+      </h2>
+      <p className="text-gray-600 md:text-lg">
+        Find answers to the most common questions about our UI/UX design services. We're here to help!
+      </p>
+    </div>
 
-            <div className="max-w-3xl mx-auto">
-              {faqs.map((faq, index) => (
-                <div key={index} className="mb-4 overflow-hidden border border-gray-200 rounded-lg">
-                  <button
-                    className="flex items-center justify-between w-full p-5 text-left bg-white"
-                    onClick={() => toggleFaq(index)}
-                  >
-                    <span className="text-lg font-medium text-gray-900">{faq.question}</span>
-                    <svg
-                      className={`w-6 h-6 transition-transform ${openFaqIndex === index ? 'transform rotate-180' : ''}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M19 9l-7 7-7-7"
-                      ></path>
-                    </svg>
-                  </button>
-                  <div
-                    className={`transition-all duration-300 ${
-                      openFaqIndex === index ? 'max-h-96 p-5 bg-gray-50' : 'max-h-0'
-                    }`}
-                  >
-                    <p className="text-gray-600">{faq.answer}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+    {/* FAQ List */}
+    <div className="max-w-3xl mx-auto">
+      {faqs.map((faq, index) => (
+        <div
+          key={index}
+          className="mb-6 overflow-hidden transition-all border border-gray-200 rounded-lg shadow-lg hover:shadow-2xl"
+        >
+          <button
+            className="flex items-center justify-between w-full p-6 text-left transition-all duration-300 bg-white hover:bg-gray-100"
+            onClick={() => toggleFaq(index)}
+          >
+            <span className="text-lg font-medium text-gray-900">{faq.question}</span>
+            <svg
+              className={`w-6 h-6 transition-transform ${openFaqIndex === index ? 'transform rotate-180' : ''}`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <div
+            className={`transition-all duration-500 ease-in-out ${openFaqIndex === index ? 'max-h-96 p-6 bg-gray-50' : 'max-h-0'}`}
+          >
+            <p className="text-gray-600">{faq.answer}</p>
           </div>
-        </section>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
-        {/* CTA Section */}
-        <section className="py-20 text-white bg-gradient-to-r from-purple-600 to-indigo-700">
-          <div className="container px-6 mx-auto text-center md:px-12 lg:px-16">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Ready to Transform Your Digital Experience?
-              </h2>
-              <p className="mb-8 text-lg md:text-xl opacity-90">
-                Let's discuss how our UI/UX design services can elevate your digital products and drive business growth.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/contact" className="px-8 py-3 text-purple-600 transition-all bg-white rounded-lg hover:bg-gray-100">
-                  Get Started
-                </Link>
-                <Link href="/portfolio" className="px-8 py-3 transition-all bg-transparent border border-white rounded-lg hover:bg-white hover:bg-opacity-10">
-                  View Portfolio
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
 
+       
         <Footer />
       </div>
     );
