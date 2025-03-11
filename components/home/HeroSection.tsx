@@ -93,6 +93,7 @@ function HeroSection() {
       </button>
     </Link>
       
+      <Link href="/portfolio">
       <button className="relative overflow-hidden border-2 border-purple-500 text-purple-700 font-medium h-10 sm:h-12 px-5 sm:px-8 text-sm sm:text-base rounded-full hover:bg-purple-50 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 group">
         <span className="relative z-10 flex items-center justify-center">
           Discover our work
@@ -113,6 +114,7 @@ function HeroSection() {
         </span>
         <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-purple-500 to-indigo-500 group-hover:w-full transition-all duration-500"></span>
       </button>
+      </Link>
     </div>
         </div>
 
