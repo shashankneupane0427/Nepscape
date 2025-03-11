@@ -190,7 +190,7 @@ const Navbar = () => {
 
             <li className="overflow-hidden">
               <Link
-                href="/work"
+                href="/portfolio"
                 className="nav-link hover:text-[#967bb6] inline-block transition-all duration-300"
               >
                 Our Work

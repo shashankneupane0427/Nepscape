@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -70,6 +71,7 @@ function HeroSection() {
           </p>
 
           <div className="flex flex-col lg:flex-row gap-3 sm:gap-5">
+            <Link href="/services/websitedevelopment">
       <button className="group cursor-pointer bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium h-10 sm:h-12 px-5 sm:px-8 text-sm sm:text-base rounded-full shadow-lg hover:shadow-purple-300/50 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0">
         <span className="flex items-center justify-center">
           Let&apos;s get Started
@@ -89,6 +91,7 @@ function HeroSection() {
           </svg>
         </span>
       </button>
+    </Link>
       
       <button className="relative overflow-hidden border-2 border-purple-500 text-purple-700 font-medium h-10 sm:h-12 px-5 sm:px-8 text-sm sm:text-base rounded-full hover:bg-purple-50 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 group">
         <span className="relative z-10 flex items-center justify-center">
