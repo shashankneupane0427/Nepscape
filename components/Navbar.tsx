@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className="container flex items-center justify-between mx-auto">
           {/* Logo Section */}
           
-          <div className="flex cursor-pointer items-center space-x-2 ">
+          <div className="flex items-center space-x-2 cursor-pointer ">
           <Link
                 href="/"
                 className="nav-link "
@@ -96,7 +96,7 @@ const Navbar = () => {
                     <h3 className="px-3 py-1 font-bold text-[#8044c9] border-b border-gray-200 mb-3">Development</h3>
                     <ul>
                       <li className="mb-3 transition-all duration-300">
-                        <Link href="/services/website-development" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-gray-100 hover:translate-x-2 hover:shadow-md">
+                        <Link href="/services/websitedevelopment" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-gray-100 hover:translate-x-2 hover:shadow-md">
                           <h4 className="font-semibold text-black">Website Development</h4>
                           <p className="text-sm text-gray-600">
                             Specialized Custom Website Development Services.
@@ -285,26 +285,13 @@ const Navbar = () => {
                 {/* Development */}
                 <p className="font-bold text-[#8044c9] mb-2 mt-1">Development</p>
                 <Link
-                  href="/services/website-development"
+                  href="/services/websitedevelopment"
                   className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
                   onClick={() => setSidebarOpen(false)}
                 >
                   Website Development
                 </Link>
-                <Link
-                  href="/services/app-development"
-                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
-                  onClick={() => setSidebarOpen(false)}
-                >
-                  App Development
-                </Link>
-                <Link
-                  href="/services/system-development"
-                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
-                  onClick={() => setSidebarOpen(false)}
-                >
-                  System/Software Development
-                </Link>
+                
                 <Link
                   href="/services/ui-ux"
                   className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
@@ -336,20 +323,8 @@ const Navbar = () => {
                 >
                   Graphic Design
                 </Link>
-                <Link
-                  href="/services/content-writing"
-                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
-                  onClick={() => setSidebarOpen(false)}
-                >
-                  Content Writing
-                </Link>
-                <Link
-                  href="/services/pay-per-click"
-                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
-                  onClick={() => setSidebarOpen(false)}
-                >
-                  Pay Per Click
-                </Link>
+               
+                
                 <Link
                   href="/services/digital-marketing"
                   className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
