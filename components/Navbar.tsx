@@ -291,20 +291,7 @@ const Navbar = () => {
                 >
                   Website Development
                 </Link>
-                <Link
-                  href="/services/app-development"
-                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
-                  onClick={() => setSidebarOpen(false)}
-                >
-                  App Development
-                </Link>
-                <Link
-                  href="/services/system-development"
-                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
-                  onClick={() => setSidebarOpen(false)}
-                >
-                  System/Software Development
-                </Link>
+                
                 <Link
                   href="/services/ui-ux"
                   className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
@@ -336,20 +323,8 @@ const Navbar = () => {
                 >
                   Graphic Design
                 </Link>
-                <Link
-                  href="/services/content-writing"
-                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
-                  onClick={() => setSidebarOpen(false)}
-                >
-                  Content Writing
-                </Link>
-                <Link
-                  href="/services/pay-per-click"
-                  className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
-                  onClick={() => setSidebarOpen(false)}
-                >
-                  Pay Per Click
-                </Link>
+               
+                
                 <Link
                   href="/services/digital-marketing"
                   className="block py-2 hover:text-[#967bb6] transition-all duration-300 hover:translate-x-3 hover:scale-105 hover:font-medium"
