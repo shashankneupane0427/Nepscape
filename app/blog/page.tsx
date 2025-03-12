@@ -1,12 +1,6 @@
-import ServicesSection from "../components/home/ServicesSection";
-import ExpertiseSection from "../components/home/ExpertiseSection";
-import HowWeWork from "../components/home/HowWeWork";
-import CompanyStats from "@/components/home/CompanyStats";
-import Footer from "@/components/Footer";
-import HeroSection from "@/components/home/HeroSection";
-import TestimonialsSection from "@/components/home/Testimonial";
+import React from "react";
+// import page from "../page"
 import BlogSection from "@/components/home/BlogSection";
-import StructuredData from "../components/StructuredData";
 
 const blogPosts = [
   {
@@ -29,20 +23,12 @@ const blogPosts = [
   },
 ];
 
-function page() {
+function index() {
   return (
-    <div className="min-h-screen text-black bg-white">
-      <StructuredData />
-      <HeroSection />
-      <ServicesSection />
-      <ExpertiseSection />
-      <HowWeWork />
-      <CompanyStats />
-      <TestimonialsSection />
+    <div className="mt-12">
       <BlogSection blogPosts={blogPosts} />
-      <Footer />
     </div>
   );
 }
 
-export default page;
+export default index;
