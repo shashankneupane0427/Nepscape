@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 import {
   FaUser,
   FaEnvelope,
@@ -28,7 +28,7 @@ const Main = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
@@ -36,7 +36,7 @@ const Main = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     // Validate all required fields
@@ -151,7 +151,10 @@ const Main = () => {
                     <FaPhone className="text-purple-500 " />
                   </div>
                   <div className="flex">
-                    <select className="bg-purple-100 pl-7 text-purple-800 border border-purple-300 rounded-l-lg px-3 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300">
+                    <select 
+                      className="bg-purple-100 pl-7 text-purple-800 border border-purple-300 rounded-l-lg px-3 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300"
+                      onChange={handleChange}
+                    >
                       <option>+977</option>
                       <option>+1</option>
                       <option>+44</option>
@@ -316,7 +319,15 @@ const Main = () => {
   );
 };
 
-const ContactInfoCard = ({ icon, title, content, delay }) => {
+// Type definitions for props
+interface ContactInfoCardProps {
+  icon: React.ReactNode;
+  title: string;
+  content: string;
+  delay: number;
+}
+
+const ContactInfoCard = ({ icon, title, content, delay }: ContactInfoCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -333,7 +344,14 @@ const ContactInfoCard = ({ icon, title, content, delay }) => {
   );
 };
 
-const SupportCard = ({ title, phone, icon, delay }) => {
+interface SupportCardProps {
+  title: string;
+  phone: string;
+  icon: React.ReactNode;
+  delay: number;
+}
+
+const SupportCard = ({ title, phone, icon, delay }: SupportCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -358,7 +376,11 @@ const SupportCard = ({ title, phone, icon, delay }) => {
   );
 };
 
-const SocialIcon = ({ icon }) => {
+interface SocialIconProps {
+  icon: React.ReactNode;
+}
+
+const SocialIcon = ({ icon }: SocialIconProps) => {
   return (
     <motion.a
       whileHover={{ scale: 1.1 }}

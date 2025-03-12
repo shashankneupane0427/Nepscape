@@ -105,11 +105,11 @@ const Footer: React.FC = () => {
                   <a href="tel:+9862973810" className="text-[#5d605d] hover:text-[#7d2fd0] hover:underline">9862973810</a>
                 </li>
                 <li className="flex items-center text-lg text-[#5d605d] justify-center sm:justify-start">
-  <FaEnvelope className="mr-4 text-[#7d2fd0] text-2xl" />
-  <a href="mailto:csr@nepscape.com" className="text-[#5d605d] hover:text-[#7d2fd0] hover:underline">
-    csr@nepscape.com
-  </a>
-</li>
+                <FaEnvelope className="mr-4 text-[#7d2fd0] text-2xl" />
+                <a href="mailto:csr@nepscape.com" className="text-[#5d605d] hover:text-[#7d2fd0] hover:underline">
+                  csr@nepscape.com
+                </a>
+              </li>
                 <li className="flex items-center text-lg text-[#5d605d] justify-center sm:justify-start">
                   <FaMapMarkerAlt className="mr-4 text-[#7d2fd0] text-2xl" /> Putalisadak, Kathmandu
                 </li>
