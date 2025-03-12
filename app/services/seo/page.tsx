@@ -1,6 +1,6 @@
 'use client';
 
-import { SiGoogleanalytics, SiGooglesearchconsole, SiMonzo, SiSemrush, SiYoast } from 'react-icons/si';
+import { SiGoogleanalytics, SiGooglesearchconsole, SiMonzo, SiSemrush, SiYoast, SiGoogleads } from 'react-icons/si';
 import { useState } from 'react';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
@@ -18,48 +18,49 @@ const SeoServices = () => {
     };
 
     const stats = [
-        { number: '250+', label: 'SEO Projects' },
-        { number: '380+', label: 'Satisfied Clients' },
-        { number: '35+', label: 'SEO Experts' },
+        { number: '50+', label: 'SEO Projects' },
+        { number: '70+', label: 'Satisfied Clients' },
+        { number: '8+', label: 'SEO Experts' },
     ];
 
-  const features = [
-    { 
-      title: 'Satisfaction Guarantee',
-      description: 'Get higher rankings and increased organic traffic with our proven SEO strategies.',
-      svg: (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 4C12.954 4 4 12.954 4 24C4 35.046 12.954 44 24 44C35.046 44 44 35.046 44 24C44 12.954 35.046 4 24 4ZM20 34L10 24L13.414 20.586L20 27.172L34.586 12.586L38 16L20 34Z" fill="#7d2fd0"/>
-        </svg>
-      )
-    },
-    {
-      title: 'Best Quality Work',
-      description: 'Data-driven SEO solutions designed to maximize your visibility and conversions.',
-      svg: (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 4L30.31 16.76L44 19.48L34 29.24L36.52 43.02L24 36.56L11.48 43.02L14 29.24L4 19.48L17.69 16.76L24 4Z" fill="#7d2fd0"/>
-        </svg>
-      )
-    },
-    {
-      title: 'Interactive Interface',
-      description: 'Transparent reporting dashboards to track your SEO performance in real-time.',
-      svg: (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="4" y="8" width="40" height="28" rx="2" fill="#7d2fd0"/>
-          <path d="M4 10C4 8.89543 4.89543 8 6 8H42C43.1046 8 44 8.89543 44 10V14H4V10Z" fill="#2E7D32"/>
-          <circle cx="8" cy="11" r="1.5" fill="white"/>
-          <circle cx="12" cy="11" r="1.5" fill="white"/>
-          <circle cx="16" cy="11" r="1.5" fill="white"/>
-          <rect x="8" y="18" width="32" height="2" rx="1" fill="white"/>
-          <rect x="8" y="22" width="20" height="2" rx="1" fill="white"/>
-          <rect x="8" y="26" width="24" height="2" rx="1" fill="white"/>
-          <rect x="8" y="30" width="16" height="2" rx="1" fill="white"/>
-        </svg>
-      )
-    }
-  ];
+    const features = [
+      { 
+        title: 'Guaranteed Performance',
+        description: 'Boost search rankings and drive targeted organic traffic with our data-backed SEO strategies.',
+        svg: (
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4C12.954 4 4 12.954 4 24C4 35.046 12.954 44 24 44C35.046 44 44 35.046 44 24C44 12.954 35.046 4 24 4ZM20 34L10 24L13.414 20.586L20 27.172L34.586 12.586L38 16L20 34Z" fill="#7d2fd0"/>
+          </svg>
+        )
+      },
+      {
+        title: 'Precision-Driven Optimization',
+        description: 'Leverage AI-powered keyword strategies to enhance visibility and maximize conversion rates.',
+        svg: (
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4L30.31 16.76L44 19.48L34 29.24L36.52 43.02L24 36.56L11.48 43.02L14 29.24L4 19.48L17.69 16.76L24 4Z" fill="#7d2fd0"/>
+          </svg>
+        )
+      },
+      {
+        title: 'Real-Time SEO Insights',
+        description: 'Access live analytics dashboards to monitor keyword rankings, traffic growth, and performance trends.',
+        svg: (
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="8" width="40" height="28" rx="2" fill="#7d2fd0"/>
+            <path d="M4 10C4 8.89543 4.89543 8 6 8H42C43.1046 8 44 8.89543 44 10V14H4V10Z" fill="#2E7D32"/>
+            <circle cx="8" cy="11" r="1.5" fill="white"/>
+            <circle cx="12" cy="11" r="1.5" fill="white"/>
+            <circle cx="16" cy="11" r="1.5" fill="white"/>
+            <rect x="8" y="18" width="32" height="2" rx="1" fill="white"/>
+            <rect x="8" y="22" width="20" height="2" rx="1" fill="white"/>
+            <rect x="8" y="26" width="24" height="2" rx="1" fill="white"/>
+            <rect x="8" y="30" width="16" height="2" rx="1" fill="white"/>
+          </svg>
+        )
+      }
+    ];
+    
 
   const services = [
     {
@@ -117,7 +118,10 @@ const SeoServices = () => {
     { name: 'Search Console', icon: <SiGooglesearchconsole className="text-4xl text-purple-600" /> },
     { name: 'SEMrush', icon: <SiSemrush className="text-4xl text-purple-600" /> },
     { name: 'Moz', icon: <SiMonzo className="text-4xl text-purple-600" /> },
-    { name: 'Yoast', icon: <SiYoast className="text-4xl text-purple-600" /> }
+    { name: 'Yoast', icon: <SiYoast className="text-4xl text-purple-600" /> },
+    { name: 'Google Leads', icon: <SiGoogleads className="text-4xl text-purple-600" /> }
+
+
   ];
 
   const seoProcess = [
@@ -364,8 +368,8 @@ const SeoServices = () => {
   const pricingPlans = [
     {
       title: "Standard SEO Package",
-      price: "34,000",
-      frequency: "INR/month",
+      price: "246",
+      frequency: "/month",
       features: [
         "Preferred for Small Businesses",
         "Complete SEO Setup",
@@ -378,8 +382,8 @@ const SeoServices = () => {
     },
     {
       title: "Professional SEO Package",
-      price: "56,000",
-      frequency: "INR/month",
+      price: "400",
+      frequency: "/month",
       features: [
         "Preferred for Medium Business",
         "Intermediate Solution",
@@ -392,8 +396,8 @@ const SeoServices = () => {
     },
     {
       title: "Premium SEO Package",
-      price: "88,000",
-      frequency: "INR/month",
+      price: "630",
+      frequency: "/month",
       features: [
         "Preferred for Large Business",
         "Full-Service SEO",
@@ -469,7 +473,7 @@ const SeoServices = () => {
             </div>
             <div className="flex justify-center">
               <Image 
-                src="/images/seo-hero.svg" 
+                src="/seo-hero.png" 
                 alt="SEO Services Illustration" 
                 width={500} 
                 height={400}
@@ -494,26 +498,41 @@ const SeoServices = () => {
         </div>
       </div>
 
-      {/* Features Section */}
-      <div className="py-16 bg-gray-50">
-        <div className="container px-4 mx-auto">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-gray-900">Why Choose Our SEO Services</h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-700">
-              We deliver results-driven SEO solutions that help businesses achieve sustainable growth through increased online visibility.
-            </p>
+{/* Features Section */}
+<div className="py-24 bg-gradient-to-b from-gray-50 to-white">
+  <div className="container px-6 mx-auto">
+    <div className="mb-16 text-center">
+      <h2 className="mb-4 text-4xl font-extrabold text-gray-900">
+        Elevate Your Online Presence with Expert SEO
+      </h2>
+      <p className="max-w-2xl mx-auto text-lg text-gray-600">
+        Unlock sustainable growth with AI-powered SEO strategies that enhance search rankings, drive organic traffic, and boost conversions.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+      {features.map((feature, index) => (
+        <div 
+          key={index} 
+          className="relative p-8 overflow-hidden transition-transform duration-300 bg-white shadow-xl rounded-3xl hover:shadow-2xl hover:-translate-y-3"
+        >
+          <div className="absolute w-24 h-24 bg-purple-500 rounded-full -top-6 -right-6 opacity-10"></div>
+          <div className="absolute w-24 h-24 bg-indigo-500 rounded-full -bottom-6 -left-6 opacity-10"></div>
+          
+          <div className="flex items-center justify-center w-16 h-16 mb-5 text-white shadow-md bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl">
+            {feature.svg}
           </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {features.map((feature, index) => (
-              <div key={index} className="p-6 transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-lg">
-                <div className="mb-4">{feature.svg}</div>
-                <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
-                <p className="text-gray-700">{feature.description}</p>
-              </div>
-            ))}
-          </div>
+
+          <h3 className="mb-3 text-2xl font-bold text-gray-900">{feature.title}</h3>
+          <p className="text-gray-600">{feature.description}</p>
+
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+
       
       {/* Services Section */}
       <div id="services" className="py-16 bg-white">
@@ -615,24 +634,28 @@ const SeoServices = () => {
       </div>
 
       {/* SEO Tools Section */}
-      <div className="py-12 bg-white">
-        <div className="container px-4 mx-auto">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-gray-900">SEO Tools We Use</h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-700">
-              We leverage industry-leading tools and platforms to analyze, implement, and track your SEO performance.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6">
-            {seoTools.map((tool, index) => (
-              <div key={index} className="flex flex-col items-center p-6 transition-colors duration-300 rounded-lg bg-gray-50 hover:bg-purple-50">
-                <div className="mb-3">{tool.icon}</div>
-                <p className="font-medium text-gray-800">{tool.name}</p>
-              </div>
-            ))}
-          </div>
+<div className="py-12 bg-white">
+  <div className="container px-4 mx-auto">
+    <div className="mb-12 text-center">
+      <h2 className="mb-4 text-3xl font-bold text-gray-900">SEO Tools We Use</h2>
+      <p className="max-w-3xl mx-auto text-lg text-gray-700">
+        We leverage industry-leading tools and platforms to analyze, implement, and track your SEO performance.
+      </p>
+    </div>
+    <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6">
+      {seoTools.map((tool, index) => (
+        <div 
+          key={index} 
+          className="flex flex-col items-center p-6 transition-colors duration-300 rounded-lg bg-gray-50 hover:bg-purple-50"
+        >
+          <div className="mb-3">{tool.icon}</div>
+          <p className="font-medium text-gray-800">{tool.name}</p>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
+
 
       {/* Pricing Section */}
       <div className="py-16 bg-gray-50">
@@ -660,7 +683,7 @@ const SeoServices = () => {
                 )}
                 <h3 className="mb-2 text-2xl font-bold text-gray-900">{plan.title}</h3>
                 <div className="flex items-baseline mb-6">
-                  <span className="text-3xl font-bold text-purple-600">₹{plan.price}</span>
+                <span className="text-3xl font-bold text-purple-600">${plan.price}</span>
                   <span className="ml-1 text-gray-600">{plan.frequency}</span>
                 </div>
                 <ul className="mb-8 space-y-4">
@@ -689,60 +712,63 @@ const SeoServices = () => {
         </div>
       </div>
 
-      {/* FAQ Section */}
-      <div className="py-16 bg-white">
-        <div className="container px-4 mx-auto">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-700">
-              Find answers to common questions about our SEO services and methodologies.
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            {faqs.map((faq, index) => (
-              <div key={index} className="mb-4 border border-gray-200 rounded-lg">
-                <button
-                  className="flex items-center justify-between w-full p-5 text-left focus:outline-none"
-                  onClick={() => toggleFaq(index)}
+     {/* FAQ Section */}
+<div className="py-20 bg-white">
+  <div className="container px-6 mx-auto">
+    <div className="grid items-center grid-cols-1 gap-12 md:grid-cols-2">
+      
+      {/* Left Side - Image */}
+      <div className="relative">
+        <img 
+          src="/faq-image.jpg" 
+          alt="FAQs Illustration" 
+          className="w-full max-w-md mx-auto shadow-lg rounded-3xl"
+        />
+      </div>
+
+      {/* Right Side - FAQs */}
+      <div>
+        <div className="mb-12 text-left md:text-left">
+          <h2 className="mb-4 text-4xl font-extrabold text-gray-900">
+            Frequently Asked Questions
+          </h2>
+          <p className="max-w-xl text-lg text-gray-600">
+            Find answers to common questions about our SEO services and methodologies.
+          </p>
+        </div>
+
+        <div className="max-w-2xl">
+          {faqs.map((faq, index) => (
+            <div key={index} className="mb-4 overflow-hidden border border-gray-200 shadow-sm rounded-xl">
+              <button
+                className="flex items-center justify-between w-full p-5 text-left transition bg-gray-50 hover:bg-gray-100"
+                onClick={() => toggleFaq(index)}
+              >
+                <h3 className="text-lg font-semibold text-gray-900">{faq.question}</h3>
+                <svg
+                  className={`w-6 h-6 text-purple-600 transform transition-transform duration-300 ${openFaqIndex === index ? 'rotate-180' : ''}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
-                  <h3 className="text-lg font-medium text-gray-900">{faq.question}</h3>
-                  <svg
-                    className={`w-6 h-6 text-purple-600 transform ${openFaqIndex === index ? 'rotate-180' : ''}`}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {openFaqIndex === index && (
-                  <div className="px-5 pb-5">
-                    <p className="text-gray-700">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {openFaqIndex === index && (
+                <div className="px-5 pb-5 bg-white">
+                  <p className="text-gray-700">{faq.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="py-16 text-white bg-gradient-to-r from-purple-600 to-indigo-600">
-        <div className="container px-4 mx-auto text-center">
-          <h2 className="mb-6 text-3xl font-bold">Ready to Improve Your Search Engine Rankings?</h2>
-          <p className="max-w-3xl mx-auto mb-8 text-lg">
-            Get in touch with our SEO experts today for a free consultation and discover how we can help your business grow online.
-          </p>
-          <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href="/contact" className="px-8 py-3 font-medium text-purple-600 transition duration-300 bg-white rounded-md hover:bg-gray-100">
-              Request a Free Consultation
-            </Link>
-            <Link href="/case-studies" className="px-8 py-3 font-medium text-white transition duration-300 bg-transparent border border-white rounded-md hover:bg-purple-700">
-              View Our Case Studies
-            </Link>
-          </div>
-        </div>
-      </div>
+    </div>
+  </div>
+</div>
+
+
 
       <Footer />
     </div>
