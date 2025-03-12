@@ -11,7 +11,7 @@ const CompanyStats = () => {
     const spotlightElement = spotlightRef.current;
     if (!spotlightElement) return;
     
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e:any) => {
       const { left, top, width, height } = spotlightElement.getBoundingClientRect();
       const x = e.clientX - left;
       const y = e.clientY - top;
