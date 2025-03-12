@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from "framer-motion";
 
 const SocialMediaMarketing = () => {
     const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -18,15 +19,15 @@ const SocialMediaMarketing = () => {
     };
 
     const stats = [
-        { number: '500+', label: 'Clients Served' },
-        { number: '1200+', label: 'Campaigns Launched' },
-        { number: '25+', label: 'Social Media Experts' },
+        { number: '50+', label: 'Clients Served' },
+        { number: '120+', label: 'Campaigns Launched' },
+        { number: '8+', label: 'Social Media Experts' },
     ];
 
     const features = [
         { 
-            title: 'Satisfaction Guarantee',
-            description: 'Assured satisfaction regarding your social media impact.',
+            title: 'Guaranteed Growth',
+            description: 'Boost engagement and expand your social reach with our proven strategies.',
             svg: (
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M24 4C12.954 4 4 12.954 4 24C4 35.046 12.954 44 24 44C35.046 44 44 35.046 44 24C44 12.954 35.046 4 24 4ZM20 34L10 24L13.414 20.586L20 27.172L34.586 12.586L38 16L20 34Z" fill="#7d2fd0"/>
@@ -34,8 +35,8 @@ const SocialMediaMarketing = () => {
             )
         },
         {
-            title: 'Best Service',
-            description: 'We offer affordable price for committed social media results.',
+            title: 'Performance-Driven Strategies',
+            description: 'Unlock the power of data-driven campaigns to maximize social media ROI.',
             svg: (
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M24 4L30.31 16.76L44 19.48L34 29.24L36.52 43.02L24 36.56L11.48 43.02L14 29.24L4 19.48L17.69 16.76L24 4Z" fill="#7d2fd0"/>
@@ -43,8 +44,8 @@ const SocialMediaMarketing = () => {
             )
         },
         {
-            title: 'Marketing Expertise',
-            description: 'Experience in effective social media marketing strategies.',
+            title: 'Expert Social Media Management',
+            description: 'Stay ahead of trends with tailored strategies for brand growth and engagement.',
             svg: (
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="4" y="8" width="40" height="28" rx="2" fill="#7d2fd0"/>
@@ -60,7 +61,7 @@ const SocialMediaMarketing = () => {
             )
         }
     ];
-
+    
     const services = [
         {
             title: 'Healthcare And Hospitals',
@@ -362,23 +363,7 @@ const SocialMediaMarketing = () => {
         }
     ];
         
-    const recentWorks = [
-        { 
-            image: "/smm/work1.jpg", 
-            alt: "Educational Institution SMM Example",
-            title: "Visa Life Prep"
-        },
-        { 
-            image: "/smm/work2.jpg", 
-            alt: "Professional Services SMM Example",
-            title: "Panchagram English"
-        },
-        { 
-            image: "/smm/work3.jpg", 
-            alt: "Healthcare SMM Example",
-            title: "Physicians Group"
-        }
-    ];
+    
 
     const trustedCompanies = [
         { name: 'Venus', logo: '/clients/venus.png' },
@@ -391,49 +376,52 @@ const SocialMediaMarketing = () => {
 
     return (
         <div className="bg-gray-50">
-            {/* Hero Section */}
-            <section className="relative py-20 overflow-hidden text-white bg-gradient-to-r from-purple-500 to-indigo-600">
-                {/* Background decoration */}
-                <div className="absolute top-0 left-0 w-full h-full opacity-10">
-                    <div className="absolute w-40 h-40 bg-white rounded-full top-10 left-10 blur-3xl"></div>
-                    <div className="absolute bg-purple-300 rounded-full bottom-10 right-10 w-60 h-60 blur-3xl"></div>
+            <section className="relative flex items-center justify-center min-h-screen py-24 overflow-hidden text-white bg-gradient-to-br from-purple-700 via-purple-500 to-indigo-700">
+    {/* Background Glow */}
+    <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute bg-purple-300 rounded-full w-96 h-96 -top-20 -left-20 opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 bg-indigo-400 rounded-full w-96 h-96 opacity-20 blur-3xl"></div>
+        <div className="absolute bg-pink-400 rounded-full w-80 h-80 top-1/3 left-1/3 opacity-15 blur-3xl"></div>
+    </div>
+    
+    <div className="relative z-10 w-full px-6 mx-auto md:px-12 lg:px-16 max-w-7xl">
+        <div className="grid items-center grid-cols-1 gap-16 md:grid-cols-2">
+            {/* Text Content */}
+            <div className="space-y-6 text-center md:text-left">
+                <h1 className="text-4xl font-extrabold leading-tight md:text-5xl lg:text-6xl">
+                    Elevate Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300">Brand</span> with Social Media
+                </h1>
+                
+                <p className="max-w-lg text-lg text-purple-100 md:text-xl">
+                    Build a powerful online presence and engage with your audience through expert social media strategies.
+                </p>
+                
+                <div className="flex flex-wrap justify-center gap-4 pt-4 md:justify-start">
+                    <Link href="/contact" className="px-8 py-3 text-base font-semibold text-white transition-all duration-300 rounded-lg shadow-lg bg-gradient-to-r from-purple-600 to-indigo-600 hover:shadow-xl">
+                        Get Started
+                    </Link>
+                    
                 </div>
-
-                <div className="container relative z-10 px-6 mx-auto md:px-12 lg:px-16">
-                    <div className="flex flex-col items-center md:flex-row md:items-start">
-                        <div className="w-full mb-8 md:w-1/2 md:mb-0 md:pr-8">
-                            <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-                                Social Media Marketing
-                            </h1>
-                            <p className="mb-8 text-lg md:text-xl">
-                                Build a strong online presence and engage with your targeted audience. Transform your social media presence with the expertise of SMM specialists.
-                            </p>
-                            <div className="flex flex-wrap gap-4">
-                                <Link href="/contact" className="px-6 py-3 text-white transition-all bg-white border border-white rounded-lg bg-opacity-20 hover:bg-opacity-30">
-                                    Get Started
-                                </Link>
-                                <Link href="/portfolio" className="px-6 py-3 text-purple-600 transition-all bg-white rounded-lg hover:bg-gray-100">
-                                    View Portfolio
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="w-full md:w-1/2">
-                            <div className="p-1 bg-white rounded-lg bg-opacity-20 backdrop-blur-sm">
-                                <div className="overflow-hidden rounded-lg">
-                                    <Image
-                                        src="/images/smm-hero.jpg"
-                                        alt="Social Media Marketing"
-                                        width={600}
-                                        height={400}
-                                        className="w-full h-auto rounded-lg"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            
+            {/* Image Section - Zoomed out with more space */}
+            <div className="relative max-w-lg mx-auto md:max-w-full">
+                <div className="p-3 bg-white border border-white shadow-xl bg-opacity-10 backdrop-blur-sm rounded-2xl border-opacity-10">
+                    <Image
+                        src="/smm-hero.png"
+                        alt="Social Media Marketing"
+                        width={700}
+                        height={500}
+                        className="w-full h-auto shadow-lg rounded-xl"
+                    />
                 </div>
-            </section>
+            </div>
+        </div>
+    </div>
+</section>
 
+
+        
             {/* Stats Section */}
             <section className="py-16 bg-white">
                 <div className="container px-6 mx-auto md:px-12 lg:px-16">
@@ -602,119 +590,72 @@ const SocialMediaMarketing = () => {
                 </div>
             </section>
 
-            {/* Recent Work Section */}
-            <section className="py-16 bg-gray-50">
-                <div className="container px-6 mx-auto md:px-12 lg:px-16">
-                    <div className="max-w-3xl mx-auto mb-16 text-center">
-                        <h2 className="mb-6 text-3xl font-bold text-gray-800 md:text-4xl">Our Recent Work</h2>
-                        <p className="text-lg text-gray-600">Check out some of our successful social media marketing campaigns.</p>
-                    </div>
-
-                    <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-                        {recentWorks.map((work, index) => (
-                            <div key={index} className="overflow-hidden transition-all bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md">
-                                <div className="relative overflow-hidden">
-                                    <Image
-                                        src={work.image}
-                                        alt={work.alt}
-                                        width={400}
-                                        height={300}
-                                        className="object-cover w-full h-64"
-                                    />
-                                </div>
-                                <div className="p-6">
-                                    <h3 className="mb-2 text-xl font-semibold text-gray-800">{work.title}</h3>
-                                    <Link href="/portfolio" className="text-purple-600 hover:text-purple-700">
-                                        View Details
-                                    </Link>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Trusted Clients */}
-            <section className="py-16 bg-white">
-                <div className="container px-6 mx-auto md:px-12 lg:px-16">
-                    <div className="max-w-3xl mx-auto mb-16 text-center">
-                        <h2 className="mb-6 text-3xl font-bold text-gray-800 md:text-4xl">Trusted By</h2>
-                        <p className="text-lg text-gray-600">We've helped numerous businesses achieve their social media marketing goals.</p>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6">
-                        {trustedCompanies.map((company, index) => (
-                            <div key={index} className="flex items-center justify-center p-4 transition-all bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md">
-                                <Image
-                                    src={company.logo}
-                                    alt={company.name}
-                                    width={120}
-                                    height={80}
-                                    className="object-contain w-auto h-16"
-                                />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+           
 
             {/* FAQ Section */}
-            <section className="py-16 bg-gray-50">
-                <div className="container px-6 mx-auto md:px-12 lg:px-16">
-                    <div className="max-w-3xl mx-auto mb-16 text-center">
-                        <h2 className="mb-6 text-3xl font-bold text-gray-800 md:text-4xl">Frequently Asked Questions</h2>
-                        <p className="text-lg text-gray-600">Find answers to common questions about our social media marketing services.</p>
-                    </div>
+            <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+  <div className="container max-w-6xl px-6 mx-auto">
+    <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
+      {/* Image Column */}
+      <div className="flex justify-center order-2 lg:order-1">
+        <div className="relative flex items-center justify-center w-full max-w-md overflow-hidden rounded-lg shadow-xl bg-purple-50 aspect-square">
+          <img src="/faq1.png" alt="FAQ" className="object-cover w-full h-auto rounded-lg" />
+        </div>
+      </div>
 
-                    <div className="max-w-4xl mx-auto divide-y divide-gray-200">
-                        {faqs.map((faq, index) => (
-                            <div key={index} className="py-5">
-                                <button
-                                    className="flex items-center justify-between w-full text-left"
-                                    onClick={() => toggleFaq(index)}
-                                >
-                                    <h3 className="text-lg font-medium text-gray-800">{faq.question}</h3>
-                                    <svg
-                                        className={`w-6 h-6 text-purple-600 transform ${openFaqIndex === index ? 'rotate-180' : ''}`}
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </button>
-                                {openFaqIndex === index && (
-                                    <div className="mt-2 text-gray-600">
-                                        <p>{faq.answer}</p>
-                                    </div>
-                                )}
-                            </div>
-                        ))}
-                    </div>
+      {/* Content Column */}
+      <div className="order-1 lg:order-2">
+        <div className="mb-12">
+          <h2 className="mb-4 text-4xl font-extrabold text-gray-900 md:text-5xl">
+            Frequently Asked <span className="text-purple-600">Questions</span>
+          </h2>
+          <p className="text-lg text-gray-600">
+            Find answers to common questions about our social media marketing services.
+          </p>
+        </div>
+
+        <div className="space-y-6">
+          {faqs.map((faq, index) => (
+            <div 
+              key={index} 
+              className="overflow-hidden transition-all duration-300 bg-white border border-gray-200 shadow-md rounded-2xl hover:shadow-lg"
+            >
+              <button
+                className="flex items-center justify-between w-full px-6 py-5 text-left focus:outline-none"
+                onClick={() => toggleFaq(index)}
+              >
+                <h3 className="text-lg font-medium text-gray-800">{faq.question}</h3>
+                <div 
+                  className={`flex items-center justify-center w-9 h-9 rounded-full bg-purple-100 transition-transform duration-300 ${
+                    openFaqIndex === index ? "rotate-180" : ""
+                  }`}
+                >
+                  <svg
+                    className="w-5 h-5 text-purple-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
                 </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className="py-16 text-white bg-gradient-to-r from-purple-500 to-indigo-600">
-                <div className="container px-6 mx-auto md:px-12 lg:px-16">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="mb-6 text-3xl font-bold md:text-4xl">Ready to Transform Your Social Media Presence?</h2>
-                        <p className="mb-8 text-lg">
-                            Contact us today to discuss how our social media marketing services can help your business grow.
-                        </p>
-                        <div className="flex flex-wrap justify-center gap-4">
-                            <Link href="/contact" className="px-8 py-3 font-medium text-purple-600 transition-all bg-white rounded-lg hover:bg-gray-100">
-                                Get Started Today
-                            </Link>
-                            <Link href="/portfolio" className="px-8 py-3 font-medium transition-all bg-white border border-white rounded-lg bg-opacity-20 hover:bg-opacity-30">
-                                View Our Portfolio
-                            </Link>
-                        </div>
-                    </div>
+              </button>
+              {openFaqIndex === index && (
+                <div className="px-6 pb-5 text-gray-600 transition-opacity duration-300 animate-fadeIn">
+                  <p>{faq.answer}</p>
                 </div>
-            </section>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+
+            
             <Footer />
         </div>
     );
