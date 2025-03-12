@@ -15,27 +15,88 @@ export default function Home() {
   const [activeFilter, setActiveFilter] = useState('All');
   const [projects] = useState<Project[]>([
     {
-      id: 1,
-      name: "NEPAL'S NO.1 OUTDOOR ADVERTISING COMPANY",
+      id: 6,
+      name: "Jadoo",
       category: "Website Development",
-      image: "/images/project1.jpg",
+      image: "/project15.webp"
     },
+
     {
       id: 2,
       name: "JustKleek E-commerce",
-      category: "Mobile Application",
-      image: "/images/project2.jpg",
+      category: "Website Development",
+      image: "/project2.png",
     },
     {
       id: 3,
       name: "Nepal Tourism Portal",
       category: "Graphics Design",
-      image: "/images/project3.jpg",
+      image: "/project3.png",
     },
+    {
+      id: 4,
+      name: "Jadoo",
+      category: "Graphics Design",
+      image: "/project1.png"
+    },
+    {
+      id: 5,
+      name: "Jadoo",
+      category: "Website Development",
+      image: "/project4.png"
+    },
+ 
+    {
+      id: 7,
+      name: "Jadoo",
+      category: "Website Development",
+      image: "/project13.webp"
+    },
+    {
+      id: 8,
+      name: "Jadoo",
+      category: "Website Development",
+      image: "/project6.png",
+    },
+   
+   
+    {
+      id: 9,
+      name: "Jadoo",
+      category: "Website Development",
+      image: "/project11.webp"
+    },
+    {
+      id: 10,
+      name: "Jadoo",
+      category: "Website Development",
+      image: "/project10.webp"
+    },
+  
+ 
+    {
+      id: 11,
+      name: "Jadoo",
+      category: "Graphics Design",
+      image: "/project5.png"
+    },
+    {
+      id: 12,
+      name: "Jadoo",
+      category: "Website Development",
+      image: "/project14.webp"
+    },
+    {
+      id: 13,
+      name: "Jadoo",
+      category: "Graphics Design",
+      image: "/project7.png"
+    },
+
   ]);
 
   // Fix: Remove the extra comma that created an undefined entry
-  const categories = ['All', 'Website Development', 'Mobile Application', 'Graphics Design'];
+  const categories = ['All', 'Website Development', 'Graphics Design'];
 
   const filteredProjects = activeFilter === 'All' 
     ? projects 
@@ -81,32 +142,28 @@ export default function Home() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
-            <div
-              key={project.id}
-              className="bg-white rounded-lg overflow-hidden shadow-md group transition-all duration-300 hover:shadow-xl"
-            >
-              <div className="relative h-64 sm:h-72 overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.name}
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-transform duration-500 group-hover:scale-110"
-                />
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-purple-900 bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 text-center px-6">
-                    <h3 className="text-white text-xl font-bold mb-2">{project.name}</h3>
-                    <span className="inline-block bg-white text-purple-600 px-3 py-1 rounded-full text-sm font-medium">
-                      {project.category}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+  {filteredProjects.map((project) => (
+    <div
+      key={project.id}
+      className="bg-white rounded-lg overflow-hidden shadow-md group transition-all duration-300 hover:shadow-xl"
+    >
+      <div className="relative h-64 sm:h-72 overflow-hidden">
+        <Image
+          src={project.image}
+          alt={project.name}
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+        {/* Bottom Overlay - Improved Visibility */}
+        {/* <div className="absolute bottom-0 left-0 right-0 bg-purple-400 bg-opacity-10 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+          <h3 className="text-white text-lg font-bold mb-2 line-clamp-2 drop-shadow-md">{project.name}</h3>
+      
+        </div> */}
+      </div>
+    </div>
+  ))}
+</div>
       </main>
     </div>
   );
