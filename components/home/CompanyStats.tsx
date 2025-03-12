@@ -5,13 +5,13 @@ import { Clock, ClipboardCheck, Users, Award, Zap } from 'lucide-react';
 import Link from 'next/link';
 
 const CompanyStats = () => {
-  const spotlightRef = useRef(null);
+  const spotlightRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
     const spotlightElement = spotlightRef.current;
     if (!spotlightElement) return;
     
-    const handleMouseMove = (e:any) => {
+    const handleMouseMove = (e: MouseEvent) => {
       const { left, top, width, height } = spotlightElement.getBoundingClientRect();
       const x = e.clientX - left;
       const y = e.clientY - top;
@@ -74,7 +74,7 @@ const CompanyStats = () => {
             style={{
               '--x': '50%',
               '--y': '50%',
-            }}
+            } as React.CSSProperties}
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_var(--x)_var(--y),rgba(255,255,255,0.3)_10%,transparent_60%)]"></div>
             
