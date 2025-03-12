@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
                   className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-700 my-2 cursor-pointer"
                   target="_blank"
                 >
-                  9862973810
+                 +977 9862973810
                 </a>
 
                 <a
@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-6">
                 <li className="flex items-center text-lg text-[#5d605d] justify-center sm:justify-start">
                   <FaPhoneAlt className="mr-4 text-[#7d2fd0] text-2xl" />
-                  <a href="tel:+9862973810" className="text-[#5d605d] hover:text-[#7d2fd0] hover:underline">9862973810</a>
+                  <a href="tel:+9862973810" className="text-[#5d605d] hover:text-[#7d2fd0] hover:underline">+977 9862973810</a>
                 </li>
                 <li className="flex items-center text-lg text-[#5d605d] justify-center sm:justify-start">
                 <FaEnvelope className="mr-4 text-[#7d2fd0] text-2xl" />
