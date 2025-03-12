@@ -7,6 +7,7 @@ interface Service {
   title: string;
   description: string;
   icon: React.ReactNode;
+  slug?: string;
 }
 
 const ServicesSection: React.FC = () => {
@@ -15,43 +16,49 @@ const ServicesSection: React.FC = () => {
     {
       id: 1,
       title: "Website Development",
+      slug: "websitedevelopment",
       description: "Highly functional & visually appealing website designed to meet your need.",
       icon: <WebsiteIcon />
     },
     {
       id: 4,
       title: "UI/UX",
+      slug: "ui-ux",
       description: "Design eye-catching UI/UX interfaces for effortless user interaction",
       icon: <UiUxIcon />
     },
     {
       id: 5,
       title: "Search Engine Optimization (SEO)",
+      slug: "seo",
       description: "Custom SEO solutions for enhanced search engine visibility and growth",
       icon: <SeoIcon />
     },
     {
       id: 6,
       title: "Social Media Marketing (SMM)",
+      slug: "social-media-marketing",
       description: "Build a strong online presence and engage with your targeted audience",
       icon: <SmmIcon />
     },
     {
       id: 7,
       title: "Graphic Design",
+      slug: "graphic-design",
       description: "Designs that Speak Your Brand's Narrative and Connect with Your Audience",
       icon: <GraphicDesignIcon />
     },
     {
       id: 8,
       title: "Digital Marketing",
+      slug: "digital-marketing",
       description: "Engaging and meaningful content to connect with your audience",
       icon: <ContentWritingIcon />
     }
   ];
 
   return (
-    <div className="w-full py-8 sm:py-12 md:py-16 px-4 md:px-8 bg-white font-poppins">
+    <div className="w-full mt-5 py-8 sm:py-12 md:py-16 px-4 md:px-8 bg-white font-poppins">
       {/* Header Section */}
       <div className="text-center mb-8 sm:mb-12">
         <p className="mb-2 flex items-center justify-center font-poppins text-base sm:text-lg">
@@ -80,7 +87,8 @@ const ServicesSection: React.FC = () => {
 
       {/* Services Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mt-8 sm:mt-12 md:mt-16">
-        {services.map((service) => (
+        {services.map((service: Service) => (
+          <Link href={`/services/${service.slug}`} key={service.id}>
           <div 
             key={service.id} 
             className="flex flex-col items-center text-center p-3 sm:p-4 rounded-lg transition-all duration-300 hover:bg-purple-50 hover:cursor-pointer group font-poppins"
@@ -89,6 +97,7 @@ const ServicesSection: React.FC = () => {
             <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 font-poppins">{service.title}</h3>
             <p className="text-gray-600 text-base sm:text-lg font-poppins">{service.description}</p>
           </div>
+          </Link>
         ))}
       </div>
     </div>

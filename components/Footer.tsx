@@ -136,7 +136,7 @@ const Footer: React.FC = () => {
       <div className="bg-[#7d2fd0] py-4 text-white">
         <div className="container px-4 mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <span className="text-sm sm:text-base md:text-lg text-white text-center md:text-left">© 2025 Softbenz Infosys. All Rights Reserved.</span>
+            <span className="text-sm sm:text-base md:text-lg text-white text-center md:text-left">© 2025 Nepscape. All Rights Reserved.</span>
             <div className="flex space-x-4 justify-center">
               <a href="https://wa.me/9812316018" target="_blank" className="text-xl sm:text-2xl text-white hover:text-gray-200"><FaWhatsapp /></a>
               <a href="#" target="_blank" className="text-xl sm:text-2xl text-white hover:text-gray-200"><FaFacebook /></a>
