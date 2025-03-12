@@ -18,23 +18,23 @@ const Testimonial: React.FC<TestimonialProps> = ({
   hasGoogleReview = false 
 }) => {
   return (
-    <div className="border border-purple-500 rounded-lg p-6 h-full flex flex-col">
-      <div className="flex items-center mb-4">
-        <img src={avatar} alt={name} className="w-12 h-12 rounded-full object-cover mr-4" />
+    <div className="bg-white rounded-lg p-6 h-full flex flex-col shadow-md hover:shadow-lg transition-shadow duration-300 border-t-4 border-purple-500">
+      <div className="flex items-center mb-5">
+        <img src={avatar} alt={name} className="w-16 h-16 rounded-full object-cover mr-4 border-2 border-purple-100" />
         <div>
-          <h3 className="font-bold text-lg">{name}</h3>
-          <p className="text-gray-600 text-sm">{title}</p>
+          <h3 className="font-bold text-xl text-gray-900">{name}</h3>
+          <p className="text-gray-600 text-lg">{title}</p>
         </div>
       </div>
       
-      <p className="text-gray-700 mb-4 flex-grow">{content}</p>
+      <p className="text-gray-800 text-lg mb-6 flex-grow leading-relaxed">{content}</p>
       
-      <div className="flex items-center">
-        <div className="flex mr-2">
+      <div className="flex items-center justify-between mt-2">
+        <div className="flex">
           {[...Array(5)].map((_, i) => (
             <svg 
               key={i} 
-              className={`w-5 h-5 ${i < stars ? "text-yellow-400" : "text-gray-300"}`}
+              className={`w-6 h-6 ${i < stars ? "text-yellow-400" : "text-gray-300"}`}
               fill="currentColor" 
               viewBox="0 0 20 20"
             >
@@ -44,8 +44,8 @@ const Testimonial: React.FC<TestimonialProps> = ({
         </div>
         
         {hasGoogleReview && (
-          <div className="flex items-center">
-          
+          <div className="flex items-center bg-gray-100 py-1 px-3 rounded-full">
+            <span className="text-base font-medium text-gray-700">Google Review</span>
           </div>
         )}
       </div>
@@ -58,9 +58,9 @@ const TestimonialsSection: React.FC = () => {
     {
       id: 1,
       avatar: "/pip1.jpg", // Replace with actual image paths
-      name: "Bibek Regmi",
+      name: "David Jhohanson",
       title: "Managing Director, NLPRC",
-      content: "Nepscape Pvt. Ltd is the best website design and development company in nepal with highly qualified IT staff having an amazing sense of understanding, cooperation, and support to the clients during the project design. The company offers follow-up services even after the completion of projects.",
+      content: "Nepscape Pvt. Ltd is the best website design and development company in nepal with highly qualified IT staff having an amazing sense of understanding, cooperation, and support to the clients during the project design.",
       stars: 5,
       hasGoogleReview: true
     },
@@ -69,43 +69,48 @@ const TestimonialsSection: React.FC = () => {
       avatar: "/pip2.jpg", // Replace with actual image paths
       name: "Shristi Dhakal",
       title: "Chairman, NIMS Group Clinic Pvt. Ltd.",
-      content: "Nepscape has been a game-changer for us at NIMS Group Clinic Pvt Ltd. Their Social Media Marketing and Website Development services have transformed our online presence. Their innovative strategies boosted our engagement and patient interactions. We're incredibly grateful for their expertise, and highly recommend their services.",
+      content: "Nepscape has been a game-changer for us at NIMS Group Clinic Pvt Ltd. Their Social Media Marketing and Website Development services have transformed our online presence.",
       stars: 5,
       hasGoogleReview: true
     },
     {
       id: 3,
       avatar: "/pip3.jpg", // Replace with actual image paths
-      name: "Sulav Prasad Pudasaini",
+      name: "Jennifer Gomez",
       title: "Founder/ CEO, Eduzelt Education Network",
-      content: "Nepscape has very unique team, work professionally and understands the need of customers in the very sight. Its very worthy to be the part of its customer due to its time relevant services. Very thankful for its reliable support.",
+      content: "Nepscape has very unique team, work professionally and understands the need of customers in the very sight. Its very worthy to be the part of its customer due to its time relevant services.",
       stars: 5,
       hasGoogleReview: true
     }
   ];
 
   return (
-    <section className="py-12 px-4">
-      <div className="text-center mb-12">
-        <p className="text-gray-600 tracking-wider font-medium">Testimonials</p>
-        <h2 className="text-3xl md:text-4xl font-bold mt-2">
-          <span className="text-gray-800">What Our</span>
-          <span className="text-purple-500"> Clients Says</span>
-        </h2>
-      </div>
-      
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {testimonials.map((testimonial) => (
-          <Testimonial
-            key={testimonial.id}
-            avatar={testimonial.avatar}
-            name={testimonial.name}
-            title={testimonial.title}
-            content={testimonial.content}
-            stars={testimonial.stars}
-            hasGoogleReview={testimonial.hasGoogleReview}
-          />
-        ))}
+    <section className="py-16 px-4 bg-gray-50">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">
+            <span className="text-gray-800">What Our</span>
+            <span className="text-purple-600"> Clients Say</span>
+          </h2>
+          <div className="w-24 h-1 bg-purple-500 mx-auto mb-6"></div>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Hear from our satisfied clients about their experience working with us
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial) => (
+            <Testimonial
+              key={testimonial.id}
+              avatar={testimonial.avatar}
+              name={testimonial.name}
+              title={testimonial.title}
+              content={testimonial.content}
+              stars={testimonial.stars}
+              hasGoogleReview={testimonial.hasGoogleReview}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

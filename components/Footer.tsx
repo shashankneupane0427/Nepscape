@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                 </a>
 
                 <a
-                  href="/contactus"
+                  href="/contact"
                   className="bg-purple-700 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full hover:bg-white hover:text-purple-700 border border-[#a46ede] transition duration-300 font-semibold text-sm sm:text-base"
                 >
                   Let's Start Conversation

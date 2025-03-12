@@ -14,7 +14,7 @@ const blogPosts = [
     title: 'Best Website Design and Development Cost in Nepal',
     excerpt: 'You must be wondering what may be the cost of Website design. Website development in Nepal especially the business owners and entrepreneurs...',
     date: 'Jun 12, 2024',
-    imageUrl: '/blog1.png',
+    imageUrl: '/blog11.webp',
     slug: 'website-design-development-cost-nepal'
   },
   {
@@ -22,7 +22,7 @@ const blogPosts = [
     title: 'Best IT Company in Nepal 2024',
     excerpt: 'The number of IT companies found in every corner of Nepal has been living proof that Nepal has over 500+ IT companies in Nepal and...',
     date: 'Jun 12, 2024',
-    imageUrl: '/blog2.jpg',
+    imageUrl: '/blog22.avif',
     slug: 'best-it-company-nepal-2024'
   }
 ];
