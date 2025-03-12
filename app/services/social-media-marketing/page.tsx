@@ -376,37 +376,36 @@ const SocialMediaMarketing = () => {
 
     return (
         <div className="bg-gray-50">
-            <section className="relative flex items-center justify-center min-h-screen py-24 overflow-hidden text-white bg-gradient-to-br from-purple-700 via-purple-500 to-indigo-700">
-    {/* Background Glow */}
+            <section className="relative flex items-center justify-center min-h-screen py-24 overflow-hidden text-white bg-gradient-to-br from-purple-800 via-purple-600 to-indigo-800">
+    {/* Background Glow Enhancements */}
     <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bg-purple-300 rounded-full w-96 h-96 -top-20 -left-20 opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 bg-indigo-400 rounded-full w-96 h-96 opacity-20 blur-3xl"></div>
-        <div className="absolute bg-pink-400 rounded-full w-80 h-80 top-1/3 left-1/3 opacity-15 blur-3xl"></div>
+        <div className="absolute bg-purple-400 rounded-full w-[450px] h-[450px] -top-20 -left-20 opacity-30 blur-[120px]"></div>
+        <div className="absolute bottom-0 right-0 bg-indigo-400 rounded-full w-[400px] h-[400px] opacity-30 blur-[120px]"></div>
+        <div className="absolute bg-pink-500 rounded-full w-[300px] h-[300px] top-1/3 left-1/3 opacity-20 blur-[100px]"></div>
     </div>
-    
+
     <div className="relative z-10 w-full px-6 mx-auto md:px-12 lg:px-16 max-w-7xl">
         <div className="grid items-center grid-cols-1 gap-16 md:grid-cols-2">
             {/* Text Content */}
-            <div className="space-y-6 text-center md:text-left">
-                <h1 className="text-4xl font-extrabold leading-tight md:text-5xl lg:text-6xl">
-                    Elevate Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300">Brand</span> with Social Media
+            <div className="space-y-6 text-center md:text-left animate-fadeIn">
+                <h1 className="text-5xl font-extrabold leading-tight md:text-6xl lg:text-7xl">
+                    Elevate Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300">Brand</span> with <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-blue-300">Social Media</span>
                 </h1>
                 
-                <p className="max-w-lg text-lg text-purple-100 md:text-xl">
+                <p className="max-w-lg text-lg text-purple-200 md:text-xl">
                     Build a powerful online presence and engage with your audience through expert social media strategies.
                 </p>
                 
                 <div className="flex flex-wrap justify-center gap-4 pt-4 md:justify-start">
-                    <Link href="/contact" className="px-8 py-3 text-base font-semibold text-white transition-all duration-300 rounded-lg shadow-lg bg-gradient-to-r from-purple-600 to-indigo-600 hover:shadow-xl">
-                        Get Started
+                    <Link href="/contact" className="px-8 py-3 text-lg font-semibold text-white transition-all duration-300 rounded-lg shadow-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:scale-105 hover:shadow-2xl">
+                        Get Started 🚀
                     </Link>
-                    
                 </div>
             </div>
-            
-            {/* Image Section - Zoomed out with more space */}
-            <div className="relative max-w-lg mx-auto md:max-w-full">
-                <div className="p-3 bg-white border border-white shadow-xl bg-opacity-10 backdrop-blur-sm rounded-2xl border-opacity-10">
+
+            {/* Modern Image Section */}
+            <div className="relative max-w-lg mx-auto md:max-w-full animate-fadeInRight">
+                <div className="p-4 transition-all transform bg-white border border-white shadow-2xl bg-opacity-10 backdrop-blur-lg rounded-2xl border-opacity-20 hover:scale-105 hover:shadow-3xl">
                     <Image
                         src="/smm-hero.png"
                         alt="Social Media Marketing"
@@ -419,6 +418,7 @@ const SocialMediaMarketing = () => {
         </div>
     </div>
 </section>
+
 
 
         
