@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const GraphicDesign = () => {
     const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -18,9 +19,9 @@ const toggleFaq = (index: number) => {
 };
       
     const stats = [
-        { number: '500+', label: 'Graphic Design Projects' },
-        { number: '350+', label: 'Satisfied Clients' },
-        { number: '35+', label: 'Design Experts' },
+        { number: '50+', label: 'Graphic Design Projects' },
+        { number: '30+', label: 'Satisfied Clients' },
+        { number: '5+', label: 'Design Experts' },
     ];
 
   const features = [
@@ -335,54 +336,67 @@ const toggleFaq = (index: number) => {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="relative py-12 overflow-hidden text-white sm:py-16 md:py-20 bg-gradient-to-r from-purple-500 to-indigo-600">
-        {/* Background decoration */}
-        <div className="absolute top-0 left-0 w-full h-full opacity-10">
-          <div className="absolute w-20 h-20 bg-white rounded-full sm:w-40 sm:h-40 top-10 left-10 blur-3xl"></div>
-          <div className="absolute bg-purple-300 rounded-full bottom-10 right-10 w-30 sm:w-60 h-30 sm:h-60 blur-3xl"></div>
-        </div>
+      <section className="relative py-20 overflow-hidden text-white bg-gradient-to-br from-purple-700 to-indigo-900">
+      {/* Background Decoration */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute w-40 h-40 bg-white rounded-full sm:w-72 sm:h-72 top-10 left-10 blur-3xl"></div>
+        <div className="absolute w-48 h-48 bg-purple-400 rounded-full bottom-10 right-10 sm:w-96 sm:h-96 blur-3xl"></div>
+      </div>
 
-        <div className="container relative z-10 px-4 mx-auto sm:px-6 md:px-12 lg:px-16">
-          <div className="flex flex-col items-center md:flex-row md:items-start">
-            <div className="w-full mb-8 text-center md:text-left md:w-1/2 md:mb-0 md:pr-6 lg:pr-8">
-              <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl md:text-5xl lg:text-6xl">
-                Graphic Design
-              </h1>
-              <p className="mb-6 text-base sm:text-lg md:text-xl">
-                  Transform your brand with our expert graphic design services. We create visually compelling designs that communicate your message effectively and leave a lasting impression on your audience.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 md:justify-start">
-                <Link href="/contact" className="px-4 py-2 text-sm text-white transition-all bg-white border border-white rounded-lg sm:px-6 sm:py-3 sm:text-base bg-opacity-20 hover:bg-opacity-30">
-                  Get Started
-                </Link>
-                <Link href="/portfolio" className="px-4 py-2 text-sm text-purple-600 transition-all bg-white rounded-lg sm:px-6 sm:py-3 sm:text-base hover:bg-gray-100">
-                  View Portfolio
-                </Link>
-              </div>
+      <div className="container relative z-10 px-6 mx-auto sm:px-12 md:px-16">
+        <div className="flex flex-col-reverse items-center gap-16 md:flex-row">
+          {/* Left Content */}
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }} 
+            animate={{ opacity: 1, x: 0 }} 
+            transition={{ duration: 0.6 }} 
+            className="text-center md:text-left md:w-1/2"
+          >
+            <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
+              Elevate Your Brand with Stunning <span className="text-purple-300">Graphic Design</span>
+            </h1>
+            <p className="mt-6 text-lg sm:text-xl opacity-90">
+              We craft compelling visuals that enhance your brand identity and captivate your audience, ensuring your message stands out.
+            </p>
+            <div className="flex justify-center mt-8 md:justify-start">
+              <Link href="/contact" className="px-6 py-3 text-lg font-semibold text-white transition bg-purple-500 shadow-md rounded-xl hover:bg-purple-600">
+                Get Started
+              </Link>
             </div>
-            <div className="w-full px-4 sm:px-0 md:w-1/2">
-              <div className="relative p-2 bg-white rounded-lg shadow-xl sm:p-4">
-                <Image 
-                  src="/images/graphic-design-hero.jpg" 
-                  alt="Graphic Design Services" 
-                  width={600} 
-                  height={400} 
-                  className="w-full h-auto rounded-lg"
-                />
-              </div>
+          </motion.div>
+          
+          {/* Right Image */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }} 
+            animate={{ opacity: 1, scale: 1 }} 
+            transition={{ duration: 0.6 }}
+            className="relative w-full max-w-lg md:max-w-xl lg:max-w-2xl"
+          >
+            <div className="relative overflow-hidden shadow-lg rounded-xl">
+              <Image 
+                src="/graphic.jpg" 
+                alt="Graphic Design Services" 
+                width={700} 
+                height={500} 
+                className="w-full h-auto transition duration-500 transform hover:scale-105"
+              />
             </div>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      {/* Stats Section */}
-      <section className="py-8 bg-white sm:py-12">
-        <div className="container px-4 mx-auto sm:px-6 md:px-12 lg:px-16">
-          <div className="grid grid-cols-1 gap-4 sm:gap-6 md:gap-8 sm:grid-cols-2 md:grid-cols-3">
+            {/* Stats Section */}
+            <section className="py-12 bg-gradient-to-r from-purple-50 to-indigo-50">
+        <div className="container px-6 mx-auto sm:px-8 md:px-16 lg:px-20">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
             {stats.map((stat, index) => (
-              <div key={index} className="p-4 text-center bg-white rounded-lg shadow-sm sm:p-6">
-                <div className="text-2xl font-bold text-purple-600 sm:text-3xl md:text-4xl">{stat.number}</div>
-                <div className="mt-2 text-sm text-gray-600 sm:text-base">{stat.label}</div>
+              <div
+                key={index}
+                className="p-6 text-center transition-all bg-white shadow-md rounded-2xl hover:shadow-lg"
+              >
+                <div className="text-4xl font-extrabold text-indigo-600 sm:text-5xl">{stat.number}</div>
+                <div className="mt-2 text-lg text-gray-700 sm:text-xl">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -390,17 +404,26 @@ const toggleFaq = (index: number) => {
       </section>
 
       {/* Features Section */}
-      <section className="py-10 sm:py-16 bg-gray-50">
-        <div className="container px-4 mx-auto sm:px-6 md:px-12 lg:px-16">
-          <div className="max-w-3xl mx-auto mb-8 text-center sm:mb-12">
-          <h2 className="mb-3 text-2xl font-bold text-gray-900 sm:mb-4 sm:text-3xl md:text-4xl">Our Design Expertise</h2>
-            <p className="text-base text-gray-600 sm:text-lg">Delivering exceptional visual solutions that help your brand stand out in today's competitive market.</p>
+      <section className="py-16 bg-white">
+        <div className="container px-6 mx-auto sm:px-8 md:px-16 lg:px-20">
+          <div className="max-w-3xl mx-auto mb-12 text-center">
+            <h2 className="mb-4 text-3xl font-extrabold text-gray-900 sm:text-4xl md:text-5xl">
+              Our Design Expertise
+            </h2>
+            <p className="text-lg text-gray-600 sm:text-xl">
+              Delivering exceptional visual solutions that help your brand stand out in today’s competitive market.
+            </p>
           </div>
-          <div className="grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
             {features.map((feature, index) => (
-              <div key={index} className="p-5 transition-all bg-white rounded-lg shadow-sm sm:p-6 hover:shadow-md">
-                <div className="mb-4">{feature.svg}</div>
-                <h3 className="mb-2 text-lg font-bold text-gray-900 sm:text-xl">{feature.title}</h3>
+              <div
+                key={index}
+                className="p-6 transition-all bg-white shadow-md rounded-2xl hover:shadow-lg hover:-translate-y-1"
+              >
+                <div className="flex items-center justify-center w-16 h-16 mb-4 bg-indigo-100 rounded-full">
+                  {feature.svg}
+                </div>
+                <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
@@ -464,38 +487,6 @@ const toggleFaq = (index: number) => {
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section className="py-10 sm:py-16 bg-gray-50">
-        <div className="container px-4 mx-auto sm:px-6 md:px-12 lg:px-16">
-          <div className="max-w-3xl mx-auto mb-8 text-center sm:mb-12">
-            <h2 className="mb-3 text-2xl font-bold text-gray-900 sm:mb-4 sm:text-3xl md:text-4xl">Our Design Portfolio</h2>
-            <p className="text-base text-gray-600 sm:text-lg">Explore our recent projects and see how we help brands shine through exceptional design.</p>
-          </div>
-          <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div key={item} className="overflow-hidden bg-white rounded-lg shadow-sm">
-                <div className="relative pt-[66%]">
-                  <Image 
-                    src={`/images/portfolio-${item}.jpg`} 
-                    alt={`Portfolio Item ${item}`} 
-                    fill
-                    className="absolute top-0 left-0 object-cover w-full h-full transition-all hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="mb-1 text-lg font-bold text-gray-900">Project Title {item}</h3>
-                  <p className="text-sm text-gray-600">Brand Identity, Print Design</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <Link href="/portfolio" className="px-6 py-3 font-medium text-white transition-all bg-purple-600 rounded-lg hover:bg-purple-700">
-              View Full Portfolio
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* More Services Section */}
       <section className="py-10 bg-white sm:py-16">
@@ -516,81 +507,60 @@ const toggleFaq = (index: number) => {
         </div>
       </section>
 
-      {/* Trusted By Section */}
-      <section className="py-10 sm:py-16 bg-gray-50">
-        <div className="container px-4 mx-auto sm:px-6 md:px-12 lg:px-16">
-          <div className="max-w-3xl mx-auto mb-8 text-center sm:mb-12">
-            <h2 className="mb-3 text-2xl font-bold text-gray-900 sm:mb-4 sm:text-3xl md:text-4xl">Trusted By</h2>
-            <p className="text-base text-gray-600 sm:text-lg">Join hundreds of businesses that trust us with their graphic design needs.</p>
-          </div>
-          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-6">
-            {trustedCompanies.map((company, index) => (
-              <div key={index} className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
-                <Image 
-                  src={`/images/companies/${company.logo}`} 
-                  alt={company.name} 
-                  width={120} 
-                  height={60} 
-                  className="w-auto max-h-12"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      
       {/* FAQ Section */}
-      <section className="py-10 bg-white sm:py-16">
-        <div className="container px-4 mx-auto sm:px-6 md:px-12 lg:px-16">
-          <div className="max-w-3xl mx-auto mb-8 text-center sm:mb-12">
-            <h2 className="mb-3 text-2xl font-bold text-gray-900 sm:mb-4 sm:text-3xl md:text-4xl">Frequently Asked Questions</h2>
-            <p className="text-base text-gray-600 sm:text-lg">Find answers to common questions about our graphic design services.</p>
+      <section className="py-16 bg-white">
+      <div className="container px-6 mx-auto sm:px-8 md:px-16 lg:px-20">
+        <div className="grid items-center grid-cols-1 gap-12 md:grid-cols-2">
+          {/* Left Side - Image */}
+          <div className="hidden md:block">
+            <img
+              src="/faqimage.jpg"
+              alt="FAQ Illustration"
+              className="w-full shadow-lg rounded-2xl"
+            />
           </div>
-          <div className="max-w-4xl mx-auto">
-            {faqs.map((faq, index) => (
-              <div key={index} className="mb-4 border border-gray-200 rounded-lg">
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="flex items-center justify-between w-full p-4 text-left bg-white rounded-lg focus:outline-none"
-                >
-                  <span className="font-medium text-gray-900">{faq.question}</span>
-                  <svg
-                    className={`w-5 h-5 text-gray-500 transition-transform ${openFaqIndex === index ? 'transform rotate-180' : ''}`}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {openFaqIndex === index && (
-                  <div className="p-4 pt-0 border-t border-gray-200">
-                    <p className="text-gray-600">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-12 text-white sm:py-16 bg-gradient-to-r from-purple-600 to-indigo-700">
-        <div className="container px-4 mx-auto sm:px-6 md:px-12 lg:px-16">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="mb-4 text-2xl font-bold sm:text-3xl md:text-4xl">Ready to Transform Your Brand?</h2>
-            <p className="mb-6 text-lg sm:text-xl">Let's create designs that elevate your brand and engage your audience.</p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="px-6 py-3 font-medium text-purple-600 transition-all bg-white rounded-lg hover:bg-gray-100">
-                Get Started
-              </Link>
-              <Link href="/portfolio" className="px-6 py-3 font-medium text-white transition-all border border-white rounded-lg hover:bg-white hover:bg-opacity-10">
-                View Portfolio
-              </Link>
+          {/* Right Side - FAQ Content */}
+          <div>
+            <div className="max-w-3xl mb-10 text-center md:text-left">
+              <h2 className="mb-4 text-3xl font-extrabold text-gray-900 sm:text-4xl md:text-5xl">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-lg text-gray-600 sm:text-xl">
+                Find answers to common questions about our graphic design services.
+              </p>
+            </div>
+            <div className="max-w-2xl">
+              {faqs.map((faq, index) => (
+                <div key={index} className="mb-4 overflow-hidden border border-gray-200 shadow-md rounded-2xl">
+                  <button
+                    onClick={() => toggleFaq(index)}
+                    className="flex items-center justify-between w-full p-5 text-left bg-white rounded-lg focus:outline-none"
+                  >
+                    <span className="text-lg font-medium text-gray-900">{faq.question}</span>
+                    <svg
+                      className={`w-6 h-6 text-purple-600 transition-transform ${openFaqIndex === index ? 'rotate-180' : ''}`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {openFaqIndex === index && (
+                    <div className="p-5 pt-0 border-t border-gray-200 bg-purple-50">
+                      <p className="text-base text-gray-700">{faq.answer}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+
 
       <Footer />
     </div>
