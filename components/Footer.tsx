@@ -63,8 +63,8 @@ const Footer: React.FC = () => {
             <div className="text-center sm:text-left">
               <h4 className="mb-4 text-xl font-semibold">Development Services</h4>
               <ul>
-                <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#7d2fd0]">Website Development</Link></li>
-                <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#7d2fd0]">UI/UX</Link></li>
+                <li className="mb-2"><Link href="/services/websitedevelopment" className="text-[#5d605d] hover:text-[#7d2fd0]">Website Development</Link></li>
+                <li className="mb-2"><Link href="/services/ui-ux" className="text-[#5d605d] hover:text-[#7d2fd0]">UI/UX</Link></li>
               </ul>
             </div>
 
@@ -72,10 +72,10 @@ const Footer: React.FC = () => {
             <div className="text-center sm:text-left">
               <h4 className="mb-4 text-xl font-semibold">Marketing Services</h4>
               <ul>
-                <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#7d2fd0]">Search Engine Optimization (SEO)</Link></li>
-                <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#7d2fd0]">Social Media Marketing (SMM)</Link></li>
-                <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#7d2fd0]">Graphic Design</Link></li>
-                <li className="mb-2"><Link href="#" className="text-[#5d605d] hover:text-[#7d2fd0]">Digital Marketing</Link></li>
+                <li className="mb-2"><Link href="/services/seo" className="text-[#5d605d] hover:text-[#7d2fd0]">Search Engine Optimization (SEO)</Link></li>
+                <li className="mb-2"><Link href="/services/social-media-marketing" className="text-[#5d605d] hover:text-[#7d2fd0]">Social Media Marketing (SMM)</Link></li>
+                <li className="mb-2"><Link href="/services/graphic-design" className="text-[#5d605d] hover:text-[#7d2fd0]">Graphic Design</Link></li>
+                <li className="mb-2"><Link href="/services/digital-marketing" className="text-[#5d605d] hover:text-[#7d2fd0]">Digital Marketing</Link></li>
               </ul>
             </div>
 
@@ -83,8 +83,8 @@ const Footer: React.FC = () => {
             <div className="text-center sm:text-left">
               <h4 className="mb-4 text-xl font-semibold">Quick Links</h4>
               <ul>
-                <li className="mb-2"><Link href="/about" className="text-[#5d605d] hover:text-[#7d2fd0]">About Us</Link></li>
-                <li className="mb-2"><Link href="/services" className="text-[#5d605d] hover:text-[#7d2fd0]">Services</Link></li>
+                <li className="mb-2"><Link href="/aboutus" className="text-[#5d605d] hover:text-[#7d2fd0]">About Us</Link></li>
+                <li className="mb-2"><Link href="/aboutus#" className="text-[#5d605d] hover:text-[#7d2fd0]">Services</Link></li>
                 <li className="mb-2"><Link href="/contact" className="text-[#5d605d] hover:text-[#7d2fd0]">Contact Us</Link></li>
                 <li className="mb-2"><Link href="/blog" className="text-[#5d605d] hover:text-[#7d2fd0]">Blog</Link></li>
                 <li className="mb-2"><Link href="/our-work" className="text-[#5d605d] hover:text-[#7d2fd0]">Our Work</Link></li>
@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
       <div className="bg-[#7d2fd0] py-4 text-white">
         <div className="container px-4 mx-auto">
           <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
-            <span className="text-sm text-center text-white sm:text-base md:text-lg md:text-left">© 2025 Softbenz Infosys. All Rights Reserved.</span>
+            <span className="text-sm text-center text-white sm:text-base md:text-lg md:text-left">© 2025 Nepscape. All Rights Reserved.</span>
             <div className="flex justify-center space-x-4">
               <a href="https://wa.me/9812316018" target="_blank" className="text-xl text-white sm:text-2xl hover:text-gray-200"><FaWhatsapp /></a>
               <a href="#" target="_blank" className="text-xl text-white sm:text-2xl hover:text-gray-200"><FaFacebook /></a>
