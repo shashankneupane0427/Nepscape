@@ -42,11 +42,11 @@ const Footer: React.FC = () => {
                   className="my-2 text-2xl font-bold text-purple-700 cursor-pointer sm:text-3xl md:text-4xl"
                   target="_blank"
                 >
-                  9862973810
+                 +977 9862973810
                 </a>
 
                 <a
-                  href="/contactus"
+                  href="/contact"
                   className="bg-purple-700 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full hover:bg-white hover:text-purple-700 border border-[#a46ede] transition duration-300 font-semibold text-sm sm:text-base"
                 >
                   Let's Start Conversation
@@ -97,8 +97,14 @@ const Footer: React.FC = () => {
               <ul className="space-y-6">
                 <li className="flex items-center text-lg text-[#5d605d] justify-center sm:justify-start">
                   <FaPhoneAlt className="mr-4 text-[#7d2fd0] text-2xl" />
-                  <a href="tel:+9862973810" className="text-[#5d605d] hover:text-[#7d2fd0] hover:underline">9862973810</a>
+                  <a href="tel:+9862973810" className="text-[#5d605d] hover:text-[#7d2fd0] hover:underline">+977 9862973810</a>
                 </li>
+                <li className="flex items-center text-lg text-[#5d605d] justify-center sm:justify-start">
+                <FaEnvelope className="mr-4 text-[#7d2fd0] text-2xl" />
+                <a href="mailto:csr@nepscape.com" className="text-[#5d605d] hover:text-[#7d2fd0] hover:underline">
+                  csr@nepscape.com
+                </a>
+              </li>
                 <li className="flex items-center text-lg text-[#5d605d] justify-center sm:justify-start">
                   <FaMapMarkerAlt className="mr-4 text-[#7d2fd0] text-2xl" /> Putalisadak, Kathmandu
                 </li>

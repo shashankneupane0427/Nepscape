@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 // Types for our services data
 interface Service {
@@ -6,6 +7,7 @@ interface Service {
   title: string;
   description: string;
   icon: React.ReactNode;
+  slug?: string;
 }
 
 const ServicesSection: React.FC = () => {
@@ -14,63 +16,57 @@ const ServicesSection: React.FC = () => {
     {
       id: 1,
       title: "Website Development",
+      slug: "websitedevelopment",
       description: "Highly functional & visually appealing website designed to meet your need.",
       icon: <WebsiteIcon />
     },
     {
-      id: 2,
-      title: "App Development",
-      description: "Innovative and user-friendly mobile application designed to engage users.",
-      icon: <AppDevIcon />
-    },
-    {
-      id: 3,
-      title: "System/Software Development",
-      description: "System/software developed according to your business needs.",
-      icon: <SoftwareIcon />
-    },
-    {
       id: 4,
       title: "UI/UX",
+      slug: "ui-ux",
       description: "Design eye-catching UI/UX interfaces for effortless user interaction",
       icon: <UiUxIcon />
     },
     {
       id: 5,
       title: "Search Engine Optimization (SEO)",
+      slug: "seo",
       description: "Custom SEO solutions for enhanced search engine visibility and growth",
       icon: <SeoIcon />
     },
     {
       id: 6,
       title: "Social Media Marketing (SMM)",
+      slug: "social-media-marketing",
       description: "Build a strong online presence and engage with your targeted audience",
       icon: <SmmIcon />
     },
     {
       id: 7,
       title: "Graphic Design",
+      slug: "graphic-design",
       description: "Designs that Speak Your Brand's Narrative and Connect with Your Audience",
       icon: <GraphicDesignIcon />
     },
     {
       id: 8,
-      title: "Content Writing",
+      title: "Digital Marketing",
+      slug: "digital-marketing",
       description: "Engaging and meaningful content to connect with your audience",
       icon: <ContentWritingIcon />
     }
   ];
 
   return (
-    <div className="w-full py-8 sm:py-12 md:py-16 px-4 md:px-8 bg-white font-poppins">
+    <div className="w-full mt-5 py-8 sm:py-12 md:py-16 px-4 md:px-8 bg-white font-poppins">
       {/* Header Section */}
       <div className="text-center mb-8 sm:mb-12">
-        <p className="mb-2 flex items-center justify-center font-poppins text-sm sm:text-base">
+        <p className="mb-2 flex items-center justify-center font-poppins text-base sm:text-lg">
           <span className="border-t border-gray-300 w-8 sm:w-12 mr-2 sm:mr-4"></span>
           Our Services
           <span className="border-t border-gray-300 w-8 sm:w-12 ml-2 sm:ml-4"></span>
         </p>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 font-poppins px-2">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 font-poppins px-2">
           Exceptional Services For Your 
           <span className="text-purple-500 ml-2">
             Business Growth
@@ -78,25 +74,30 @@ const ServicesSection: React.FC = () => {
         </h2>
         
         <div className="border border-purple-500 rounded-full py-2 sm:py-3 md:py-4 px-3 sm:px-4 md:px-6 flex flex-col sm:flex-row items-center justify-between mb-6 sm:mb-8 md:mb-12 mx-auto max-w-xs sm:max-w-lg md:max-w-4xl">
-          <p className="text-[#443d3d] text-sm sm:text-base mb-2 sm:mb-0">Discover our wide range of digital solutions to enhance your online presence.</p>
-          <button className="flex items-center text-[#443d3d] text-sm sm:text-base whitespace-nowrap">
+          <p className="text-[#443d3d] text-base sm:text-lg mb-2 sm:mb-0">Discover our wide range of digital solutions to enhance your online presence.</p>
+          <button className="flex items-center text-[#443d3d] text-base sm:text-lg whitespace-nowrap">
             <div className="w-2 h-2 mr-2 rounded-full bg-purple-500"></div>
-            <span>See All</span>
+            <Link href="/services">
+            <span className='cursor-pointer'>See All</span>
+            </Link>
+            
           </button>
         </div>
       </div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mt-8 sm:mt-12 md:mt-16">
-        {services.map((service) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mt-8 sm:mt-12 md:mt-16">
+        {services.map((service: Service) => (
+          <Link href={`/services/${service.slug}`} key={service.id}>
           <div 
             key={service.id} 
             className="flex flex-col items-center text-center p-3 sm:p-4 rounded-lg transition-all duration-300 hover:bg-purple-50 hover:cursor-pointer group font-poppins"
           >
-            <div className="w-16 h-16 sm:w-18 md:w-20 sm:h-18 md:h-20 mb-4 sm:mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:animate-pulse">{service.icon}</div>
-            <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 font-poppins">{service.title}</h3>
-            <p className="text-gray-600 text-sm sm:text-base font-poppins">{service.description}</p>
+            <div className="w-20 h-20 sm:w-24 md:w-28 sm:h-24 md:h-28 mb-4 sm:mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:animate-pulse">{service.icon}</div>
+            <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 font-poppins">{service.title}</h3>
+            <p className="text-gray-600 text-base sm:text-lg font-poppins">{service.description}</p>
           </div>
+          </Link>
         ))}
       </div>
     </div>

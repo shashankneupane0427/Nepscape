@@ -46,34 +46,28 @@ const HowWeWork: React.FC = () => {
       description: "In the final stage, we maintain systems to ensure smooth operation, security, and reliability. Optimization keeps performance high and client satisfaction focused on operational excellence."
     }
   ];
-
+  
   return (
     <div className="bg-white container mx-auto py-14 px-4">
       <div className="text-center mb-8">
-        <p className=" inline-block py-1 px-8 border-purple-500]">How We Work</p>
-        <h2 className="text-4xl font-bold mt-2 ">Enjoy Seamless Service With <span className="text-purple-500">Our Easy Steps!</span></h2>
+        <p className="text-lg inline-block py-1 px-8 border-purple-500]">How We Work</p>
+        <h2 className="text-5xl font-bold mt-2 ">Enjoy Seamless Service With <span className="text-purple-500">Our Easy Steps!</span></h2>
       </div>
       
-      <div className="border border-purple-500 rounded-full py-4 px-6  flex items-center justify-between mb-12 mx-auto max-w-4xl">
-        <p className="text-[#443d3d]">Efficient workflow from requirements gathering to support and maintenance</p>
-        <button className="flex items-center text-[#443d3d]">
-        <div className="ml-2 w-2 h-2 mr-2.5 rounded-full bg-purple-500"></div>
-          <span>See All</span>
-          
-        </button>
-      </div>
-      
+      <div className="py-4 px-6 flex items-center justify-center mb-12 mx-auto">
+  <p className="text-lg text-center text-[#443d3d] border border-purple-400 rounded-full py-4 px-6">Efficient workflow from requirements gathering to support and maintenance</p>
+</div>
       <div className="space-y-8">
         {workflowSteps.map((step) => (
           <div key={step.id} className="flex flex-col p-2 md:flex-row border-b mb-0 border-gray-200 pb-8 hover:bg-purple-50 ">
             <div className="md:w-1/6 pr-4">
-              <div className="text-6xl font-bold text-[#443d3d] opacity-75  p-4 rounded-lg inline-block">{step.number}</div>
+              <div className="text-7xl font-bold text-[#443d3d] opacity-75 p-4 rounded-lg inline-block">{step.number}</div>
             </div>
             <div className="md:w-1/3 pr-4">
-              <h3 className="text-3xl font-bold text-[#443d3d]">{step.title}</h3>
+              <h3 className="text-4xl font-bold text-[#443d3d]">{step.title}</h3>
             </div>
             <div className="md:w-1/2">
-              <p className="">{step.description}</p>
+              <p className="text-lg">{step.description}</p>
             </div>
           </div>
         ))}

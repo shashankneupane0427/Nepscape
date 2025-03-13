@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 import {
   FaUser,
   FaEnvelope,
@@ -15,6 +15,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { toast, Toaster } from 'react-hot-toast';
 
 // Main Contact Form Component
 const Main = () => {
@@ -25,8 +26,9 @@ const Main = () => {
     subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
@@ -34,15 +36,59 @@ const Main = () => {
     }));
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add your form submission logic here
+    
+    // Validate all required fields
+    if (!formData.fullName || !formData.email || !formData.subject || !formData.message) {
+      toast.error('Please fill all required fields');
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    // Show loading toast
+    const loadingToast = toast.loading('Sending your message...');
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok) {
+        // Success
+        toast.success('Message sent successfully!', { id: loadingToast });
+        // Reset form
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        // Error
+        toast.error(`Failed to send message: ${data.message}`, { id: loadingToast });
+      }
+    } catch (error) {
+      toast.error('An error occurred. Please try again later.', { id: loadingToast });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <div className="bg-purple-50 min-h-screen p-8">
       <div className="max-w-6xl mx-auto">
+        {/* Toaster for notifications */}
+        <Toaster position="top-right" />
+        
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -105,8 +151,11 @@ const Main = () => {
                     <FaPhone className="text-purple-500 " />
                   </div>
                   <div className="flex">
-                    <select className="bg-purple-100 pl-7 text-purple-800 border border-purple-300 rounded-l-lg px-3 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300">
-                      <option >+977</option>
+                    <select 
+                      className="bg-purple-100 pl-7 text-purple-800 border border-purple-300 rounded-l-lg px-3 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300"
+                      onChange={handleChange}
+                    >
+                      <option>+977</option>
                       <option>+1</option>
                       <option>+44</option>
                     </select>
@@ -116,7 +165,7 @@ const Main = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="Phone Number"
-                      className="w-full py-3  pl-3.5 pr-4 border border-purple-300 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300"
+                      className="w-full py-3 pl-3.5 pr-4 border border-purple-300 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300"
                     />
                   </div>
                 </div>
@@ -145,7 +194,7 @@ const Main = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Message *"
-                rows={5}
+                  rows={5}
                   className="w-full py-3 px-4 border border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300"
                   required
                 ></textarea>
@@ -157,9 +206,22 @@ const Main = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   type="submit"
-                  className="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-300"
+                  disabled={isSubmitting}
+                  className={`bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-300 ${
+                    isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                  }`}
                 >
-                  Submit
+                  {isSubmitting ? (
+                    <span className="flex items-center">
+                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Sending...
+                    </span>
+                  ) : (
+                    'Submit'
+                  )}
                 </motion.button>
               </div>
             </form>
@@ -186,7 +248,7 @@ const Main = () => {
           <ContactInfoCard
             icon={<FaPhone size={24} />}
             title="Our Phone Number"
-            content="+997 986-2973810"
+            content="+977 9862973810"
             delay={0.2}
           />
 
@@ -219,21 +281,21 @@ const Main = () => {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
           <SupportCard
             title="For Sales"
-            phone="9801848492"
+            phone="+977 9862973810"
             icon={<FaBriefcase size={20} />}
             delay={0.3}
           />
 
           <SupportCard
             title="For Career"
-            phone="9801848493"
+            phone="+977 9827394116"
             icon={<FaUser size={20} />}
             delay={0.5}
           />
 
           <SupportCard
             title="For Support"
-            phone="9801848493"
+            phone="+977 9862973810"
             icon={<FaHeadset size={20} />}
             delay={0.7}
           />
@@ -257,27 +319,27 @@ const Main = () => {
   );
 };
 
-interface ContactInfoProps {
+// Type definitions for props
+interface ContactInfoCardProps {
   icon: React.ReactNode;
   title: string;
   content: string;
   delay: number;
 }
 
-const ContactInfoCard: React.FC<ContactInfoProps> = ({ icon, title, content, delay }) => {
+const ContactInfoCard = ({ icon, title, content, delay }: ContactInfoCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay }}
-      whileHover={{ y: -10 }}
-      className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center transform transition-all duration-300 hover:shadow-lg"
+      transition={{ duration: 0.6, delay }}
+      className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center"
     >
-      <div className="bg-purple-100 p-4 rounded-full mb-4 text-purple-600">
+      <div className="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mb-4">
         {icon}
       </div>
       <h3 className="text-lg font-semibold text-purple-800 mb-2">{title}</h3>
-      <p className="text-purple-700">{content}</p>
+      <p className="text-purple-600">{content}</p>
     </motion.div>
   );
 };
@@ -289,21 +351,26 @@ interface SupportCardProps {
   delay: number;
 }
 
-const SupportCard: React.FC<SupportCardProps> = ({ title, phone, icon, delay }) => {
+const SupportCard = ({ title, phone, icon, delay }: SupportCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay }}
-      className="bg-purple-700 text-white rounded-xl shadow-md p-6 text-center transform transition-all duration-300 hover:bg-purple-800"
+      transition={{ duration: 0.6, delay }}
+      className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-xl shadow-lg p-6 text-white"
     >
-      <div className="flex justify-center mb-4">
-        <div className="bg-purple-500 p-3 rounded-full">{icon}</div>
+      <div className="flex items-center mb-4">
+        <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mr-3">
+          {icon}
+        </div>
+        <h3 className="text-xl font-semibold">{title}</h3>
       </div>
-      <h3 className="text-xl font-bold mb-4">{title}</h3>
-      <div className="flex items-center justify-center gap-2">
-        <FaPhone />
-        <span className="text-lg">{phone}</span>
+      <p className="text-purple-100 mb-4">For any queries related to {title.toLowerCase()}, please contact us</p>
+      <div className="bg-white/10 rounded-lg p-3 flex items-center justify-between">
+        <span>{phone}</span>
+        <button className="bg-white text-purple-700 px-3 py-1 rounded-md text-sm font-medium hover:bg-purple-100 transition duration-300">
+          Call Now
+        </button>
       </div>
     </motion.div>
   );
@@ -313,15 +380,16 @@ interface SocialIconProps {
   icon: React.ReactNode;
 }
 
-const SocialIcon: React.FC<SocialIconProps> = ({ icon }) => {
+const SocialIcon = ({ icon }: SocialIconProps) => {
   return (
-    <motion.div
-      whileHover={{ scale: 1.2 }}
+    <motion.a
+      whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      className="bg-purple-600 text-white p-3 rounded-full cursor-pointer"
+      href="#"
+      className="w-12 h-12 bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center shadow-md transition duration-300"
     >
       {icon}
-    </motion.div>
+    </motion.a>
   );
 };
 

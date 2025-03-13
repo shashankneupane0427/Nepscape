@@ -89,14 +89,14 @@ const Navbar = () => {
               >
                 Service <MdKeyboardArrowDown className="ml-1 transition-transform duration-500 group-hover:rotate-180 group-hover:scale-125" />
               </Link>
-              <div className="absolute left-0 hidden w-full bg-white rounded-md shadow-lg top-full group-hover:block min-w-max animate-fadeIn">
+              <div className="absolute left-0 hidden w-full bg-white rounded-md  top-full group-hover:block min-w-max animate-fadeIn">
                 <div className="grid grid-cols-2 gap-6 p-4">
                   {/* Development Section */}
                   <div>
                     <h3 className="px-3 py-1 font-bold text-[#8044c9] border-b border-gray-200 mb-3">Development</h3>
                     <ul>
                       <li className="mb-3 transition-all duration-300">
-                        <Link href="/services/websitedevelopment" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-gray-100 hover:translate-x-2 hover:shadow-md">
+                        <Link href="/services/websitedevelopment" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-purple-50 hover:translate-x-2">
                           <h4 className="font-semibold text-black">Website Development</h4>
                           <p className="text-sm text-gray-600">
                             Specialized Custom Website Development Services.
@@ -106,7 +106,7 @@ const Navbar = () => {
                       
                     
                       <li className="transition-all duration-300">
-                        <Link href="/services/ui-ux" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-gray-100 hover:translate-x-2 hover:shadow-md">
+                        <Link href="/services/ui-ux" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-purple-50 hover:translate-x-2">
                           <h4 className="font-semibold text-black">UI/UX</h4>
                           <p className="text-sm text-gray-600">
                             Design UI/UX interfaces for effortless user interaction.
@@ -121,7 +121,7 @@ const Navbar = () => {
                     <h3 className="px-3 py-1 font-bold text-[#8044c9] border-b border-gray-200 mb-3">Marketing</h3>
                     <ul>
                       <li className="mb-3 transition-all duration-300">
-                        <Link href="/services/seo" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-gray-100 hover:translate-x-2 hover:shadow-md">
+                        <Link href="/services/seo" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-purple-50 hover:translate-x-2 ">
                           <h4 className="font-semibold text-black">Search Engine Optimization (SEO)</h4>
                           <p className="text-sm text-gray-600">
                             Enhance Search Engine Ranking with Effective SEO.
@@ -129,7 +129,7 @@ const Navbar = () => {
                         </Link>
                       </li>
                       <li className="mb-3 transition-all duration-300">
-                        <Link href="/services/social-media-marketing" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-gray-100 hover:translate-x-2 hover:shadow-md">
+                        <Link href="/services/social-media-marketing" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-purple-50 hover:translate-x-2 ">
                           <h4 className="font-semibold text-black">Social Media Marketing (SMM)</h4>
                           <p className="text-sm text-gray-600">
                             Boost online presence, engage audience.
@@ -137,7 +137,7 @@ const Navbar = () => {
                         </Link>
                       </li>
                       <li className="mb-3 transition-all duration-300">
-                        <Link href="/services/graphic-design" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-gray-100 hover:translate-x-2 hover:shadow-md">
+                        <Link href="/services/graphic-design" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-purple-50 hover:translate-x-2 ">
                           <h4 className="font-semibold text-black">Graphic Design</h4>
                           <p className="text-sm text-gray-600">
                             Bringing Ideas to Visual Life.
@@ -147,7 +147,7 @@ const Navbar = () => {
                      
                      
                       <li className="transition-all duration-300">
-                        <Link href="/services/digital-marketing" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-gray-100 hover:translate-x-2 hover:shadow-md">
+                        <Link href="/services/digital-marketing" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-purple-50 hover:translate-x-2 ">
                           <h4 className="font-semibold text-black">Digital Marketing</h4>
                           <p className="text-sm text-gray-600">
                             Designing Digital Paths That Echo with Audiences.
@@ -170,7 +170,7 @@ const Navbar = () => {
               </Link>
               <ul className="absolute left-0 hidden p-4 bg-white rounded-md shadow-lg top-full group-hover:block w-72 animate-fadeIn">
                 <li className="mb-3 transition-all duration-300">
-                  <Link href="/Pricing/seo-package" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-gray-100 hover:translate-x-2 hover:shadow-md">
+                  <Link href="/Pricing/seo-package" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-purple-50 hover:translate-x-2 ">
                     <h4 className="font-semibold text-black">SEO Package</h4>
                     <p className="text-sm text-gray-600">
                       Typically offers a range of services including keyword research.
@@ -178,7 +178,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="mb-3 transition-all duration-300">
-                  <Link href="/Pricing/social-media" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-gray-100 hover:translate-x-2 hover:shadow-md">
+                  <Link href="/Pricing/social-media" className="block px-3 py-2 transition-all duration-300 rounded-md hover:bg-purple-50 hover:translate-x-2 ">
                     <h4 className="font-semibold text-black">Social Media Package</h4>
                     <p className="text-sm text-gray-600">
                       Typically offers a range of services tailored to clients' needs, including social media marketing.
@@ -190,7 +190,7 @@ const Navbar = () => {
 
             <li className="overflow-hidden">
               <Link
-                href="/work"
+                href="/portfolio"
                 className="nav-link hover:text-[#967bb6] inline-block transition-all duration-300"
               >
                 Our Work
@@ -209,14 +209,17 @@ const Navbar = () => {
 
           {/* Contact Section - Only visible on desktop when width is greater than 1045px */}
           <div className="items-center hidden space-x-4 lg:flex">
-            <div className="flex items-center text-[#967bb6] font-semibold text-lg hover:scale-110 transition-transform duration-300">
+            <Link href="https://wa.me/9862973810">
+            <div className="flex items-center text-[#967bb6] font-semibold text-lg ">
               <FaPhoneAlt className="mr-2 animate-bounce" />
-              <span>9862973810</span>
+              <span>+977 9862973810</span>
             </div>
-
-            <button className="border-2 border-[#967bb6] text-[#967bb6] px-4 py-2 rounded-full hover:bg-[#967bb6] hover:text-white transition-all duration-500 hover:scale-110 hover:shadow-lg hover:rotate-1">
+            </Link>
+            <Link href="/contact">
+            <button className="border-2 border-purple-700  text-purple-700 px-4 py-2 rounded-full hover:bg-purple-700 hover:text-white transition-all duration-500 cursor-pointer">
               Quick Enquiry
             </button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -230,7 +233,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between p-4 border-b">
           <div className="flex items-center">
             <img src="/logo.png" alt="Nepscape Logo" className="h-8" />
-            <p className="text-[#8044c9] ml-2">Nepscape</p>
+            <p className="text-purple-700 ml-2">Nepscape</p>
           </div>
           <button 
             onClick={toggleSidebar}
@@ -397,7 +400,7 @@ const Navbar = () => {
           <div className="pt-6 mt-6 border-t border-gray-200">
             <div className="flex items-center text-[#967bb6] font-semibold mb-4">
               <FaPhoneAlt className="mr-2 animate-bounce" />
-              <span>9862973810</span>
+              <span>+977 9862973810</span>
             </div>
 
             <button className="w-full border-2 border-[#967bb6] text-[#967bb6] px-4 py-2 rounded-full hover:bg-[#967bb6] hover:text-white transition-all duration-500 hover:scale-105 hover:shadow-lg hover:rotate-1">
