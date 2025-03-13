@@ -954,13 +954,7 @@ const WebsiteDevelopment = () => {
           <h3 className="mt-4 text-xl font-semibold text-gray-800">{service.title}</h3>
           <p className="mt-2 text-gray-600">{service.description}</p>
 
-          {/* Learn More Link */}
-          <Link href="#" className="flex items-center mt-4 font-medium text-purple-600 transition-colors duration-300 hover:text-green-600">
-            Learn More
-            <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-            </svg>
-          </Link>
+         
 
           {/* Decorative Glow Effect */}
           <div className="absolute w-24 h-1 transform -translate-x-1/2 bg-purple-500 rounded-full opacity-50 -bottom-2 left-1/2"></div>
