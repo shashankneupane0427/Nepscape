@@ -257,15 +257,46 @@ const WebsiteDevelopment = () => {
   ];
 
   const technologies = {
-    frontend: [
-      "data:image/jpeg;base64,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",
-      "CSS3",
-      "React",
-      "Next.js",
-      "TypeScript",
-    ],
+    frontend: ["HTML5", "CSS3", "React", "Next.js", "TypeScript"],
     backend: ["Node.js", "Python", "PHP", "WordPress"],
     infrastructure: ["AWS", "Google Cloud", "Docker", "Kubernetes"],
+  };
+  const techIcons = {
+    HTML5:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    CSS3: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    React:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    "Next.js":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    TypeScript:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    "Node.js":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    Python:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    PHP: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+    WordPress:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
+    AWS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+    "Google Cloud":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+    Docker:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    Kubernetes:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
+  };
+
+  // For demo purposes, using a placeholder in case actual CDN image fails
+  const renderTechIcon = (tech) => {
+    // Using placeholder for this demo - in real application, you'd use the real CDN URL
+    return (
+      <img
+        src="/api/placeholder/48/48"
+        alt={`${tech} icon`}
+        className="w-12 h-12"
+      />
+    );
   };
 
   const roadmap = [
@@ -992,7 +1023,11 @@ const WebsiteDevelopment = () => {
                       key={index}
                       className="flex items-center px-6 py-3 transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg"
                     >
-                      <img src={tech} alt={tech} className="w-6 h-6 mr-2" />
+                      <img
+                        src={techIcons[tech]}
+                        alt={tech}
+                        className="w-6 h-6 mr-2"
+                      />
                       {tech}
                     </div>
                   ))}
@@ -1010,7 +1045,7 @@ const WebsiteDevelopment = () => {
                       className="flex items-center px-6 py-3 transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg"
                     >
                       <img
-                        src={`/icons/${tech.toLowerCase()}.svg`}
+                        src={techIcons[tech]}
                         alt={tech}
                         className="w-6 h-6 mr-2"
                       />
@@ -1031,7 +1066,7 @@ const WebsiteDevelopment = () => {
                       className="flex items-center px-6 py-3 transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg"
                     >
                       <img
-                        src={`/icons/${tech.toLowerCase()}.svg`}
+                        src={techIcons[tech]}
                         alt={tech}
                         className="w-6 h-6 mr-2"
                       />
