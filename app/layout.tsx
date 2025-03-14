@@ -21,9 +21,9 @@ export async function generateMetadata(): Promise<Metadata> {
   const pathname = headersList.get("x-pathname") || "/";
   const canonicalUrl = `https://nepscape.com${pathname}`;
   return {
-    title: "Nepscape | IT Company | Website Development | Graphic Design",
+    title: "Nepscape | Website Development & Digital Marketing Services Nepal",
     description:
-      "We have Top website developer to design and develop your website. Contact Us for highly functional and visually appealing website.",
+      "Professional website development, digital marketing & social media services in Nepal. Boost your online presence with our SEO-optimized solutions & custom web design services.",
     icons: {
       icon: [
         { url: "/logo.png", sizes: "192x192", type: "image/png"},
@@ -47,9 +47,9 @@ export async function generateMetadata(): Promise<Metadata> {
       "SEO Optimization",
     ],
     openGraph: {
-      title: "Nepscape | IT Company | Website Development | Graphic Design",
+      title: "Nepscape | Website Development & Digital Marketing Services Nepal",
       description:
-        "We have Top website developer to design and develop your website. Contact Us for highly functional and visually appealing website.",
+        "Professional website development, digital marketing & social media services in Nepal. Boost your online presence with our SEO-optimized solutions & custom web design services.",
       url: canonicalUrl,
       images: [
         {
