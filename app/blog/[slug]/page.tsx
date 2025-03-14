@@ -9,7 +9,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 
-const BlogPage = ({ posts }) => {
+const BlogPage = ({ posts: any }) => {
   const [currentPostIndex, setCurrentPostIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
