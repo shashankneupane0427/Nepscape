@@ -26,6 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "We have Top website developer to design and develop your website. Contact Us for highly functional and visually appealing website.",
     icons: {
       icon: [
+        { url: "/logo.png", sizes: "192x192", type: "image/png"},
         { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
         { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
         { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
