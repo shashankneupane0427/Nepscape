@@ -40,7 +40,7 @@ const BlogSection: React.FC<BlogSectionProps> = ({ blogPosts }) => {
       
       {/* Blog Cards Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {blogPosts.map((post) => (
+        {blogPosts.map((post:any) => (
           <div
             key={post.id}
             className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-md hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row w-full"
