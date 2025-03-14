@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const pathname = headersList.get("x-pathname") || "/";
   const canonicalUrl = `https://nepscape.com${pathname}`;
   return {
-    title: "Nepscape | IT Company | Website Development",
+    title: "Nepscape | IT Company | Website Development | Graphic Designing",
     description:
       "We have Top website developer to design and develop your website. Contact Us for highly functional and visually appealing website.",
     icons: {
@@ -46,7 +46,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "SEO Optimization",
     ],
     openGraph: {
-      title: "Nepscape | IT Company | Website Development",
+      title: "Nepscape | IT Company | Website Development | Graphic Designing",
       description:
         "We have Top website developer to design and develop your website. Contact Us for highly functional and visually appealing website.",
       url: canonicalUrl,
