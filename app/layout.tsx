@@ -4,6 +4,7 @@ import Script from "next/script"; // Import Next.js Script
 import Navbar from "../components/Navbar";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import LocalBusinessInfo from "../components/LocalBusinessInfo"; // New component for address/phone
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -70,6 +71,86 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+         {/* LocalBusiness Schema for Local SEO */}
+         <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
+              {
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "@id": "https://nepscape.com",
+                "name": "Nepscape",
+                "image": "https://nepscape.com/logo.png",
+                "url": "https://nepscape.com",
+                "telephone": "+977 986-2973810",
+                "priceRange": "",
+                "description": "Nepscape delivers custom web development, AI solutions, and enterprise IT services with a focus on quality and innovation.",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Your Street Address",
+                  "addressLocality": "Your City",
+                  "addressRegion": "Your Region/Province",
+                  "postalCode": "Your Postal Code",
+                  "addressCountry": "NP"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": "XX.XXXX",
+                  "longitude": "XX.XXXX"
+                },
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "09:00",
+                    "closes": "18:00"
+                  }
+                ],
+                "sameAs": [
+                  "https://www.facebook.com/nepscape",
+                  "https://www.linkedin.com/company/nepscape",
+                  "https://twitter.com/nepscape"
+                ],
+                "areaServed": ["Kathmandu", "Nepal", "Global"],
+                "serviceType": ["Web Development", "AI Solutions", "IT Services", "Mobile App Development"],
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+977 986-2973810",
+                  "contactType": "customer service",
+                  "availableLanguage": ["English", "Nepali"]
+                }
+              }
+            `,
+          }}
+        />
+
+        {/* Organization Schema (maintain this as well) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Nepscape",
+                "url": "https://nepscape.com",
+                "logo": "https://nepscape.com/logo.png",
+                "sameAs": [
+                  "https://www.facebook.com/nepscape",
+                  "https://www.linkedin.com/company/nepscape",
+                  "https://twitter.com/nepscape"
+                ],
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+977 986-2973810",
+                  "contactType": "customer service",
+                  "availableLanguage": ["English", "Nepali"]
+                }
+              }
+            `,
+          }}
+        />
         {/* Google Analytics */}
         <Script
           strategy="afterInteractive"
@@ -91,6 +172,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Navbar />
         <main>{children}</main>
+        <LocalBusinessInfo phone="+977 986-2973810" address="Putalisadak, Nepal" />
       </body>
     </html>
   );
