@@ -9,7 +9,21 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 
-const BlogPage = ({ posts: any }) => {
+// Define the type for a blog post
+interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  imageUrl: string;
+  slug: string;
+}
+
+interface BlogPageProps {
+  posts: BlogPost[];
+}
+
+const BlogPage: React.FC<BlogPageProps> = ({ posts }) => {
   const [currentPostIndex, setCurrentPostIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
