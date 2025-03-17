@@ -269,8 +269,7 @@ const WebsiteDevelopment = () => {
   };
 
   // For demo purposes, using a placeholder in case actual CDN image fails
-  const renderTechIcon = (tech) => {
-    // Using placeholder for this demo - in real application, you'd use the real CDN URL
+  const renderTechIcon = (tech:any) => {
     return (
       <img
         src="/api/placeholder/48/48"
