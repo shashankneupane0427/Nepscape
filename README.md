@@ -2,7 +2,7 @@
 
 <img src="/public/site.png" alt="Nepscape Screenshot" width="100%">
 
-**Nepscape** is a modern IT company website built with **Next.js (App Router), TypeScript, React, Tailwind CSS, and Framer Motion**. It showcases Nepscape’s services, expertise, and contact information in a visually appealing and responsive.  
+**Nepscape** is a modern IT company website built with **Next.js (App Router), TypeScript, React, Tailwind CSS, and Framer Motion**.
 
 ## Tech Stack
 
@@ -40,13 +40,13 @@ LINK: https://nepscape.vercel.app/
    # or
    yarn install
    ```
-3.**Run the development server**
+3. **Run the development server**
    ```bash
    npm run dev
    # or
    yarn dev
    ```
 ### Contributors
-   Shashank Neupane
-   Saimon Neupane
-   Pratik Chapagain
+   - Shashank Neupane
+   - Saimon Neupane
+   - Pratik Chapagain
